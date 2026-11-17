@@ -22,18 +22,30 @@ export function RevealObserver() {
       pending().forEach((el) => el.setAttribute("data-revealed", ""));
       return;
     }
+    // IntersectionObserver applies the target's own clip-path, and an "unveil" starts fully clipped
+    // (inset 100%), so its ratio stays 0 forever. Those are watched through their unclipped parent.
+    const byTarget = new Map<Element, HTMLElement[]>();
     const io = new IntersectionObserver(
       (entries) => {
         for (const e of entries) {
           if (e.isIntersecting) {
-            e.target.setAttribute("data-revealed", "");
+            byTarget.get(e.target)?.forEach((el) => el.setAttribute("data-revealed", ""));
+            byTarget.delete(e.target);
             io.unobserve(e.target);
           }
         }
       },
       { rootMargin: "0px 0px -8% 0px", threshold: 0.12 },
     );
-    pending().forEach((el) => io.observe(el));
+    pending().forEach((el) => {
+      const target = (el.dataset.reveal === "unveil" && el.parentElement) || el;
+      const list = byTarget.get(target);
+      if (list) list.push(el);
+      else {
+        byTarget.set(target, [el]);
+        io.observe(target);
+      }
+    });
     return () => io.disconnect();
   }, [pathname]);
   return null;
