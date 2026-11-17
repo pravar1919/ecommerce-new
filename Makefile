@@ -2,7 +2,7 @@
 DC  := docker compose
 RUN := $(DC) exec -T backend uv run --no-sync
 
-.PHONY: up up-app down logs migrate seed shell test-backend lint-backend schema check-backend \
+.PHONY: up up-app down logs migrate seed demo-photos shell test-backend lint-backend schema check-backend \
         test-frontend check-frontend e2e lighthouse check
 
 up:            ## infrastructure only (postgres, redis, s3, mailpit)
@@ -17,6 +17,8 @@ migrate:
 	$(RUN) python manage.py migrate
 seed:          ## idempotent dev data with labelled placeholder images
 	$(RUN) python manage.py seed_dev
+demo-photos:   ## curated Unsplash demo photography over the placeholders (UNSPLASH_ACCESS_KEY)
+	$(RUN) python manage.py seed_demo_photos
 shell:
 	$(RUN) python manage.py shell
 

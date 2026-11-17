@@ -28,7 +28,7 @@ def media_dict(m: MediaAsset) -> dict:
     return {
         "id": str(m.id),
         "kind": m.kind,
-        "url": m.file.url,
+        "url": m.src_url,
         "poster_url": m.poster.url if m.poster else None,
         "alt": "" if m.is_decorative else m.alt_text,
         "width": m.width,
@@ -38,6 +38,7 @@ def media_dict(m: MediaAsset) -> dict:
         "dominant_hex": m.dominant_hex,
         "blurhash": m.blurhash,
         "credit": m.credit,
+        "credit_url": m.credit_url,
         "is_placeholder": m.is_placeholder,
     }
 

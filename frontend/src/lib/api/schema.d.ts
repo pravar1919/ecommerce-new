@@ -918,6 +918,9 @@ export interface components {
             focal_x?: number;
             /** Format: double */
             focal_y?: number;
+            /** @description Photographer, for licensed stock */
+            credit?: string;
+            credit_url?: string;
             /** @description Development placeholder, never real inventory */
             is_placeholder?: boolean;
         };
@@ -1022,6 +1025,9 @@ export interface components {
             focal_x?: number;
             /** Format: double */
             focal_y?: number;
+            /** @description Photographer, for licensed stock */
+            credit?: string;
+            credit_url?: string;
             /** @description Development placeholder, never real inventory */
             is_placeholder?: boolean;
             kind?: components["schemas"]["MediaKindEnum"];
@@ -1052,6 +1058,7 @@ export interface components {
             dominant_hex: string;
             blurhash: string;
             credit: string;
+            credit_url: string;
             is_placeholder: boolean;
         };
         /**

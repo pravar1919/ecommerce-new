@@ -1,0 +1,1434 @@
+{
+ "_licence": "Unsplash License (https://unsplash.com/license). Hotlinked per Unsplash API guidelines. Demo only: not product photography.",
+ "products": {
+  "Emerald Velvet Dinner Jacket": {
+   "Emerald": [
+    {
+     "id": "KNyoEREeIQI",
+     "url": "https://images.unsplash.com/photo-1643131870277-749922079eb1?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Mnx8dmVsdmV0JTIwYmxhemVyJTIwbWVufGVufDF8MXx8fDE3OTQ5MDI5MDh8MA&ixlib=rb-4.1.0",
+     "width": 4000,
+     "height": 6000,
+     "color": "#738c8c",
+     "blur_hash": "L9C@ET.T.9IA?w%MWCfl%MbHIAx]",
+     "alt": "A man standing in front of a brick wall",
+     "photographer": "Ibrahima Toure",
+     "photographer_url": "https://unsplash.com/@gringophoto?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-man-standing-in-front-of-a-brick-wall-KNyoEREeIQI?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/KNyoEREeIQI/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Mnx8dmVsdmV0JTIwYmxhemVyJTIwbWVufGVufDF8MXx8fDE3OTQ5MDI5MDh8MA"
+    },
+    {
+     "id": "qVrgGyQqZgg",
+     "url": "https://images.unsplash.com/photo-1643131802421-42f23e35be4b?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8M3x8dmVsdmV0JTIwYmxhemVyJTIwbWVufGVufDF8MXx8fDE3OTQ5MDI5MDh8MA&ixlib=rb-4.1.0",
+     "width": 4000,
+     "height": 6000,
+     "color": "#8ca6a6",
+     "blur_hash": "L8FPsm0KWARiIpD$9FM|_N.9D$og",
+     "alt": "A man in a suit and sunglasses standing in front of a brick wall",
+     "photographer": "Ibrahima Toure",
+     "photographer_url": "https://unsplash.com/@gringophoto?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-man-in-a-suit-and-sunglasses-standing-in-front-of-a-brick-wall-qVrgGyQqZgg?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/qVrgGyQqZgg/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8M3x8dmVsdmV0JTIwYmxhemVyJTIwbWVufGVufDF8MXx8fDE3OTQ5MDI5MDh8MA"
+    }
+   ],
+   "Burgundy": [
+    {
+     "id": "ssnSQS6-UbA",
+     "url": "https://images.unsplash.com/photo-1627350435982-a3f9aae1dcde?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Mjh8fHZlbHZldCUyMGJsYXplciUyMG1lbnxlbnwxfDF8fHwxNzk0OTAyOTA4fDA&ixlib=rb-4.1.0",
+     "width": 5304,
+     "height": 6630,
+     "color": "#f3f3f3",
+     "blur_hash": "LjMssIX4pbQ-_MMdn4ozyDaKRPo}",
+     "alt": "Man in red coat standing on road during daytime",
+     "photographer": "Brock Wegner",
+     "photographer_url": "https://unsplash.com/@isthatbrock?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/man-in-red-coat-standing-on-road-during-daytime-ssnSQS6-UbA?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/ssnSQS6-UbA/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Mjh8fHZlbHZldCUyMGJsYXplciUyMG1lbnxlbnwxfDF8fHwxNzk0OTAyOTA4fDA"
+    }
+   ]
+  },
+  "Royal Blue Jodhpuri Bandhgala": {
+   "Royal Blue": [
+    {
+     "id": "rXRFce8WOnU",
+     "url": "https://images.unsplash.com/photo-1534217466718-ef4950786e24?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTN8fGluZG8lMjB3ZXN0ZXJuJTIwbWVuJTIwZmFzaGlvbnxlbnwxfDF8fHwxNzk0OTAyOTA2fDA&ixlib=rb-4.1.0",
+     "width": 3456,
+     "height": 5184,
+     "color": "#d9d9d9",
+     "blur_hash": "LZJkZWRj~q%2?bRPE1tR-:%LIUR*",
+     "alt": "Man wearing blue thobe suit",
+     "photographer": "Ahmed Syed",
+     "photographer_url": "https://unsplash.com/@shotbyraza?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/man-wearing-blue-thobe-suit-rXRFce8WOnU?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/rXRFce8WOnU/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTN8fGluZG8lMjB3ZXN0ZXJuJTIwbWVuJTIwZmFzaGlvbnxlbnwxfDF8fHwxNzk0OTAyOTA2fDA"
+    },
+    {
+     "id": "FZY5inPTc_c",
+     "url": "https://images.unsplash.com/photo-1785613590868-21f188fad922?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MjN8fGdyb29tJTIwc2hlcndhbmklMjB3ZWRkaW5nfGVufDF8MXx8fDE3OTQ5MDI5MDJ8MA&ixlib=rb-4.1.0",
+     "width": 3024,
+     "height": 4032,
+     "color": "#0c2640",
+     "blur_hash": "LGGl3MNG~m4;^#^*EMxu#j9bR6a}",
+     "alt": "Man in traditional blue outfit standing beside a decorated car",
+     "photographer": "MOHAMMAD AL JANNAT RAKIN",
+     "photographer_url": "https://unsplash.com/@aljannatrakin?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/man-in-traditional-blue-outfit-standing-beside-a-decorated-car-FZY5inPTc_c?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/FZY5inPTc_c/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MjN8fGdyb29tJTIwc2hlcndhbmklMjB3ZWRkaW5nfGVufDF8MXx8fDE3OTQ5MDI5MDJ8MA"
+    }
+   ],
+   "Burgundy": [
+    {
+     "id": "k-ehfxCMamI",
+     "url": "https://images.unsplash.com/photo-1522169092203-1cce6d311a0b?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MXx8aW5kbyUyMHdlc3Rlcm4lMjBtZW4lMjBmYXNoaW9ufGVufDF8MXx8fDE3OTQ5MDI5MDZ8MA&ixlib=rb-4.1.0",
+     "width": 2400,
+     "height": 3600,
+     "color": "#26260c",
+     "blur_hash": "LKASGGt60}RjrsR*S}xZOWaywKj[",
+     "alt": "Men's red long-sleeved dress",
+     "photographer": "Parvez AzarQaderi",
+     "photographer_url": "https://unsplash.com/@iampaq?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/mens-red-long-sleeved-dress-k-ehfxCMamI?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/k-ehfxCMamI/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MXx8aW5kbyUyMHdlc3Rlcm4lMjBtZW4lMjBmYXNoaW9ufGVufDF8MXx8fDE3OTQ5MDI5MDZ8MA"
+    }
+   ],
+   "Ivory": [
+    {
+     "id": "6xHLu4jBSG0",
+     "url": "https://images.unsplash.com/photo-1678805408312-04e5fd7a9dcc?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTN8fGluZGlhbiUyMGdyb29tfGVufDF8MXx8fDE3OTQ5MDI5MDF8MA&ixlib=rb-4.1.0",
+     "width": 4000,
+     "height": 6000,
+     "color": "#d9c0a6",
+     "blur_hash": "LQOMKYD%EMD%0fSONFofEMxbjFt7",
+     "alt": "A white jacket with a red flower on it",
+     "photographer": "Arun Prakash",
+     "photographer_url": "https://unsplash.com/@its_arunprakash?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-white-jacket-with-a-red-flower-on-it-6xHLu4jBSG0?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/6xHLu4jBSG0/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTN8fGluZGlhbiUyMGdyb29tfGVufDF8MXx8fDE3OTQ5MDI5MDF8MA"
+    }
+   ]
+  },
+  "Chanderi Mirror Festive Kurta": {
+   "Blush": [
+    {
+     "id": "DatmJfAvtOQ",
+     "url": "https://images.unsplash.com/photo-1727835523550-18478cacefa2?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Mnx8aW5kaWFuJTIwbWFuJTIwa3VydGF8ZW58MXwxfHx8MTc5NDkwMjkwM3ww&ixlib=rb-4.1.0",
+     "width": 2800,
+     "height": 4200,
+     "color": "#595959",
+     "blur_hash": "LgH1ACxbNaoL0yRjjFaxrqS2xas:",
+     "alt": "A man sitting on a table with a bowl of flowers",
+     "photographer": "Firangi Yarn Menswear Brand",
+     "photographer_url": "https://unsplash.com/@firangiyarn?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-man-sitting-on-a-table-with-a-bowl-of-flowers-DatmJfAvtOQ?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/DatmJfAvtOQ/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Mnx8aW5kaWFuJTIwbWFuJTIwa3VydGF8ZW58MXwxfHx8MTc5NDkwMjkwM3ww"
+    },
+    {
+     "id": "Xgip1NPJ_b4",
+     "url": "https://images.unsplash.com/photo-1774267230654-ad5335ecd6f0?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Mjl8fGluZGlhbiUyMG1hbiUyMGt1cnRhfGVufDF8MXx8fDE3OTQ5MDI5MDN8MA&ixlib=rb-4.1.0",
+     "width": 2952,
+     "height": 4246,
+     "color": "#8c8c8c",
+     "blur_hash": "LMIr1~t70JozRiWBR%oMImWB-=ax",
+     "alt": "A man in a pink kurta and jacket smiles",
+     "photographer": "Noor Alam",
+     "photographer_url": "https://unsplash.com/@itsmenoor2022?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-man-in-a-pink-kurta-and-jacket-smiles-Xgip1NPJ_b4?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/Xgip1NPJ_b4/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Mjl8fGluZGlhbiUyMG1hbiUyMGt1cnRhfGVufDF8MXx8fDE3OTQ5MDI5MDN8MA"
+    }
+   ],
+   "Marigold": [
+    {
+     "id": "fI8QI03I3Og",
+     "url": "https://images.unsplash.com/photo-1768807478287-9e7953cfdca3?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8NXx8aW5kaWFuJTIwbWFuJTIwa3VydGF8ZW58MXwxfHx8MTc5NDkwMjkwM3ww&ixlib=rb-4.1.0",
+     "width": 6000,
+     "height": 8400,
+     "color": "#f3f3f3",
+     "blur_hash": "LlR{lIt8t:oHRNa#bcaeNhaenLbI",
+     "alt": "Man in yellow kurta and white pants smiles",
+     "photographer": "Noor Alam",
+     "photographer_url": "https://unsplash.com/@itsmenoor2022?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/man-in-yellow-kurta-and-white-pants-smiles-fI8QI03I3Og?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/fI8QI03I3Og/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8NXx8aW5kaWFuJTIwbWFuJTIwa3VydGF8ZW58MXwxfHx8MTc5NDkwMjkwM3ww"
+    }
+   ]
+  },
+  "Linen Pintuck Festive Kurta": {
+   "White": [
+    {
+     "id": "jbfPczfyyQQ",
+     "url": "https://images.unsplash.com/photo-1734418038940-2e5ee6a1b478?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MjR8fHdoaXRlJTIwa3VydGElMjBtYW58ZW58MXwxfHx8MTc5NDkwMjkwNHww&ixlib=rb-4.1.0",
+     "width": 3648,
+     "height": 5472,
+     "color": "#f3f3f3",
+     "blur_hash": "LYNA^_~qIUa$W9xuRjM_9GIUkBNH",
+     "alt": "A man in a white outfit sitting on a wall",
+     "photographer": "Muhammad Numan",
+     "photographer_url": "https://unsplash.com/@numaninsari?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-man-in-a-white-outfit-sitting-on-a-wall-jbfPczfyyQQ?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/jbfPczfyyQQ/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MjR8fHdoaXRlJTIwa3VydGElMjBtYW58ZW58MXwxfHx8MTc5NDkwMjkwNHww"
+    },
+    {
+     "id": "ft69EMEADJw",
+     "url": "https://images.unsplash.com/photo-1774527929750-f2f32fbb3b93?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MjV8fHdoaXRlJTIwa3VydGElMjBtYW58ZW58MXwxfHx8MTc5NDkwMjkwNHww&ixlib=rb-4.1.0",
+     "width": 4160,
+     "height": 6240,
+     "color": "#c0c0d9",
+     "blur_hash": "LsH_$0oJD$jv8^oft8oLITj@t7WB",
+     "alt": "Young man in white kurta and sunglasses outdoors",
+     "photographer": "Ashikul Islam Anik",
+     "photographer_url": "https://unsplash.com/@anikphotography?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/young-man-in-white-kurta-and-sunglasses-outdoors-ft69EMEADJw?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/ft69EMEADJw/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MjV8fHdoaXRlJTIwa3VydGElMjBtYW58ZW58MXwxfHx8MTc5NDkwMjkwNHww"
+    }
+   ],
+   "Sage": [
+    {
+     "id": "cLqq0FzRXYU",
+     "url": "https://images.unsplash.com/photo-1765364816181-d486fa2b4471?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTJ8fHdoaXRlJTIwa3VydGElMjBtYW58ZW58MXwxfHx8MTc5NDkwMjkwNHww&ixlib=rb-4.1.0",
+     "width": 3024,
+     "height": 4032,
+     "color": "#c0c0c0",
+     "blur_hash": "LTI=^+n.FVOkNAjcSiX4DSjXQ=ai",
+     "alt": "Young man wearing a white shirt and blue scarf",
+     "photographer": "danish Aziz",
+     "photographer_url": "https://unsplash.com/@danihari?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/young-man-wearing-a-white-shirt-and-blue-scarf-cLqq0FzRXYU?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/cLqq0FzRXYU/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTJ8fHdoaXRlJTIwa3VydGElMjBtYW58ZW58MXwxfHx8MTc5NDkwMjkwNHww"
+    }
+   ],
+   "Charcoal": [
+    {
+     "id": "3gn0Tc5evZU",
+     "url": "https://images.unsplash.com/photo-1628157509079-9f8eb45557e7?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Mjl8fGluZG8lMjB3ZXN0ZXJuJTIwbWVuJTIwZmFzaGlvbnxlbnwxfDF8fHwxNzk0OTAyOTA2fDA&ixlib=rb-4.1.0",
+     "width": 3613,
+     "height": 5419,
+     "color": "#c0c0c0",
+     "blur_hash": "LPFPB2WCR%Rk00RiWEay-;a#V[t6",
+     "alt": "Man in black coat standing on gray concrete pathway during daytime",
+     "photographer": "Shazaf Zafar",
+     "photographer_url": "https://unsplash.com/@szpremium?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/man-in-black-coat-standing-on-gray-concrete-pathway-during-daytime-3gn0Tc5evZU?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/3gn0Tc5evZU/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Mjl8fGluZG8lMjB3ZXN0ZXJuJTIwbWVuJTIwZmFzaGlvbnxlbnwxfDF8fHwxNzk0OTAyOTA2fDA"
+    }
+   ]
+  },
+  "Ivory Asymmetric Jacket Set": {
+   "Ivory": [
+    {
+     "id": "WpnlCOt-_4E",
+     "url": "https://images.unsplash.com/photo-1785651521911-6af8287600ad?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MjF8fGluZG8lMjB3ZXN0ZXJuJTIwbWVuJTIwZmFzaGlvbnxlbnwxfDF8fHwxNzk0OTAyOTA2fDA&ixlib=rb-4.1.0",
+     "width": 2624,
+     "height": 3936,
+     "color": "#26260c",
+     "blur_hash": "LLBz5oRP01%gM{oet8WB9GkC%MRi",
+     "alt": "Man in traditional attire stands outdoors at night",
+     "photographer": "MOHAMMAD AL JANNAT RAKIN",
+     "photographer_url": "https://unsplash.com/@aljannatrakin?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/man-in-traditional-attire-stands-outdoors-at-night-WpnlCOt-_4E?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/WpnlCOt-_4E/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MjF8fGluZG8lMjB3ZXN0ZXJuJTIwbWVuJTIwZmFzaGlvbnxlbnwxfDF8fHwxNzk0OTAyOTA2fDA"
+    },
+    {
+     "id": "VQe1AJaIHfk",
+     "url": "https://images.unsplash.com/photo-1724856604249-ca73680262e8?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8OHx8aW5kaWFuJTIwd2VkZGluZyUyMGdyb29tfGVufDF8MHx8fDE3OTQ5MDI5MTZ8MA&ixlib=rb-4.1.0",
+     "width": 6000,
+     "height": 4000,
+     "color": "#26260c",
+     "blur_hash": "LXGuRH0K0K?H0K%M%MRjE1t7xuM{",
+     "alt": "A white jacket is hanging on a tree",
+     "photographer": "Abhishek Sharma",
+     "photographer_url": "https://unsplash.com/@abhishekvats?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-white-jacket-is-hanging-on-a-tree-VQe1AJaIHfk?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/VQe1AJaIHfk/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8OHx8aW5kaWFuJTIwd2VkZGluZyUyMGdyb29tfGVufDF8MHx8fDE3OTQ5MDI5MTZ8MA"
+    }
+   ],
+   "Emerald": [
+    {
+     "id": "10nDdSIWamc",
+     "url": "https://images.unsplash.com/photo-1738079264616-68b44d5de7a8?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8N3x8aW5kbyUyMHdlc3Rlcm4lMjBtZW4lMjBmYXNoaW9ufGVufDF8MXx8fDE3OTQ5MDI5MDZ8MA&ixlib=rb-4.1.0",
+     "width": 3000,
+     "height": 4000,
+     "color": "#d9d9d9",
+     "blur_hash": "LyLN-qoe$^a#-@WXNModkGj?ahWE",
+     "alt": "A man standing in a field of yellow flowers",
+     "photographer": "Ratul Pal",
+     "photographer_url": "https://unsplash.com/@adventurelife24?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-man-standing-in-a-field-of-yellow-flowers-10nDdSIWamc?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/10nDdSIWamc/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8N3x8aW5kbyUyMHdlc3Rlcm4lMjBtZW4lMjBmYXNoaW9ufGVufDF8MXx8fDE3OTQ5MDI5MDZ8MA"
+    }
+   ]
+  },
+  "Midnight Draped Indo-Western Set": {
+   "Midnight Navy": [
+    {
+     "id": "h2P8voVLrlM",
+     "url": "https://images.unsplash.com/photo-1657367144068-935d1d9e5e15?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Mnx8aW5kbyUyMHdlc3Rlcm4lMjBtZW4lMjBmYXNoaW9ufGVufDF8MXx8fDE3OTQ5MDI5MDZ8MA&ixlib=rb-4.1.0",
+     "width": 3024,
+     "height": 4032,
+     "color": "#262626",
+     "blur_hash": "LdE.5:V[xZoe0#X7NaW:-Ur@ayo2",
+     "alt": "A person standing in front of a wall with trees in the background",
+     "photographer": "Shantanu Agrawal",
+     "photographer_url": "https://unsplash.com/@ishantanuagrawal?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-person-standing-in-front-of-a-wall-with-trees-in-the-background-h2P8voVLrlM?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/h2P8voVLrlM/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Mnx8aW5kbyUyMHdlc3Rlcm4lMjBtZW4lMjBmYXNoaW9ufGVufDF8MXx8fDE3OTQ5MDI5MDZ8MA"
+    },
+    {
+     "id": "sRGh7TFjXeg",
+     "url": "https://images.unsplash.com/photo-1785613590448-c722e77bce68?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8NXx8aW5kbyUyMHdlc3Rlcm4lMjBtZW4lMjBmYXNoaW9ufGVufDF8MXx8fDE3OTQ5MDI5MDZ8MA&ixlib=rb-4.1.0",
+     "width": 3024,
+     "height": 4032,
+     "color": "#c0c0c0",
+     "blur_hash": "LFH2ND1*_3.8x_I[V@%M9Z-VD%IU",
+     "alt": "A man in traditional attire leans on a decorated car",
+     "photographer": "MOHAMMAD AL JANNAT RAKIN",
+     "photographer_url": "https://unsplash.com/@aljannatrakin?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-man-in-traditional-attire-leans-on-a-decorated-car-sRGh7TFjXeg?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/sRGh7TFjXeg/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8NXx8aW5kbyUyMHdlc3Rlcm4lMjBtZW4lMjBmYXNoaW9ufGVufDF8MXx8fDE3OTQ5MDI5MDZ8MA"
+    }
+   ],
+   "Onyx": [
+    {
+     "id": "Q6mhfaYxpPU",
+     "url": "https://images.unsplash.com/photo-1627999342897-8f169c244a97?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Mjd8fGluZG8lMjB3ZXN0ZXJuJTIwbWVuJTIwZmFzaGlvbnxlbnwxfDF8fHwxNzk0OTAyOTA2fDA&ixlib=rb-4.1.0",
+     "width": 3479,
+     "height": 5218,
+     "color": "#0c260c",
+     "blur_hash": "LB85r,8xo}n*?]IBazofNZtRR5of",
+     "alt": "Woman in black long sleeve dress standing beside green plants during daytime",
+     "photographer": "Shazaf Zafar",
+     "photographer_url": "https://unsplash.com/@szpremium?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/woman-in-black-long-sleeve-dress-standing-beside-green-plants-during-daytime-Q6mhfaYxpPU?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/Q6mhfaYxpPU/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Mjd8fGluZG8lMjB3ZXN0ZXJuJTIwbWVuJTIwZmFzaGlvbnxlbnwxfDF8fHwxNzk0OTAyOTA2fDA"
+    }
+   ]
+  },
+  "Royal Blue Jacquard Kurta Set": {
+   "Royal Blue": [
+    {
+     "id": "nXoPi3AveII",
+     "url": "https://images.unsplash.com/photo-1767775498862-d4740ce574ce?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Nnx8aW5kaWFuJTIwbWFuJTIwa3VydGF8ZW58MXwxfHx8MTc5NDkwMjkwM3ww&ixlib=rb-4.1.0",
+     "width": 4000,
+     "height": 6000,
+     "color": "#d9c0a6",
+     "blur_hash": "LTJa}%,,$_A04,NHOFwIR4I]Nx$z",
+     "alt": "Man in blue kurta and patterned vest walks outdoors",
+     "photographer": "Noor Alam",
+     "photographer_url": "https://unsplash.com/@itsmenoor2022?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/man-in-blue-kurta-and-patterned-vest-walks-outdoors-nXoPi3AveII?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/nXoPi3AveII/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Nnx8aW5kaWFuJTIwbWFuJTIwa3VydGF8ZW58MXwxfHx8MTc5NDkwMjkwM3ww"
+    },
+    {
+     "id": "22SDUWZNQaY",
+     "url": "https://images.unsplash.com/photo-1783923134222-b84651059acc?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MjZ8fGluZG8lMjB3ZXN0ZXJuJTIwbWVuJTIwZmFzaGlvbnxlbnwxfDF8fHwxNzk0OTAyOTA2fDA&ixlib=rb-4.1.0",
+     "width": 2048,
+     "height": 3073,
+     "color": "#737373",
+     "blur_hash": "LMAKaXaIyCnhcbRNV_R%x_WERjj]",
+     "alt": "Man in patterned jacket and maroon sarong by the water",
+     "photographer": "Aron Weerakoon",
+     "photographer_url": "https://unsplash.com/@aron781n?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/man-in-patterned-jacket-and-maroon-sarong-by-the-water-22SDUWZNQaY?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/22SDUWZNQaY/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MjZ8fGluZG8lMjB3ZXN0ZXJuJTIwbWVuJTIwZmFzaGlvbnxlbnwxfDF8fHwxNzk0OTAyOTA2fDA"
+    }
+   ],
+   "Burgundy": [
+    {
+     "id": "cjM2RBSCyIM",
+     "url": "https://images.unsplash.com/photo-1628250523744-6e414eded400?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTZ8fGluZG8lMjB3ZXN0ZXJuJTIwbWVuJTIwZmFzaGlvbnxlbnwxfDF8fHwxNzk0OTAyOTA2fDA&ixlib=rb-4.1.0",
+     "width": 3744,
+     "height": 5616,
+     "color": "#a6a6a6",
+     "blur_hash": "LMHxyX%M9GRU8^IURkxaN4WERjx[",
+     "alt": "Woman in red cardigan walking on road during daytime",
+     "photographer": "Shazaf Zafar",
+     "photographer_url": "https://unsplash.com/@szpremium?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/woman-in-red-cardigan-walking-on-road-during-daytime-cjM2RBSCyIM?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/cjM2RBSCyIM/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTZ8fGluZG8lMjB3ZXN0ZXJuJTIwbWVuJTIwZmFzaGlvbnxlbnwxfDF8fHwxNzk0OTAyOTA2fDA"
+    }
+   ]
+  },
+  "Sage Threadwork Kurta Set": {
+   "Sage": [
+    {
+     "id": "hEuVOYuq1l4",
+     "url": "https://images.unsplash.com/photo-1727835523545-70ee992b5763?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MXx8aW5kaWFuJTIwbWFuJTIwa3VydGF8ZW58MXwxfHx8MTc5NDkwMjkwM3ww&ixlib=rb-4.1.0",
+     "width": 2334,
+     "height": 3500,
+     "color": "#c0d9c0",
+     "blur_hash": "LJK1?M0JZzXn-2-..8jW${xIxaoe",
+     "alt": "A man standing next to a tree wearing a green shirt",
+     "photographer": "Firangi Yarn Menswear Brand",
+     "photographer_url": "https://unsplash.com/@firangiyarn?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-man-standing-next-to-a-tree-wearing-a-green-shirt-hEuVOYuq1l4?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/hEuVOYuq1l4/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MXx8aW5kaWFuJTIwbWFuJTIwa3VydGF8ZW58MXwxfHx8MTc5NDkwMjkwM3ww"
+    },
+    {
+     "id": "e8YkT7c08ak",
+     "url": "https://images.unsplash.com/photo-1781106784282-decc68f223ee?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTl8fGluZGlhbiUyMG1hbiUyMGt1cnRhfGVufDF8MXx8fDE3OTQ5MDI5MDN8MA&ixlib=rb-4.1.0",
+     "width": 4284,
+     "height": 5712,
+     "color": "#737359",
+     "blur_hash": "LOGl9QR*E0%Mt1NGbIog0K%2xvIU",
+     "alt": "A man in traditional attire sitting outdoors",
+     "photographer": "MOHAMMAD AL JANNAT RAKIN",
+     "photographer_url": "https://unsplash.com/@aljannatrakin?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-man-in-traditional-attire-sitting-outdoors-e8YkT7c08ak?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/e8YkT7c08ak/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTl8fGluZGlhbiUyMG1hbiUyMGt1cnRhfGVufDF8MXx8fDE3OTQ5MDI5MDN8MA"
+    }
+   ],
+   "Blush": [
+    {
+     "id": "01dr7FTdJ6c",
+     "url": "https://images.unsplash.com/photo-1774267230662-575d1f4ec1bd?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8N3x8aW5kaWFuJTIwbWFuJTIwa3VydGF8ZW58MXwxfHx8MTc5NDkwMjkwM3ww&ixlib=rb-4.1.0",
+     "width": 2886,
+     "height": 3952,
+     "color": "#8c8c8c",
+     "blur_hash": "LKHo8=WB0Jt7RjWBWCofIma#-qWA",
+     "alt": "Man in light purple kurta and embellished vest",
+     "photographer": "Noor Alam",
+     "photographer_url": "https://unsplash.com/@itsmenoor2022?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/man-in-light-purple-kurta-and-embellished-vest-01dr7FTdJ6c?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/01dr7FTdJ6c/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8N3x8aW5kaWFuJTIwbWFuJTIwa3VydGF8ZW58MXwxfHx8MTc5NDkwMjkwM3ww"
+    }
+   ]
+  },
+  "Embroidered Leather Mojari": {
+   "Ivory": [
+    {
+     "id": "5RnYcPPBl48",
+     "url": "https://images.unsplash.com/photo-1724856604257-d420e3556bd8?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MjB8fGluZGlhbiUyMGdyb29tfGVufDF8MXx8fDE3OTQ5MDI5MDF8MA&ixlib=rb-4.1.0",
+     "width": 4000,
+     "height": 6000,
+     "color": "#735940",
+     "blur_hash": "LTELviE1D*%2slofkCRj0Lxt%LRj",
+     "alt": "A pair of white shoes sitting on top of a metal bench",
+     "photographer": "Abhishek Sharma",
+     "photographer_url": "https://unsplash.com/@abhishekvats?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-pair-of-white-shoes-sitting-on-top-of-a-metal-bench-5RnYcPPBl48?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/5RnYcPPBl48/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MjB8fGluZGlhbiUyMGdyb29tfGVufDF8MXx8fDE3OTQ5MDI5MDF8MA"
+    },
+    {
+     "id": "6fvGkUexJCU",
+     "url": "https://images.unsplash.com/photo-1739126092150-dc59d9d381d2?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MjZ8fGhhbmQlMjBlbWJyb2lkZXJ5JTIwaW5kaWF8ZW58MXwxfHx8MTc5NDkwMjkyNXww&ixlib=rb-4.1.0",
+     "width": 3064,
+     "height": 5456,
+     "color": "#260c0c",
+     "blur_hash": "LEHKnN%g%Mrr^+={xutk0%rstRo}",
+     "alt": "A bunch of shoes that are on a rack",
+     "photographer": "Shashwat Shriparv",
+     "photographer_url": "https://unsplash.com/@shriparv?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-bunch-of-shoes-that-are-on-a-rack-6fvGkUexJCU?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/6fvGkUexJCU/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MjZ8fGhhbmQlMjBlbWJyb2lkZXJ5JTIwaW5kaWF8ZW58MXwxfHx8MTc5NDkwMjkyNXww"
+    }
+   ],
+   "Onyx": [
+    {
+     "id": "KbYXDew9uNk",
+     "url": "https://images.unsplash.com/photo-1768807478320-fcfd3929acb2?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8NHx8aW5kaWFuJTIwbWFuJTIwa3VydGF8ZW58MXwxfHx8MTc5NDkwMjkwM3ww&ixlib=rb-4.1.0",
+     "width": 6000,
+     "height": 8400,
+     "color": "#f3f3f3",
+     "blur_hash": "LORC#l%i%%roxUt7RkMxJsaIR3ks",
+     "alt": "A man in a yellow kurta and white pants sits",
+     "photographer": "Noor Alam",
+     "photographer_url": "https://unsplash.com/@itsmenoor2022?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-man-in-a-yellow-kurta-and-white-pants-sits-KbYXDew9uNk?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/KbYXDew9uNk/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8NHx8aW5kaWFuJTIwbWFuJTIwa3VydGF8ZW58MXwxfHx8MTc5NDkwMjkwM3ww"
+    }
+   ],
+   "Champagne": [
+    {
+     "id": "8OGwalxjFXg",
+     "url": "https://images.unsplash.com/photo-1724856604247-0de2c43b6491?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8N3x8aW5kaWFuJTIwd2VkZGluZyUyMGdyb29tfGVufDF8MHx8fDE3OTQ5MDI5MTZ8MA&ixlib=rb-4.1.0",
+     "width": 3744,
+     "height": 2496,
+     "color": "#26260c",
+     "blur_hash": "LiG[1b~BE19at7t7s:s:fRj[oft7",
+     "alt": "A close up of a person wearing a white coat",
+     "photographer": "Abhishek Sharma",
+     "photographer_url": "https://unsplash.com/@abhishekvats?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-close-up-of-a-person-wearing-a-white-coat-8OGwalxjFXg?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/8OGwalxjFXg/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8N3x8aW5kaWFuJTIwd2VkZGluZyUyMGdyb29tfGVufDF8MHx8fDE3OTQ5MDI5MTZ8MA"
+    }
+   ]
+  },
+  "Hand-Tied Bandhani Safa": {
+   "Marigold": [
+    {
+     "id": "rE4MAmsypWI",
+     "url": "https://images.unsplash.com/photo-1774438364169-41c3c4ed5b2c?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTR8fGluZGlhbiUyMG1hbiUyMGt1cnRhfGVufDF8MXx8fDE3OTQ5MDI5MDN8MA&ixlib=rb-4.1.0",
+     "width": 4000,
+     "height": 6000,
+     "color": "#262626",
+     "blur_hash": "LIFqO2-51%tK7fXS$fOEoaV{E2$*",
+     "alt": "Man wearing an orange turban and yellow shirt",
+     "photographer": "Tanmay Abhay Mahajan",
+     "photographer_url": "https://unsplash.com/@mr_bond1999?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/man-wearing-an-orange-turban-and-yellow-shirt-rE4MAmsypWI?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/rE4MAmsypWI/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTR8fGluZGlhbiUyMG1hbiUyMGt1cnRhfGVufDF8MXx8fDE3OTQ5MDI5MDN8MA"
+    },
+    {
+     "id": "BRbAwrXNHR0",
+     "url": "https://images.unsplash.com/photo-1633104505030-a4b8d9ed30af?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTF8fHR1cmJhbiUyMHNhZmElMjB3ZWRkaW5nfGVufDF8MXx8fDE3OTQ5MDI5MTJ8MA&ixlib=rb-4.1.0",
+     "width": 4000,
+     "height": 6000,
+     "color": "#f3f3f3",
+     "blur_hash": "LiJtJ5RP%MjF~WM{ShjZN[M|aKt7",
+     "alt": "A man wearing a turban and sunglasses",
+     "photographer": "Rupinder Singh",
+     "photographer_url": "https://unsplash.com/@singhrupinder?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-man-wearing-a-turban-and-sunglasses-BRbAwrXNHR0?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/BRbAwrXNHR0/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTF8fHR1cmJhbiUyMHNhZmElMjB3ZWRkaW5nfGVufDF8MXx8fDE3OTQ5MDI5MTJ8MA"
+    }
+   ],
+   "Burgundy": [
+    {
+     "id": "7tn1GBg-wPg",
+     "url": "https://images.unsplash.com/photo-1757598077295-a3bb1d5b072a?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Nnx8dHVyYmFuJTIwc2FmYSUyMHdlZGRpbmd8ZW58MXwxfHx8MTc5NDkwMjkxMnww&ixlib=rb-4.1.0",
+     "width": 3542,
+     "height": 4154,
+     "color": "#d9f3f3",
+     "blur_hash": "LvLz~zxXtQbH_4S4WBof%hoMV@n+",
+     "alt": "A decorative red turban with gold embellishments and pearls",
+     "photographer": "Royal Photography",
+     "photographer_url": "https://unsplash.com/@royalfoto?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-decorative-red-turban-with-gold-embellishments-and-pearls-7tn1GBg-wPg?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/7tn1GBg-wPg/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Nnx8dHVyYmFuJTIwc2FmYSUyMHdlZGRpbmd8ZW58MXwxfHx8MTc5NDkwMjkxMnww"
+    }
+   ],
+   "Blush": [
+    {
+     "id": "MR3Kaug3454",
+     "url": "https://images.unsplash.com/photo-1633104502646-eb5ea88b3190?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8NHx8dHVyYmFuJTIwc2FmYSUyMHdlZGRpbmd8ZW58MXwxfHx8MTc5NDkwMjkxMnww&ixlib=rb-4.1.0",
+     "width": 4000,
+     "height": 6000,
+     "color": "#a68c73",
+     "blur_hash": "LFI4OwE10yjY-pX59skDK%NHH@bH",
+     "alt": "A man wearing a pink turban and sunglasses",
+     "photographer": "Rupinder Singh",
+     "photographer_url": "https://unsplash.com/@singhrupinder?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-man-wearing-a-pink-turban-and-sunglasses-MR3Kaug3454?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/MR3Kaug3454/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8NHx8dHVyYmFuJTIwc2FmYSUyMHdlZGRpbmd8ZW58MXwxfHx8MTc5NDkwMjkxMnww"
+    }
+   ]
+  },
+  "Burgundy Velvet Heirloom Sherwani": {
+   "Burgundy": [
+    {
+     "id": "FcD45jgmxqA",
+     "url": "https://images.unsplash.com/photo-1781106699949-80bc2e81300c?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8N3x8Z3Jvb20lMjBzaGVyd2FuaSUyMHdlZGRpbmd8ZW58MXwxfHx8MTc5NDkwMjkwMnww&ixlib=rb-4.1.0",
+     "width": 4160,
+     "height": 6240,
+     "color": "#737359",
+     "blur_hash": "LPFPEHxtEMt7TJkB%Nog*0t7r@t7",
+     "alt": "Groom in ornate red and gold sherwani and turban",
+     "photographer": "MOHAMMAD AL JANNAT RAKIN",
+     "photographer_url": "https://unsplash.com/@aljannatrakin?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/groom-in-ornate-red-and-gold-sherwani-and-turban-FcD45jgmxqA?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/FcD45jgmxqA/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8N3x8Z3Jvb20lMjBzaGVyd2FuaSUyMHdlZGRpbmd8ZW58MXwxfHx8MTc5NDkwMjkwMnww"
+    },
+    {
+     "id": "WxjzR6nT7LU",
+     "url": "https://images.unsplash.com/photo-1781106699888-8f59750f830e?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MjV8fGdyb29tJTIwc2hlcndhbmklMjB3ZWRkaW5nfGVufDF8MXx8fDE3OTQ5MDI5MDJ8MA&ixlib=rb-4.1.0",
+     "width": 4160,
+     "height": 6240,
+     "color": "#d9d9d9",
+     "blur_hash": "LnHo5ox]IoR*_NxuV@WCx]ogaeof",
+     "alt": "Man in traditional red and gold sherwani standing outdoors",
+     "photographer": "MOHAMMAD AL JANNAT RAKIN",
+     "photographer_url": "https://unsplash.com/@aljannatrakin?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/man-in-traditional-red-and-gold-sherwani-standing-outdoors-WxjzR6nT7LU?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/WxjzR6nT7LU/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MjV8fGdyb29tJTIwc2hlcndhbmklMjB3ZWRkaW5nfGVufDF8MXx8fDE3OTQ5MDI5MDJ8MA"
+    }
+   ]
+  },
+  "Champagne Aari Jacquard Sherwani": {
+   "Champagne": [
+    {
+     "id": "Al2Kps9hipo",
+     "url": "https://images.unsplash.com/photo-1670296047577-36c2c1281a85?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8M3x8aW5kaWFuJTIwd2VkZGluZyUyMGdyb29tfGVufDF8MHx8fDE3OTQ5MDI5MTZ8MA&ixlib=rb-4.1.0",
+     "width": 6720,
+     "height": 4480,
+     "color": "#f3f3f3",
+     "blur_hash": "LRNmKA8wIos:.TIoE1S$-?IAsBs:",
+     "alt": "A person wearing a garment",
+     "photographer": "Akash Gurle",
+     "photographer_url": "https://unsplash.com/@chitr_agraph?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-person-wearing-a-garment-Al2Kps9hipo?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/Al2Kps9hipo/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8M3x8aW5kaWFuJTIwd2VkZGluZyUyMGdyb29tfGVufDF8MHx8fDE3OTQ5MDI5MTZ8MA"
+    },
+    {
+     "id": "no9ZyMXnUr8",
+     "url": "https://images.unsplash.com/photo-1735052709798-2abcc8c0d6e1?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MXx8aW5kaWFuJTIwd2VkZGluZyUyMGdyb29tfGVufDF8MHx8fDE3OTQ5MDI5MTZ8MA&ixlib=rb-4.1.0",
+     "width": 6000,
+     "height": 4000,
+     "color": "#a6c0c0",
+     "blur_hash": "L8J[I?~U800M1H8_ZhyX0ejV%4bd",
+     "alt": "A man in a white turban standing in front of a mirror",
+     "photographer": "iKshana Productions",
+     "photographer_url": "https://unsplash.com/@ikshanaproductions?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-man-in-a-white-turban-standing-in-front-of-a-mirror-no9ZyMXnUr8?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/no9ZyMXnUr8/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MXx8aW5kaWFuJTIwd2VkZGluZyUyMGdyb29tfGVufDF8MHx8fDE3OTQ5MDI5MTZ8MA"
+    }
+   ]
+  },
+  "Emerald Brocade Achkan Sherwani": {
+   "Emerald": [
+    {
+     "id": "LGgTxzIRuck",
+     "url": "https://images.unsplash.com/photo-1654758790539-766103dd71d5?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTd8fGluZG8lMjB3ZXN0ZXJuJTIwbWVuJTIwZmFzaGlvbnxlbnwxfDF8fHwxNzk0OTAyOTA2fDA&ixlib=rb-4.1.0",
+     "width": 4000,
+     "height": 5000,
+     "color": "#c0a6a6",
+     "blur_hash": "LLGReo~VIqog?GRP9ZjFD*RPjYRj",
+     "alt": "A close up of a person wearing a jacket and tie",
+     "photographer": "Simran Sood",
+     "photographer_url": "https://unsplash.com/@simran01_fashionphotography?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-close-up-of-a-person-wearing-a-jacket-and-tie-LGgTxzIRuck?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/LGgTxzIRuck/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTd8fGluZG8lMjB3ZXN0ZXJuJTIwbWVuJTIwZmFzaGlvbnxlbnwxfDF8fHwxNzk0OTAyOTA2fDA"
+    },
+    {
+     "id": "UkejCHPIvqQ",
+     "url": "https://images.unsplash.com/photo-1695461569773-e7c75f38ac3b?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Nnx8aW5kbyUyMHdlc3Rlcm4lMjBtZW4lMjBmYXNoaW9ufGVufDF8MXx8fDE3OTQ5MDI5MDZ8MA&ixlib=rb-4.1.0",
+     "width": 4000,
+     "height": 6000,
+     "color": "#262626",
+     "blur_hash": "L47UI{~q00M{9GM{oft700IUt7j[",
+     "alt": "A black and white jacket on a mannequin",
+     "photographer": "Sahil Shah",
+     "photographer_url": "https://unsplash.com/@sahilshah21?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-black-and-white-jacket-on-a-mannequin-UkejCHPIvqQ?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/UkejCHPIvqQ/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Nnx8aW5kbyUyMHdlc3Rlcm4lMjBtZW4lMjBmYXNoaW9ufGVufDF8MXx8fDE3OTQ5MDI5MDZ8MA"
+    }
+   ],
+   "Midnight Navy": [
+    {
+     "id": "aoxbv45zHmw",
+     "url": "https://images.unsplash.com/photo-1785613589920-90b1149250d1?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8OXx8Z3Jvb20lMjBzaGVyd2FuaSUyMHdlZGRpbmd8ZW58MXwxfHx8MTc5NDkwMjkwMnww&ixlib=rb-4.1.0",
+     "width": 3024,
+     "height": 4032,
+     "color": "#d9c0c0",
+     "blur_hash": "LMGuak10-pxv%g-;NGM{V=-oIAWA",
+     "alt": "A man in traditional attire stands beside a decorated car",
+     "photographer": "MOHAMMAD AL JANNAT RAKIN",
+     "photographer_url": "https://unsplash.com/@aljannatrakin?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-man-in-traditional-attire-stands-beside-a-decorated-car-aoxbv45zHmw?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/aoxbv45zHmw/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8OXx8Z3Jvb20lMjBzaGVyd2FuaSUyMHdlZGRpbmd8ZW58MXwxfHx8MTc5NDkwMjkwMnww"
+    }
+   ]
+  },
+  "Ivory Zardozi Raw Silk Sherwani": {
+   "Ivory": [
+    {
+     "id": "gXWVyFpRCRU",
+     "url": "https://images.unsplash.com/photo-1729347917808-e3e35a462fec?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Mnx8Z3Jvb20lMjBzaGVyd2FuaSUyMHdlZGRpbmd8ZW58MXwxfHx8MTc5NDkwMjkwMnww&ixlib=rb-4.1.0",
+     "width": 1952,
+     "height": 3469,
+     "color": "#0c2626",
+     "blur_hash": "LiFh|%M{0KxGRPofkWaeDjs:xuWV",
+     "alt": "A man in a white outfit standing in front of a green wall",
+     "photographer": "Yogesh Shinde",
+     "photographer_url": "https://unsplash.com/@i_m_yog_e_sh?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-man-in-a-white-outfit-standing-in-front-of-a-green-wall-gXWVyFpRCRU?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/gXWVyFpRCRU/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Mnx8Z3Jvb20lMjBzaGVyd2FuaSUyMHdlZGRpbmd8ZW58MXwxfHx8MTc5NDkwMjkwMnww"
+    },
+    {
+     "id": "2Lg8s0inpz0",
+     "url": "https://images.unsplash.com/photo-1783188223126-69e5d0b56f39?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MjF8fGdyb29tJTIwc2hlcndhbmklMjB3ZWRkaW5nfGVufDF8MXx8fDE3OTQ5MDI5MDJ8MA&ixlib=rb-4.1.0",
+     "width": 6336,
+     "height": 9504,
+     "color": "#d9c0c0",
+     "blur_hash": "LaLfRJs:D5X5EytR$*Vt9FnQx]ay",
+     "alt": "A cream sherwani with a necklace hangs among pink flowers",
+     "photographer": "ARTO SURAJ",
+     "photographer_url": "https://unsplash.com/@artosuraj?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-cream-sherwani-with-a-necklace-hangs-among-pink-flowers-2Lg8s0inpz0?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/2Lg8s0inpz0/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MjF8fGdyb29tJTIwc2hlcndhbmklMjB3ZWRkaW5nfGVufDF8MXx8fDE3OTQ5MDI5MDJ8MA"
+    }
+   ],
+   "Champagne": [
+    {
+     "id": "B9UBRAvamWU",
+     "url": "https://images.unsplash.com/photo-1783188223082-be0c4311b913?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MjF8fGluZGlhbiUyMHdlZGRpbmclMjBncm9vbXxlbnwxfDB8fHwxNzk0OTAyOTE2fDA&ixlib=rb-4.1.0",
+     "width": 9504,
+     "height": 6336,
+     "color": "#402626",
+     "blur_hash": "LeH1i8wv01s=I.fktRjYNFf+kWNG",
+     "alt": "Cream sherwani hangs on ornate golden door with vibrant flowers",
+     "photographer": "ARTO SURAJ",
+     "photographer_url": "https://unsplash.com/@artosuraj?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/cream-sherwani-hangs-on-ornate-golden-door-with-vibrant-flowers-B9UBRAvamWU?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/B9UBRAvamWU/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MjF8fGluZGlhbiUyMHdlZGRpbmclMjBncm9vbXxlbnwxfDB8fHwxNzk0OTAyOTE2fDA"
+    }
+   ]
+  },
+  "Onyx Sequin Cocktail Sherwani": {
+   "Onyx": [
+    {
+     "id": "Ne9280LwoVo",
+     "url": "https://images.unsplash.com/photo-1785612516109-ec479a684113?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Mjd8fGdyb29tJTIwc2hlcndhbmklMjB3ZWRkaW5nfGVufDF8MXx8fDE3OTQ5MDI5MDJ8MA&ixlib=rb-4.1.0",
+     "width": 4160,
+     "height": 6240,
+     "color": "#d9d9d9",
+     "blur_hash": "LrFr|tt7WUj[_Nofj[ay-=afoMf6",
+     "alt": "Young man in embroidered traditional outfit holding a cap",
+     "photographer": "MOHAMMAD AL JANNAT RAKIN",
+     "photographer_url": "https://unsplash.com/@aljannatrakin?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/young-man-in-embroidered-traditional-outfit-holding-a-cap-Ne9280LwoVo?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/Ne9280LwoVo/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Mjd8fGdyb29tJTIwc2hlcndhbmklMjB3ZWRkaW5nfGVufDF8MXx8fDE3OTQ5MDI5MDJ8MA"
+    },
+    {
+     "id": "G-jKsQ-FcTE",
+     "url": "https://images.unsplash.com/photo-1781106784644-5a6fd4d988a9?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTl8fGdyb29tJTIwc2hlcndhbmklMjB3ZWRkaW5nfGVufDF8MXx8fDE3OTQ5MDI5MDJ8MA&ixlib=rb-4.1.0",
+     "width": 4160,
+     "height": 6240,
+     "color": "#d9f3f3",
+     "blur_hash": "LcGlbW?HSixu.Tt7t7kC?wR*IVWC",
+     "alt": "Man in traditional embroidered outfit with turban and sunglasses",
+     "photographer": "MOHAMMAD AL JANNAT RAKIN",
+     "photographer_url": "https://unsplash.com/@aljannatrakin?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/man-in-traditional-embroidered-outfit-with-turban-and-sunglasses-G-jKsQ-FcTE?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/G-jKsQ-FcTE/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTl8fGdyb29tJTIwc2hlcndhbmklMjB3ZWRkaW5nfGVufDF8MXx8fDE3OTQ5MDI5MDJ8MA"
+    }
+   ]
+  },
+  "Silk Mandarin Collar Shirt": {
+   "Ivory": [
+    {
+     "id": "29v6GTjBwgM",
+     "url": "https://images.unsplash.com/photo-1659805819089-cf4c648212b7?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MjF8fHNpbGslMjBzaGlydCUyMG1lbnxlbnwxfDF8fHwxNzk0OTAyOTE0fDA&ixlib=rb-4.1.0",
+     "width": 4000,
+     "height": 6000,
+     "color": "#c0c0c0",
+     "blur_hash": "LNIXy.?H4-xt~V%MtQf+xu%M?aRj",
+     "alt": "A man wearing glasses",
+     "photographer": "omid bonyadian",
+     "photographer_url": "https://unsplash.com/@omidbonyadian_?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-man-wearing-glasses-29v6GTjBwgM?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/29v6GTjBwgM/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MjF8fHNpbGslMjBzaGlydCUyMG1lbnxlbnwxfDF8fHwxNzk0OTAyOTE0fDA"
+    },
+    {
+     "id": "Mr0rMvkZqUY",
+     "url": "https://images.unsplash.com/photo-1792775672522-ac605086d5d0?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTd8fHNpbGslMjBzaGlydCUyMG1lbnxlbnwxfDF8fHwxNzk0OTAyOTE0fDA&ixlib=rb-4.1.0",
+     "width": 2773,
+     "height": 3467,
+     "color": "#737373",
+     "blur_hash": "LOF~8KIU01-pD%t7%1RkDjtQ%fM{",
+     "alt": "A man in a beige shirt and trousers standing on a path in a park",
+     "photographer": "Stefan Vibes",
+     "photographer_url": "https://unsplash.com/@eusuntvibes?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/man-in-beige-shirt-in-park-Mr0rMvkZqUY?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/Mr0rMvkZqUY/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTd8fHNpbGslMjBzaGlydCUyMG1lbnxlbnwxfDF8fHwxNzk0OTAyOTE0fDA"
+    }
+   ],
+   "Champagne": [
+    {
+     "id": "f8RBm8mja6o",
+     "url": "https://images.unsplash.com/photo-1723295635446-78657958f209?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Nnx8c2lsayUyMHNoaXJ0JTIwbWVufGVufDF8MXx8fDE3OTQ5MDI5MTR8MA&ixlib=rb-4.1.0",
+     "width": 4000,
+     "height": 6000,
+     "color": "#260c0c",
+     "blur_hash": "LKA^8vn$Di%MD*NHkDM|00og?bM{",
+     "alt": "A man in a white shirt and black pants",
+     "photographer": "Nereid Ndreu",
+     "photographer_url": "https://unsplash.com/@nereiq?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-man-in-a-white-shirt-and-black-pants-f8RBm8mja6o?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/f8RBm8mja6o/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Nnx8c2lsayUyMHNoaXJ0JTIwbWVufGVufDF8MXx8fDE3OTQ5MDI5MTR8MA"
+    }
+   ],
+   "Onyx": [
+    {
+     "id": "KGwA-9S4lNo",
+     "url": "https://images.unsplash.com/photo-1654182598948-17ef2fe3563f?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8NHx8c2lsayUyMHNoaXJ0JTIwbWVufGVufDF8MXx8fDE3OTQ5MDI5MTR8MA&ixlib=rb-4.1.0",
+     "width": 4539,
+     "height": 5673,
+     "color": "#f3f3f3",
+     "blur_hash": "LUMjjy4m~qtR_3aeo#oz^+xu9Za}",
+     "alt": "A man wearing a suit and tie",
+     "photographer": "Moein Glmzdh",
+     "photographer_url": "https://unsplash.com/@moeinglmzdh?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-man-wearing-a-suit-and-tie-KGwA-9S4lNo?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/KGwA-9S4lNo/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8NHx8c2lsayUyMHNoaXJ0JTIwbWVufGVufDF8MXx8fDE3OTQ5MDI5MTR8MA"
+    }
+   ]
+  },
+  "Zardozi Wedding Stole": {
+   "Ivory": [
+    {
+     "id": "SBp6Z-Njo5A",
+     "url": "https://images.unsplash.com/photo-1792862253165-bb8aaef44aaf?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8NXx8ZW1icm9pZGVyZWQlMjBzaGF3bHxlbnwxfDF8fHwxNzk0OTAyOTE1fDA&ixlib=rb-4.1.0",
+     "width": 2001,
+     "height": 3000,
+     "color": "#8c4026",
+     "blur_hash": "LGF|*w~AVZa1K3xEnjaf9bV[XRoL",
+     "alt": "A sheer cream fabric with colorful floral embroidery and red tassels on a terracotta surface",
+     "photographer": "ghost rider",
+     "photographer_url": "https://unsplash.com/@theconceivable?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/embroidered-cream-fabric-with-red-tassels-SBp6Z-Njo5A?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/SBp6Z-Njo5A/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8NXx8ZW1icm9pZGVyZWQlMjBzaGF3bHxlbnwxfDF8fHwxNzk0OTAyOTE1fDA"
+    },
+    {
+     "id": "CTTknTdGdek",
+     "url": "https://images.unsplash.com/photo-1579207238889-e1122bfc0c89?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MXx8ZW1icm9pZGVyZWQlMjBzaGF3bHxlbnwxfDF8fHwxNzk0OTAyOTE1fDA&ixlib=rb-4.1.0",
+     "width": 4000,
+     "height": 6000,
+     "color": "#a6a6a6",
+     "blur_hash": "LMGSP@4TM{bbxuWBkDozj]WBjYxu",
+     "alt": "Woman wearing gray and brown floral cardigan",
+     "photographer": "lilartsy",
+     "photographer_url": "https://unsplash.com/@lilartsy?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/woman-wearing-gray-and-brown-floral-cardigan-CTTknTdGdek?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/CTTknTdGdek/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MXx8ZW1icm9pZGVyZWQlMjBzaGF3bHxlbnwxfDF8fHwxNzk0OTAyOTE1fDA"
+    }
+   ],
+   "Burgundy": [
+    {
+     "id": "q4mC7ozaQ3M",
+     "url": "https://images.unsplash.com/photo-1781106699930-a692cfe30226?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTl8fGVtYnJvaWRlcmVkJTIwc2hhd2x8ZW58MXwxfHx8MTc5NDkwMjkxNXww&ixlib=rb-4.1.0",
+     "width": 4160,
+     "height": 6240,
+     "color": "#f3f3f3",
+     "blur_hash": "LvIFD3ofIoWV.9WAa#af?wofWBjZ",
+     "alt": "Groom in ornate red and gold sherwani and turban outdoors",
+     "photographer": "MOHAMMAD AL JANNAT RAKIN",
+     "photographer_url": "https://unsplash.com/@aljannatrakin?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/groom-in-ornate-red-and-gold-sherwani-and-turban-outdoors-q4mC7ozaQ3M?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/q4mC7ozaQ3M/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTl8fGVtYnJvaWRlcmVkJTIwc2hhd2x8ZW58MXwxfHx8MTc5NDkwMjkxNXww"
+    }
+   ]
+  },
+  "Raw Silk Churidar": {
+   "Ivory": [
+    {
+     "id": "NABwj-vCxs8",
+     "url": "https://images.unsplash.com/photo-1785612824262-5f0dedaf528f?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8NHx8d2hpdGUlMjBrdXJ0YSUyMG1hbnxlbnwxfDF8fHwxNzk0OTAyOTA0fDA&ixlib=rb-4.1.0",
+     "width": 3024,
+     "height": 4032,
+     "color": "#c0c0c0",
+     "blur_hash": "LGGk?.xp4o-peSa#tRxa4T%f%gMx",
+     "alt": "Young man in white outfit sitting on a park bench",
+     "photographer": "MOHAMMAD AL JANNAT RAKIN",
+     "photographer_url": "https://unsplash.com/@aljannatrakin?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/young-man-in-white-outfit-sitting-on-a-park-bench-NABwj-vCxs8?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/NABwj-vCxs8/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8NHx8d2hpdGUlMjBrdXJ0YSUyMG1hbnxlbnwxfDF8fHwxNzk0OTAyOTA0fDA"
+    },
+    {
+     "id": "2FeZkURjGTk",
+     "url": "https://images.unsplash.com/photo-1785612824298-362f5a8dfe78?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTN8fHdoaXRlJTIwa3VydGElMjBtYW58ZW58MXwxfHx8MTc5NDkwMjkwNHww&ixlib=rb-4.1.0",
+     "width": 3024,
+     "height": 4032,
+     "color": "#c0c0c0",
+     "blur_hash": "LLGbVM-:E1DiZ~ogWBxu01RQx]xu",
+     "alt": "Man in cream kurta standing by red and white posts",
+     "photographer": "MOHAMMAD AL JANNAT RAKIN",
+     "photographer_url": "https://unsplash.com/@aljannatrakin?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/man-in-cream-kurta-standing-by-red-and-white-posts-2FeZkURjGTk?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/2FeZkURjGTk/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTN8fHdoaXRlJTIwa3VydGElMjBtYW58ZW58MXwxfHx8MTc5NDkwMjkwNHww"
+    }
+   ],
+   "Champagne": [
+    {
+     "id": "KMdffhR5lCY",
+     "url": "https://images.unsplash.com/photo-1734418058629-f4baa916db38?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MzB8fHdoaXRlJTIwa3VydGElMjBtYW58ZW58MXwxfHx8MTc5NDkwMjkwNXww&ixlib=rb-4.1.0",
+     "width": 3648,
+     "height": 5472,
+     "color": "#f3f3f3",
+     "blur_hash": "LUIOLSjWDh%10gx?tSNe4mM~-;aK",
+     "alt": "A man sitting at a bar talking on a cell phone",
+     "photographer": "Muhammad Numan",
+     "photographer_url": "https://unsplash.com/@numaninsari?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-man-sitting-at-a-bar-talking-on-a-cell-phone-KMdffhR5lCY?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/KMdffhR5lCY/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MzB8fHdoaXRlJTIwa3VydGElMjBtYW58ZW58MXwxfHx8MTc5NDkwMjkwNXww"
+    }
+   ]
+  },
+  "Tailored Wool Trouser": {
+   "Charcoal": [
+    {
+     "id": "1mdpEQXnJ0A",
+     "url": "https://images.unsplash.com/photo-1604822106141-d9dccd171fad?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8OHx8bWVuJTIwdGhyZWUlMjBwaWVjZSUyMHN1aXR8ZW58MXwxfHx8MTc5NDkwMjkxMHww&ixlib=rb-4.1.0",
+     "width": 2000,
+     "height": 2500,
+     "color": "#d9d9d9",
+     "blur_hash": "LHLXPn-;%MWCx]ofNGRiD*j[00M{",
+     "alt": "Man in gray suit jacket and black dress pants",
+     "photographer": "behrouz sasani",
+     "photographer_url": "https://unsplash.com/@behrouzsasani?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/man-in-gray-suit-jacket-and-black-dress-pants-1mdpEQXnJ0A?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/1mdpEQXnJ0A/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8OHx8bWVuJTIwdGhyZWUlMjBwaWVjZSUyMHN1aXR8ZW58MXwxfHx8MTc5NDkwMjkxMHww"
+    },
+    {
+     "id": "tFaLxWkeEnA",
+     "url": "https://images.unsplash.com/photo-1631052066165-9720608b36da?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MXx8bWVuJTIwdGhyZWUlMjBwaWVjZSUyMHN1aXR8ZW58MXwxfHx8MTc5NDkwMjkxMHww&ixlib=rb-4.1.0",
+     "width": 2400,
+     "height": 3000,
+     "color": "#262626",
+     "blur_hash": "LQF}yS}[XmKP:k,ENHOr=y$jazo|",
+     "alt": "Man in black suit jacket and black pants sitting on black metal bench",
+     "photographer": "Mohamad Khosravi",
+     "photographer_url": "https://unsplash.com/@mohamadkhosravi?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/man-in-black-suit-jacket-and-black-pants-sitting-on-black-metal-bench-tFaLxWkeEnA?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/tFaLxWkeEnA/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MXx8bWVuJTIwdGhyZWUlMjBwaWVjZSUyMHN1aXR8ZW58MXwxfHx8MTc5NDkwMjkxMHww"
+    }
+   ],
+   "Onyx": [
+    {
+     "id": "adkLGUz1gAI",
+     "url": "https://images.unsplash.com/photo-1645369611674-493db9d04bf9?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MjR8fG1lbiUyMHRocmVlJTIwcGllY2UlMjBzdWl0fGVufDF8MXx8fDE3OTQ5MDI5MTB8MA&ixlib=rb-4.1.0",
+     "width": 4268,
+     "height": 5335,
+     "color": "#404040",
+     "blur_hash": "L37BDv%Mkrxv~q?bIpWCenWBE1Rj",
+     "alt": "A man in a suit and tie posing for a picture",
+     "photographer": "Hamid Tajik",
+     "photographer_url": "https://unsplash.com/@hamidtajikph?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-man-in-a-suit-and-tie-posing-for-a-picture-adkLGUz1gAI?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/adkLGUz1gAI/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MjR8fG1lbiUyMHRocmVlJTIwcGllY2UlMjBzdWl0fGVufDF8MXx8fDE3OTQ5MDI5MTB8MA"
+    }
+   ],
+   "Midnight Navy": [
+    {
+     "id": "wJhVaKcX5bg",
+     "url": "https://images.unsplash.com/photo-1599143872270-e7c83611f576?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTl8fG1lbiUyMHRocmVlJTIwcGllY2UlMjBzdWl0fGVufDF8MXx8fDE3OTQ5MDI5MTB8MA&ixlib=rb-4.1.0",
+     "width": 3117,
+     "height": 4706,
+     "color": "#f3f3f3",
+     "blur_hash": "LjIE@MajxuRj0Jo4NGj[?bogfiof",
+     "alt": "Man in black suit standing on white floor",
+     "photographer": "Enmanuel Betances Santos",
+     "photographer_url": "https://unsplash.com/@enmanuelbs?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/man-in-black-suit-standing-on-white-floor-wJhVaKcX5bg?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/wJhVaKcX5bg/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTl8fG1lbiUyMHRocmVlJTIwcGllY2UlMjBzdWl0fGVufDF8MXx8fDE3OTQ5MDI5MTB8MA"
+    }
+   ]
+  },
+  "Ivory Chikankari Wedding Kurta": {
+   "Ivory": [
+    {
+     "id": "MggvYLTGwgc",
+     "url": "https://images.unsplash.com/photo-1785613590016-f95a5c5f2c72?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Mjh8fHdoaXRlJTIwa3VydGElMjBtYW58ZW58MXwxfHx8MTc5NDkwMjkwNXww&ixlib=rb-4.1.0",
+     "width": 3000,
+     "height": 4000,
+     "color": "#d9d9d9",
+     "blur_hash": "LTI}hPD$4m%g55xuXRRPE1t6%MWB",
+     "alt": "A man in a cream kurta stands outdoors, hands clasped",
+     "photographer": "MOHAMMAD AL JANNAT RAKIN",
+     "photographer_url": "https://unsplash.com/@aljannatrakin?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-man-in-a-cream-kurta-stands-outdoors-hands-clasped-MggvYLTGwgc?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/MggvYLTGwgc/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Mjh8fHdoaXRlJTIwa3VydGElMjBtYW58ZW58MXwxfHx8MTc5NDkwMjkwNXww"
+    },
+    {
+     "id": "uYtNaTymfE0",
+     "url": "https://images.unsplash.com/photo-1785613590730-380d74c8cbf9?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTV8fGluZGlhbiUyMG1hbiUyMGt1cnRhfGVufDF8MXx8fDE3OTQ5MDI5MDN8MA&ixlib=rb-4.1.0",
+     "width": 3024,
+     "height": 4032,
+     "color": "#c0c0a6",
+     "blur_hash": "LRJ@%K9bI8W-0wj^pGozrpai%3Rj",
+     "alt": "A young man in a traditional kurta standing outdoors",
+     "photographer": "MOHAMMAD AL JANNAT RAKIN",
+     "photographer_url": "https://unsplash.com/@aljannatrakin?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-young-man-in-a-traditional-kurta-standing-outdoors-uYtNaTymfE0?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/uYtNaTymfE0/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTV8fGluZGlhbiUyMG1hbiUyMGt1cnRhfGVufDF8MXx8fDE3OTQ5MDI5MDN8MA"
+    }
+   ],
+   "White": [
+    {
+     "id": "6llVhgDpBe0",
+     "url": "https://images.unsplash.com/photo-1788380944775-3bed8a6e0765?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Mnx8d2hpdGUlMjBrdXJ0YSUyMG1hbnxlbnwxfDF8fHwxNzk0OTAyOTA0fDA&ixlib=rb-4.1.0",
+     "width": 3024,
+     "height": 4032,
+     "color": "#c0d9f3",
+     "blur_hash": "LVIG1IXU9WWANjR;p2R+xxRijLae",
+     "alt": "A man in a white kurta holding a small chocolate cake outdoors",
+     "photographer": "MOHAMMAD AL JANNAT RAKIN",
+     "photographer_url": "https://unsplash.com/@aljannatrakin?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/man-in-white-kurta-holding-cake-6llVhgDpBe0?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/6llVhgDpBe0/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Mnx8d2hpdGUlMjBrdXJ0YSUyMG1hbnxlbnwxfDF8fHwxNzk0OTAyOTA0fDA"
+    }
+   ]
+  },
+  "Marigold Resham Haldi Kurta": {
+   "Marigold": [
+    {
+     "id": "walWoMQgxgk",
+     "url": "https://images.unsplash.com/photo-1774437791702-f9a41a648220?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTN8fGluZGlhbiUyMG1hbiUyMGt1cnRhfGVufDF8MXx8fDE3OTQ5MDI5MDN8MA&ixlib=rb-4.1.0",
+     "width": 4000,
+     "height": 6000,
+     "color": "#260c0c",
+     "blur_hash": "LOGG2%5=5p$e1e$M$gbH5SslxYSi",
+     "alt": "Man in orange robe and hat walks in street",
+     "photographer": "Tanmay Abhay Mahajan",
+     "photographer_url": "https://unsplash.com/@mr_bond1999?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/man-in-orange-robe-and-hat-walks-in-street-walWoMQgxgk?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/walWoMQgxgk/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTN8fGluZGlhbiUyMG1hbiUyMGt1cnRhfGVufDF8MXx8fDE3OTQ5MDI5MDN8MA"
+    },
+    {
+     "id": "sAd_DWAD0Bk",
+     "url": "https://images.unsplash.com/photo-1774437555932-601dd83d790a?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MjB8fGluZGlhbiUyMG1hbiUyMGt1cnRhfGVufDF8MXx8fDE3OTQ5MDI5MDN8MA&ixlib=rb-4.1.0",
+     "width": 4000,
+     "height": 6000,
+     "color": "#404040",
+     "blur_hash": "LJDl1N=q5Z0*0iN{=^-P58Nge-xZ",
+     "alt": "Man in yellow kurta holding red flag",
+     "photographer": "Tanmay Abhay Mahajan",
+     "photographer_url": "https://unsplash.com/@mr_bond1999?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/man-in-yellow-kurta-holding-red-flag-sAd_DWAD0Bk?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/sAd_DWAD0Bk/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MjB8fGluZGlhbiUyMG1hbiUyMGt1cnRhfGVufDF8MXx8fDE3OTQ5MDI5MDN8MA"
+    }
+   ]
+  },
+  "Charcoal Three-Piece Wedding Suit": {
+   "Charcoal": [
+    {
+     "id": "7I0umiKzwgc",
+     "url": "https://images.unsplash.com/photo-1679101893310-9b9adb4b733b?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Mnx8bWVuJTIwdGhyZWUlMjBwaWVjZSUyMHN1aXR8ZW58MXwxfHx8MTc5NDkwMjkxMHww&ixlib=rb-4.1.0",
+     "width": 2400,
+     "height": 3000,
+     "color": "#262626",
+     "blur_hash": "L48Dqext0z~AxFtQ58WVJTwc$*9u",
+     "alt": "A man in a suit and sunglasses standing in front of a window",
+     "photographer": "Mohamad Khosravi",
+     "photographer_url": "https://unsplash.com/@mohamadkhosravi?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-man-in-a-suit-and-sunglasses-standing-in-front-of-a-window-7I0umiKzwgc?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/7I0umiKzwgc/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Mnx8bWVuJTIwdGhyZWUlMjBwaWVjZSUyMHN1aXR8ZW58MXwxfHx8MTc5NDkwMjkxMHww"
+    },
+    {
+     "id": "Zbay-2szzPM",
+     "url": "https://images.unsplash.com/photo-1679101893301-6c87f1508e2e?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MjB8fG1lbiUyMHRocmVlJTIwcGllY2UlMjBzdWl0fGVufDF8MXx8fDE3OTQ5MDI5MTB8MA&ixlib=rb-4.1.0",
+     "width": 2400,
+     "height": 3000,
+     "color": "#262626",
+     "blur_hash": "L6A0RE0f?G57s:WEIpRk9]s.NJt6",
+     "alt": "A man wearing a suit and tie standing in front of a table",
+     "photographer": "Mohamad Khosravi",
+     "photographer_url": "https://unsplash.com/@mohamadkhosravi?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-man-wearing-a-suit-and-tie-standing-in-front-of-a-table-Zbay-2szzPM?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/Zbay-2szzPM/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MjB8fG1lbiUyMHRocmVlJTIwcGllY2UlMjBzdWl0fGVufDF8MXx8fDE3OTQ5MDI5MTB8MA"
+    }
+   ],
+   "Midnight Navy": [
+    {
+     "id": "2hhY4FaKYLY",
+     "url": "https://images.unsplash.com/photo-1675383094481-3e2088da943b?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Nnx8bWVuJTIwdGhyZWUlMjBwaWVjZSUyMHN1aXR8ZW58MXwxfHx8MTc5NDkwMjkxMHww&ixlib=rb-4.1.0",
+     "width": 4000,
+     "height": 6000,
+     "color": "#c0d9f3",
+     "blur_hash": "LmHCK7M{?wof.9t7R-R+%Nj?V@t7",
+     "alt": "A man in a suit and red tie",
+     "photographer": "nhlakanipho Ndwandwe",
+     "photographer_url": "https://unsplash.com/@justnhlaka?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-man-in-a-suit-and-red-tie-2hhY4FaKYLY?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/2hhY4FaKYLY/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Nnx8bWVuJTIwdGhyZWUlMjBwaWVjZSUyMHN1aXR8ZW58MXwxfHx8MTc5NDkwMjkxMHww"
+    }
+   ]
+  },
+  "Onyx Shawl-Lapel Tuxedo": {
+   "Onyx": [
+    {
+     "id": "HdOre2AUEE8",
+     "url": "https://images.unsplash.com/photo-1722737099366-a356d06f0e4e?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTh8fG1lbiUyMHR1eGVkb3xlbnwxfDF8fHwxNzk0OTAyOTA5fDA&ixlib=rb-4.1.0",
+     "width": 4912,
+     "height": 7360,
+     "color": "#f3f3f3",
+     "blur_hash": "LcG+jlxuIoWU~px[9FRj_3ayM{t7",
+     "alt": "A man in a tuxedo poses for a picture",
+     "photographer": "mostafa khaled",
+     "photographer_url": "https://unsplash.com/@mostafa_aldongly_photoghraphi?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/a-man-in-a-tuxedo-poses-for-a-picture-HdOre2AUEE8?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/HdOre2AUEE8/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTh8fG1lbiUyMHR1eGVkb3xlbnwxfDF8fHwxNzk0OTAyOTA5fDA"
+    },
+    {
+     "id": "l8u-txIzT5U",
+     "url": "https://images.unsplash.com/photo-1786467470421-d96a265fdf11?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MzB8fG1lbiUyMHR1eGVkb3xlbnwxfDF8fHwxNzk0OTAyOTA5fDA&ixlib=rb-4.1.0",
+     "width": 5344,
+     "height": 9504,
+     "color": "#262626",
+     "blur_hash": "L568BN9G00~WMxozt7Rj00tR_3IA",
+     "alt": "A man in a tuxedo applying chalk to a pool cue",
+     "photographer": "Ghavam Cheraghali",
+     "photographer_url": "https://unsplash.com/@ghavix?utm_source=atelier_demo&utm_medium=referral",
+     "photo_url": "https://unsplash.com/photos/man-in-tuxedo-chalking-pool-cue-l8u-txIzT5U?utm_source=atelier_demo&utm_medium=referral",
+     "download_location": "https://api.unsplash.com/photos/l8u-txIzT5U/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MzB8fG1lbiUyMHR1eGVkb3xlbnwxfDF8fHwxNzk0OTAyOTA5fDA"
+    }
+   ]
+  }
+ },
+ "cms": {
+  "hero-groom": {
+   "id": "_-RYXBG7sdA",
+   "url": "https://images.unsplash.com/photo-1665960213533-52fc5b41daff?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTB8fGluZGlhbiUyMHdlZGRpbmclMjBncm9vbXxlbnwxfDB8fHwxNzk0OTAyOTE2fDA&ixlib=rb-4.1.0",
+   "width": 6000,
+   "height": 4000,
+   "color": "#0c2640",
+   "blur_hash": "LQD[^dQl0|Or0ftR$hnmITS$sms:",
+   "alt": "A man and woman wearing traditional clothing",
+   "photographer": "ARTO SURAJ",
+   "photographer_url": "https://unsplash.com/@artosuraj?utm_source=atelier_demo&utm_medium=referral",
+   "photo_url": "https://unsplash.com/photos/a-man-and-woman-wearing-traditional-clothing-_-RYXBG7sdA?utm_source=atelier_demo&utm_medium=referral",
+   "download_location": "https://api.unsplash.com/photos/_-RYXBG7sdA/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTB8fGluZGlhbiUyMHdlZGRpbmclMjBncm9vbXxlbnwxfDB8fHwxNzk0OTAyOTE2fDA"
+  },
+  "hero-groom-mobile": {
+   "id": "ICnMRhxJLYg",
+   "url": "https://images.unsplash.com/photo-1627913755902-dddc0b4c8c63?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTF8fGluZGlhbiUyMGdyb29tfGVufDF8MXx8fDE3OTQ5MDI5MDF8MA&ixlib=rb-4.1.0",
+   "width": 4082,
+   "height": 6123,
+   "color": "#73738c",
+   "blur_hash": "LNIXd8W?0jRj0;-StRRjInIqRPM|",
+   "alt": "Man in yellow and red floral dress",
+   "photographer": "Manoj Chauhan",
+   "photographer_url": "https://unsplash.com/@manojchauhan48?utm_source=atelier_demo&utm_medium=referral",
+   "photo_url": "https://unsplash.com/photos/man-in-yellow-and-red-floral-dress-ICnMRhxJLYg?utm_source=atelier_demo&utm_medium=referral",
+   "download_location": "https://api.unsplash.com/photos/ICnMRhxJLYg/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTF8fGluZGlhbiUyMGdyb29tfGVufDF8MXx8fDE3OTQ5MDI5MDF8MA"
+  },
+  "hero-sangeet": {
+   "id": "yS6e3uhm_ZM",
+   "url": "https://images.unsplash.com/photo-1722952908667-f4883b8e6df6?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTN8fGluZGlhbiUyMHdlZGRpbmd8ZW58MXwwfHx8MTc5NDkwMjkxN3ww&ixlib=rb-4.1.0",
+   "width": 6000,
+   "height": 4000,
+   "color": "#d9c0c0",
+   "blur_hash": "LQJ?Qk0LEQTK9YTeeoV]sDemxtt3",
+   "alt": "A bride and groom posing for a picture",
+   "photographer": "ARTO SURAJ",
+   "photographer_url": "https://unsplash.com/@artosuraj?utm_source=atelier_demo&utm_medium=referral",
+   "photo_url": "https://unsplash.com/photos/a-bride-and-groom-posing-for-a-picture-yS6e3uhm_ZM?utm_source=atelier_demo&utm_medium=referral",
+   "download_location": "https://api.unsplash.com/photos/yS6e3uhm_ZM/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTN8fGluZGlhbiUyMHdlZGRpbmd8ZW58MXwwfHx8MTc5NDkwMjkxN3ww"
+  },
+  "hero-sangeet-mobile": {
+   "id": "d9RsO9BHFVQ",
+   "url": "https://images.unsplash.com/photo-1722952934708-749c22eb2e58?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MXx8aW5kaWFuJTIwZ3Jvb218ZW58MXwxfHx8MTc5NDkwMjkwMXww&ixlib=rb-4.1.0",
+   "width": 3896,
+   "height": 5843,
+   "color": "#59260c",
+   "blur_hash": "LUI3t2R50fyDImbvt8M{4;ozxti_",
+   "alt": "A bride and groom posing for a picture",
+   "photographer": "ARTO SURAJ",
+   "photographer_url": "https://unsplash.com/@artosuraj?utm_source=atelier_demo&utm_medium=referral",
+   "photo_url": "https://unsplash.com/photos/a-bride-and-groom-posing-for-a-picture-d9RsO9BHFVQ?utm_source=atelier_demo&utm_medium=referral",
+   "download_location": "https://api.unsplash.com/photos/d9RsO9BHFVQ/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MXx8aW5kaWFuJTIwZ3Jvb218ZW58MXwxfHx8MTc5NDkwMjkwMXww"
+  },
+  "cat-sherwanis": {
+   "id": "p_LzoHuzZck",
+   "url": "https://images.unsplash.com/photo-1610047402714-307d99a677db?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MXx8c2hlcndhbml8ZW58MXwxfHx8MTc5NDkwMjkwMHww&ixlib=rb-4.1.0",
+   "width": 2486,
+   "height": 3729,
+   "color": "#d9c0a6",
+   "blur_hash": "LMMPdV01b^H?%LskNfNGI.R-n-X9",
+   "alt": "Woman in pink and white floral dress standing on hallway",
+   "photographer": "Bulbul Ahmed",
+   "photographer_url": "https://unsplash.com/@bulbul252?utm_source=atelier_demo&utm_medium=referral",
+   "photo_url": "https://unsplash.com/photos/woman-in-pink-and-white-floral-dress-standing-on-hallway-p_LzoHuzZck?utm_source=atelier_demo&utm_medium=referral",
+   "download_location": "https://api.unsplash.com/photos/p_LzoHuzZck/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MXx8c2hlcndhbml8ZW58MXwxfHx8MTc5NDkwMjkwMHww"
+  },
+  "cat-kurtas": {
+   "id": "sOuuQ3ubM0A",
+   "url": "https://images.unsplash.com/photo-1774377767308-1ff57c8cf5f8?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTF8fGluZGlhbiUyMG1hbiUyMGt1cnRhfGVufDF8MXx8fDE3OTQ5MDI5MDN8MA&ixlib=rb-4.1.0",
+   "width": 4000,
+   "height": 6000,
+   "color": "#730c0c",
+   "blur_hash": "LJGF?+ot2CS1Gboas8r?Bpaf#ROV",
+   "alt": "Man in red kurta holding microphone on stage",
+   "photographer": "Tanmay Abhay Mahajan",
+   "photographer_url": "https://unsplash.com/@mr_bond1999?utm_source=atelier_demo&utm_medium=referral",
+   "photo_url": "https://unsplash.com/photos/man-in-red-kurta-holding-microphone-on-stage-sOuuQ3ubM0A?utm_source=atelier_demo&utm_medium=referral",
+   "download_location": "https://api.unsplash.com/photos/sOuuQ3ubM0A/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTF8fGluZGlhbiUyMG1hbiUyMGt1cnRhfGVufDF8MXx8fDE3OTQ5MDI5MDN8MA"
+  },
+  "cat-indo-western": {
+   "id": "Yv-UDciEBIg",
+   "url": "https://images.unsplash.com/photo-1610047402547-19096799eedd?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8NHx8aW5kbyUyMHdlc3Rlcm4lMjBtZW4lMjBmYXNoaW9ufGVufDF8MXx8fDE3OTQ5MDI5MDZ8MA&ixlib=rb-4.1.0",
+   "width": 2009,
+   "height": 3014,
+   "color": "#40260c",
+   "blur_hash": "LMEUY{5858}@S~RjsTX75Q$*-o9u",
+   "alt": "Woman in white and red long sleeve dress standing near brown wooden chair",
+   "photographer": "Bulbul Ahmed",
+   "photographer_url": "https://unsplash.com/@bulbul252?utm_source=atelier_demo&utm_medium=referral",
+   "photo_url": "https://unsplash.com/photos/woman-in-white-and-red-long-sleeve-dress-standing-near-brown-wooden-chair-Yv-UDciEBIg?utm_source=atelier_demo&utm_medium=referral",
+   "download_location": "https://api.unsplash.com/photos/Yv-UDciEBIg/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8NHx8aW5kbyUyMHdlc3Rlcm4lMjBtZW4lMjBmYXNoaW9ufGVufDF8MXx8fDE3OTQ5MDI5MDZ8MA"
+  },
+  "cat-suits": {
+   "id": "k5vgHvp6040",
+   "url": "https://images.unsplash.com/photo-1697731367218-5311c069484e?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTN8fG1lbiUyMHRocmVlJTIwcGllY2UlMjBzdWl0fGVufDF8MXx8fDE3OTQ5MDI5MTB8MA&ixlib=rb-4.1.0",
+   "width": 2400,
+   "height": 3000,
+   "color": "#262626",
+   "blur_hash": "LFBMb_=wR3Nb}R=_xaX8-6xZxtsl",
+   "alt": "A man in a suit and tie holding a drink",
+   "photographer": "Mohamad Khosravi",
+   "photographer_url": "https://unsplash.com/@mohamadkhosravi?utm_source=atelier_demo&utm_medium=referral",
+   "photo_url": "https://unsplash.com/photos/a-man-in-a-suit-and-tie-holding-a-drink-k5vgHvp6040?utm_source=atelier_demo&utm_medium=referral",
+   "download_location": "https://api.unsplash.com/photos/k5vgHvp6040/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTN8fG1lbiUyMHRocmVlJTIwcGllY2UlMjBzdWl0fGVufDF8MXx8fDE3OTQ5MDI5MTB8MA"
+  },
+  "cat-accessories": {
+   "id": "dToB1sA7zzE",
+   "url": "https://images.unsplash.com/photo-1576470138504-b44c85f2a2af?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTV8fHR1cmJhbiUyMHNhZmElMjB3ZWRkaW5nfGVufDF8MXx8fDE3OTQ5MDI5MTJ8MA&ixlib=rb-4.1.0",
+   "width": 4000,
+   "height": 5467,
+   "color": "#264040",
+   "blur_hash": "LGB3Z?XM0yt7tjn$RjjF0zni-BWC",
+   "alt": "Man holding sherwani hat",
+   "photographer": "Ashwini Chaudhary(Monty)",
+   "photographer_url": "https://unsplash.com/@suicide_chewbacca?utm_source=atelier_demo&utm_medium=referral",
+   "photo_url": "https://unsplash.com/photos/man-holding-sherwani-hat-dToB1sA7zzE?utm_source=atelier_demo&utm_medium=referral",
+   "download_location": "https://api.unsplash.com/photos/dToB1sA7zzE/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTV8fHR1cmJhbiUyMHNhZmElMjB3ZWRkaW5nfGVufDF8MXx8fDE3OTQ5MDI5MTJ8MA"
+  },
+  "groom-edit-1": {
+   "id": "W1wkx5kcaBk",
+   "url": "https://images.unsplash.com/photo-1611106211090-8f3c79eb8552?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Mnx8aW5kaWFuJTIwZ3Jvb218ZW58MXwxfHx8MTc5NDkwMjkwMXww&ixlib=rb-4.1.0",
+   "width": 4000,
+   "height": 6000,
+   "color": "#262626",
+   "blur_hash": "LNC$im9G9#Sv0fxtxCs;ICx[oaRl",
+   "alt": "Woman in green and gold sari",
+   "photographer": "Aastha Bansal",
+   "photographer_url": "https://unsplash.com/@the_travelsmokey?utm_source=atelier_demo&utm_medium=referral",
+   "photo_url": "https://unsplash.com/photos/woman-in-green-and-gold-sari-W1wkx5kcaBk?utm_source=atelier_demo&utm_medium=referral",
+   "download_location": "https://api.unsplash.com/photos/W1wkx5kcaBk/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Mnx8aW5kaWFuJTIwZ3Jvb218ZW58MXwxfHx8MTc5NDkwMjkwMXww"
+  },
+  "groom-edit-2": {
+   "id": "A--OZVONuGE",
+   "url": "https://images.unsplash.com/photo-1716604435424-b24fb7b891c3?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MzB8fGluZGlhbiUyMGdyb29tfGVufDF8MXx8fDE3OTQ5MDI5MDF8MA&ixlib=rb-4.1.0",
+   "width": 3456,
+   "height": 4608,
+   "color": "#262626",
+   "blur_hash": "LIA]~F~Uj[IVxtoJWBV[NIV[Rkjs",
+   "alt": "A man in a tuxedo holding a woman's hand",
+   "photographer": "Aakifah Shaikh",
+   "photographer_url": "https://unsplash.com/@aakifahs?utm_source=atelier_demo&utm_medium=referral",
+   "photo_url": "https://unsplash.com/photos/a-man-in-a-tuxedo-holding-a-womans-hand-A--OZVONuGE?utm_source=atelier_demo&utm_medium=referral",
+   "download_location": "https://api.unsplash.com/photos/A--OZVONuGE/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MzB8fGluZGlhbiUyMGdyb29tfGVufDF8MXx8fDE3OTQ5MDI5MDF8MA"
+  },
+  "occ-wedding": {
+   "id": "BMqdsfkZ0I0",
+   "url": "https://images.unsplash.com/photo-1640953148126-1962ec17a92b?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8OXx8aW5kaWFuJTIwd2VkZGluZ3xlbnwxfDB8fHwxNzk0OTAyOTE3fDA&ixlib=rb-4.1.0",
+   "width": 5760,
+   "height": 3840,
+   "color": "#260c0c",
+   "blur_hash": "LIFN;_4-4:$*}[n$IUNGEL%2M{kD",
+   "alt": "A man and a woman sitting on a couch",
+   "photographer": "rajat sarki",
+   "photographer_url": "https://unsplash.com/@rajat_sarki?utm_source=atelier_demo&utm_medium=referral",
+   "photo_url": "https://unsplash.com/photos/a-man-and-a-woman-sitting-on-a-couch-BMqdsfkZ0I0?utm_source=atelier_demo&utm_medium=referral",
+   "download_location": "https://api.unsplash.com/photos/BMqdsfkZ0I0/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8OXx8aW5kaWFuJTIwd2VkZGluZ3xlbnwxfDB8fHwxNzk0OTAyOTE3fDA"
+  },
+  "occ-sangeet": {
+   "id": "DLHP-lokgJY",
+   "url": "https://images.unsplash.com/photo-1569851935333-6ca1448cc299?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MjF8fHNhbmdlZXQlMjBkYW5jZXxlbnwxfDF8fHwxNzk0OTAyOTIwfDA&ixlib=rb-4.1.0",
+   "width": 3456,
+   "height": 5184,
+   "color": "#404026",
+   "blur_hash": "LPHdd8Oa0xibOlnPs;kp5Qsk$lbw",
+   "alt": "Two man and woman standing and smiling",
+   "photographer": "Balaji Malliswamy",
+   "photographer_url": "https://unsplash.com/@blahji?utm_source=atelier_demo&utm_medium=referral",
+   "photo_url": "https://unsplash.com/photos/two-man-and-woman-standing-and-smiling-DLHP-lokgJY?utm_source=atelier_demo&utm_medium=referral",
+   "download_location": "https://api.unsplash.com/photos/DLHP-lokgJY/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MjF8fHNhbmdlZXQlMjBkYW5jZXxlbnwxfDF8fHwxNzk0OTAyOTIwfDA"
+  },
+  "occ-mehendi": {
+   "id": "3i5buYiOp24",
+   "url": "https://images.unsplash.com/photo-1633104502901-10d124036629?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Nnx8bWVoZW5kaSUyMGNlcmVtb255fGVufDF8MXx8fDE3OTQ5MDI5MTl8MA&ixlib=rb-4.1.0",
+   "width": 4000,
+   "height": 6000,
+   "color": "#c0730c",
+   "blur_hash": "LAIV-i1N2aKQ]#XT~9s.W,}?tQxG",
+   "alt": "A man in a yellow outfit and a woman in a yellow dress",
+   "photographer": "Rupinder Singh",
+   "photographer_url": "https://unsplash.com/@singhrupinder?utm_source=atelier_demo&utm_medium=referral",
+   "photo_url": "https://unsplash.com/photos/a-man-in-a-yellow-outfit-and-a-woman-in-a-yellow-dress-3i5buYiOp24?utm_source=atelier_demo&utm_medium=referral",
+   "download_location": "https://api.unsplash.com/photos/3i5buYiOp24/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Nnx8bWVoZW5kaSUyMGNlcmVtb255fGVufDF8MXx8fDE3OTQ5MDI5MTl8MA"
+  },
+  "occ-haldi": {
+   "id": "eZXqmTEaYA8",
+   "url": "https://images.unsplash.com/photo-1635919254233-38ea27301900?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTZ8fGluZGlhbiUyMHdlZGRpbmd8ZW58MXwwfHx8MTc5NDkwMjkxN3ww&ixlib=rb-4.1.0",
+   "width": 6000,
+   "height": 4000,
+   "color": "#f3a60c",
+   "blur_hash": "LFL30ctO1N5S#7eSERwe9%NzIq$j",
+   "alt": "A group of people standing around a man covered in orange and yellow flowers",
+   "photographer": "pixel studios",
+   "photographer_url": "https://unsplash.com/@pixel_studios_nlr?utm_source=atelier_demo&utm_medium=referral",
+   "photo_url": "https://unsplash.com/photos/a-group-of-people-standing-around-a-man-covered-in-orange-and-yellow-flowers-eZXqmTEaYA8?utm_source=atelier_demo&utm_medium=referral",
+   "download_location": "https://api.unsplash.com/photos/eZXqmTEaYA8/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTZ8fGluZGlhbiUyMHdlZGRpbmd8ZW58MXwwfHx8MTc5NDkwMjkxN3ww"
+  },
+  "occ-reception": {
+   "id": "OQDYhr9HRNo",
+   "url": "https://images.unsplash.com/photo-1744804298431-57953e4eaba0?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTB8fGluZGlhbiUyMGdyb29tfGVufDF8MXx8fDE3OTQ5MDI5MDF8MA&ixlib=rb-4.1.0",
+   "width": 2469,
+   "height": 3538,
+   "color": "#a68c8c",
+   "blur_hash": "LNIECJ^*0Lr=%h%2w[t24UM|?Ft6",
+   "alt": "Couple celebrates under a floral arch with confetti",
+   "photographer": "iKshana Productions",
+   "photographer_url": "https://unsplash.com/@ikshanaproductions?utm_source=atelier_demo&utm_medium=referral",
+   "photo_url": "https://unsplash.com/photos/couple-celebrates-under-a-floral-arch-with-confetti-OQDYhr9HRNo?utm_source=atelier_demo&utm_medium=referral",
+   "download_location": "https://api.unsplash.com/photos/OQDYhr9HRNo/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTB8fGluZGlhbiUyMGdyb29tfGVufDF8MXx8fDE3OTQ5MDI5MDF8MA"
+  },
+  "occ-festive": {
+   "id": "vYAqeXg63Yo",
+   "url": "https://images.unsplash.com/photo-1588140631690-51bcbde65b28?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTl8fGRpd2FsaSUyMGZlc3RpdmV8ZW58MXwxfHx8MTc5NDkwMjkyMnww&ixlib=rb-4.1.0",
+   "width": 3264,
+   "height": 4928,
+   "color": "#260c0c",
+   "blur_hash": "LqFyS?JSNabaJSoLoKay1Jwws.oK",
+   "alt": "Lighted candle on brown wooden table",
+   "photographer": "Souravi Sinha",
+   "photographer_url": "https://unsplash.com/@douxreverie93?utm_source=atelier_demo&utm_medium=referral",
+   "photo_url": "https://unsplash.com/photos/lighted-candle-on-brown-wooden-table-vYAqeXg63Yo?utm_source=atelier_demo&utm_medium=referral",
+   "download_location": "https://api.unsplash.com/photos/vYAqeXg63Yo/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTl8fGRpd2FsaSUyMGZlc3RpdmV8ZW58MXwxfHx8MTc5NDkwMjkyMnww"
+  },
+  "mtm-1": {
+   "id": "6MdNzj3tqzU",
+   "url": "https://images.unsplash.com/photo-1635740391822-262c5917d7cb?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MjJ8fGhhbmQlMjBlbWJyb2lkZXJ5JTIwaW5kaWF8ZW58MXwxfHx8MTc5NDkwMjkyNXww&ixlib=rb-4.1.0",
+   "width": 3348,
+   "height": 5456,
+   "color": "#262626",
+   "blur_hash": "L79QN-4-%M0K9FtRM{-;00bcxa%M",
+   "alt": "A man standing in front of a sewing machine",
+   "photographer": "Abhishek Shintre",
+   "photographer_url": "https://unsplash.com/@abhishekshintre?utm_source=atelier_demo&utm_medium=referral",
+   "photo_url": "https://unsplash.com/photos/a-man-standing-in-front-of-a-sewing-machine-6MdNzj3tqzU?utm_source=atelier_demo&utm_medium=referral",
+   "download_location": "https://api.unsplash.com/photos/6MdNzj3tqzU/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MjJ8fGhhbmQlMjBlbWJyb2lkZXJ5JTIwaW5kaWF8ZW58MXwxfHx8MTc5NDkwMjkyNXww"
+  },
+  "mtm-2": {
+   "id": "ksLWYYmK-0k",
+   "url": "https://images.unsplash.com/photo-1584184924103-e310d9dc82fc?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MXx8dGFpbG9yJTIwbWVhc3VyaW5nfGVufDF8MXx8fDE3OTQ5MDI5MjR8MA&ixlib=rb-4.1.0",
+   "width": 2048,
+   "height": 3072,
+   "color": "#594040",
+   "blur_hash": "LEE_U2-;57RPKPt8nhM{0zR*n%V@",
+   "alt": "Person in black suit holding brown leather bag",
+   "photographer": "Salvador Godoy",
+   "photographer_url": "https://unsplash.com/@godoyvisual?utm_source=atelier_demo&utm_medium=referral",
+   "photo_url": "https://unsplash.com/photos/person-in-black-suit-holding-brown-leather-bag-ksLWYYmK-0k?utm_source=atelier_demo&utm_medium=referral",
+   "download_location": "https://api.unsplash.com/photos/ksLWYYmK-0k/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MXx8dGFpbG9yJTIwbWVhc3VyaW5nfGVufDF8MXx8fDE3OTQ5MDI5MjR8MA"
+  },
+  "craft-1": {
+   "id": "-H1oHQo7vPU",
+   "url": "https://images.unsplash.com/photo-1724737419548-1e733c69efd5?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8N3x8aGFuZCUyMGVtYnJvaWRlcnklMjBpbmRpYXxlbnwxfDF8fHwxNzk0OTAyOTI1fDA&ixlib=rb-4.1.0",
+   "width": 4032,
+   "height": 6048,
+   "color": "#402626",
+   "blur_hash": "LCC%A~4VD*WA4X%eV@RkE2oftQoz",
+   "alt": "A woman looking through a box of glass beads",
+   "photographer": "Satya deep",
+   "photographer_url": "https://unsplash.com/@satyadeep_d?utm_source=atelier_demo&utm_medium=referral",
+   "photo_url": "https://unsplash.com/photos/a-woman-looking-through-a-box-of-glass-beads--H1oHQo7vPU?utm_source=atelier_demo&utm_medium=referral",
+   "download_location": "https://api.unsplash.com/photos/-H1oHQo7vPU/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8N3x8aGFuZCUyMGVtYnJvaWRlcnklMjBpbmRpYXxlbnwxfDF8fHwxNzk0OTAyOTI1fDA"
+  },
+  "craft-2": {
+   "id": "lFJJM6hmne4",
+   "url": "https://images.unsplash.com/photo-1521401415461-83e7162b8e64?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MXx8aGFuZCUyMGVtYnJvaWRlcnklMjBpbmRpYXxlbnwxfDF8fHwxNzk0OTAyOTI1fDA&ixlib=rb-4.1.0",
+   "width": 3809,
+   "height": 5713,
+   "color": "#262626",
+   "blur_hash": "L98W{kXSD$wJ0KniogS#bXt7xvWo",
+   "alt": "Man using sewing machine",
+   "photographer": "Carlos Torres",
+   "photographer_url": "https://unsplash.com/@elcarito?utm_source=atelier_demo&utm_medium=referral",
+   "photo_url": "https://unsplash.com/photos/man-using-sewing-machine-lFJJM6hmne4?utm_source=atelier_demo&utm_medium=referral",
+   "download_location": "https://api.unsplash.com/photos/lFJJM6hmne4/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MXx8aGFuZCUyMGVtYnJvaWRlcnklMjBpbmRpYXxlbnwxfDF8fHwxNzk0OTAyOTI1fDA"
+  },
+  "gram-1": {
+   "id": "JjOm8445mXw",
+   "url": "https://images.unsplash.com/photo-1645856052472-95fe99103c11?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MjR8fGluZGlhbiUyMHdlZGRpbmd8ZW58MXwwfHx8MTc5NDkwMjkxN3ww&ixlib=rb-4.1.0",
+   "width": 6000,
+   "height": 4000,
+   "color": "#c0590c",
+   "blur_hash": "LFMh}4Ek04HtLLMfyCteYONGM}Ny",
+   "alt": "A group of people are throwing confetti in the air",
+   "photographer": "Mohammed Sultan Farooqui",
+   "photographer_url": "https://unsplash.com/@sultanfarooqui?utm_source=atelier_demo&utm_medium=referral",
+   "photo_url": "https://unsplash.com/photos/a-group-of-people-are-throwing-confetti-in-the-air-JjOm8445mXw?utm_source=atelier_demo&utm_medium=referral",
+   "download_location": "https://api.unsplash.com/photos/JjOm8445mXw/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MjR8fGluZGlhbiUyMHdlZGRpbmd8ZW58MXwwfHx8MTc5NDkwMjkxN3ww"
+  },
+  "gram-2": {
+   "id": "eGDaaDyt-ts",
+   "url": "https://images.unsplash.com/photo-1761721133695-e7558dce99c4?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTV8fGhhbmQlMjBlbWJyb2lkZXJ5JTIwaW5kaWF8ZW58MXwxfHx8MTc5NDkwMjkyNXww&ixlib=rb-4.1.0",
+   "width": 2664,
+   "height": 3329,
+   "color": "#c0c0a6",
+   "blur_hash": "LKH^eX~URPcXo~%Kt7#nxas8S}X7",
+   "alt": "Colorful bangles displayed on shelves in a store",
+   "photographer": "Ashwin Prem",
+   "photographer_url": "https://unsplash.com/@ashmeister_777?utm_source=atelier_demo&utm_medium=referral",
+   "photo_url": "https://unsplash.com/photos/colorful-bangles-displayed-on-shelves-in-a-store-eGDaaDyt-ts?utm_source=atelier_demo&utm_medium=referral",
+   "download_location": "https://api.unsplash.com/photos/eGDaaDyt-ts/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTV8fGhhbmQlMjBlbWJyb2lkZXJ5JTIwaW5kaWF8ZW58MXwxfHx8MTc5NDkwMjkyNXww"
+  },
+  "gram-3": {
+   "id": "gfVofr15ICc",
+   "url": "https://images.unsplash.com/photo-1505932794465-147d1f1b2c97?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Nnx8aW5kaWFuJTIwd2VkZGluZ3xlbnwxfDB8fHwxNzk0OTAyOTE3fDA&ixlib=rb-4.1.0",
+   "width": 5301,
+   "height": 3534,
+   "color": "#f3a673",
+   "blur_hash": "LDLVW|b^E|0%-~NZ%KIp?Z=_R.$y",
+   "alt": "A group of people showing hands decorated with intricate black henna patterns",
+   "photographer": "Vitaliy Lyubezhanin",
+   "photographer_url": "https://unsplash.com/@aperinastudios?utm_source=atelier_demo&utm_medium=referral",
+   "photo_url": "https://unsplash.com/photos/hands-with-intricate-henna-patterns-gfVofr15ICc?utm_source=atelier_demo&utm_medium=referral",
+   "download_location": "https://api.unsplash.com/photos/gfVofr15ICc/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Nnx8aW5kaWFuJTIwd2VkZGluZ3xlbnwxfDB8fHwxNzk0OTAyOTE3fDA"
+  },
+  "gram-4": {
+   "id": "oLrgOuGFt3o",
+   "url": "https://images.unsplash.com/photo-1661932908422-aeb3c162bd51?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTJ8fGhhbmQlMjBlbWJyb2lkZXJ5JTIwaW5kaWF8ZW58MXwxfHx8MTc5NDkwMjkyNXww&ixlib=rb-4.1.0",
+   "width": 3600,
+   "height": 5400,
+   "color": "#d92659",
+   "blur_hash": "LpL0nRr[n*OW|OsBn*X7WXW.a}WV",
+   "alt": "A person sitting on a red fence",
+   "photographer": "Dibakar Roy",
+   "photographer_url": "https://unsplash.com/@dibakar16roy?utm_source=atelier_demo&utm_medium=referral",
+   "photo_url": "https://unsplash.com/photos/a-person-sitting-on-a-red-fence-oLrgOuGFt3o?utm_source=atelier_demo&utm_medium=referral",
+   "download_location": "https://api.unsplash.com/photos/oLrgOuGFt3o/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTJ8fGhhbmQlMjBlbWJyb2lkZXJ5JTIwaW5kaWF8ZW58MXwxfHx8MTc5NDkwMjkyNXww"
+  },
+  "gram-5": {
+   "id": "IXSKYai03Vo",
+   "url": "https://images.unsplash.com/photo-1793984572589-af16928d85a8?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8NXx8dHVyYmFuJTIwc2FmYSUyMHdlZGRpbmd8ZW58MXwxfHx8MTc5NDkwMjkxMnww&ixlib=rb-4.1.0",
+   "width": 4000,
+   "height": 6000,
+   "color": "#735940",
+   "blur_hash": "L9C$Q0y=IVD$KI+[XR-p9FD%Nct9",
+   "alt": "A person wearing a maroon turban with gold embroidery and a red jewel brooch",
+   "photographer": "Wafiq Raza",
+   "photographer_url": "https://unsplash.com/@wafiqraza?utm_source=atelier_demo&utm_medium=referral",
+   "photo_url": "https://unsplash.com/photos/person-wearing-maroon-embroidered-turban-IXSKYai03Vo?utm_source=atelier_demo&utm_medium=referral",
+   "download_location": "https://api.unsplash.com/photos/IXSKYai03Vo/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8NXx8dHVyYmFuJTIwc2FmYSUyMHdlZGRpbmd8ZW58MXwxfHx8MTc5NDkwMjkxMnww"
+  },
+  "gram-6": {
+   "id": "8qs92sUopC8",
+   "url": "https://images.unsplash.com/photo-1657470036063-c7e49da31393?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Mnx8aGFuZCUyMGVtYnJvaWRlcnklMjBpbmRpYXxlbnwxfDF8fHwxNzk0OTAyOTI1fDA&ixlib=rb-4.1.0",
+   "width": 1942,
+   "height": 3455,
+   "color": "#73260c",
+   "blur_hash": "LKHA^bz.00M|V]WBflay4TE3.8%L",
+   "alt": "A plate with a design on it",
+   "photographer": "Santoshi Guruju",
+   "photographer_url": "https://unsplash.com/@fantasticbeam?utm_source=atelier_demo&utm_medium=referral",
+   "photo_url": "https://unsplash.com/photos/a-plate-with-a-design-on-it-8qs92sUopC8?utm_source=atelier_demo&utm_medium=referral",
+   "download_location": "https://api.unsplash.com/photos/8qs92sUopC8/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8Mnx8aGFuZCUyMGVtYnJvaWRlcnklMjBpbmRpYXxlbnwxfDF8fHwxNzk0OTAyOTI1fDA"
+  },
+  "gram-7": {
+   "id": "qTYSfv998TQ",
+   "url": "https://images.unsplash.com/photo-1699752645940-b4863a76ae86?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTR8fGRpd2FsaSUyMGZlc3RpdmV8ZW58MXwxfHx8MTc5NDkwMjkyMnww&ixlib=rb-4.1.0",
+   "width": 3368,
+   "height": 5222,
+   "color": "#260c0c",
+   "blur_hash": "LUDaV;}rxGNK}r-AoLR-R*R+WDnj",
+   "alt": "A red and yellow lamp hanging from a ceiling",
+   "photographer": "Sarvesh Phansalkar",
+   "photographer_url": "https://unsplash.com/@sarveshphansalkar_?utm_source=atelier_demo&utm_medium=referral",
+   "photo_url": "https://unsplash.com/photos/a-red-and-yellow-lamp-hanging-from-a-ceiling-qTYSfv998TQ?utm_source=atelier_demo&utm_medium=referral",
+   "download_location": "https://api.unsplash.com/photos/qTYSfv998TQ/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MTR8fGRpd2FsaSUyMGZlc3RpdmV8ZW58MXwxfHx8MTc5NDkwMjkyMnww"
+  },
+  "gram-8": {
+   "id": "2XXQkrL0k-Q",
+   "url": "https://images.unsplash.com/photo-1756190564669-215843660e93?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MjZ8fGluZGlhbiUyMHdlZGRpbmd8ZW58MXwwfHx8MTc5NDkwMjkxN3ww&ixlib=rb-4.1.0",
+   "width": 4608,
+   "height": 3584,
+   "color": "#f3f3f3",
+   "blur_hash": "LTOeL]-p7i%MlVxt%On%pee.xZay",
+   "alt": "Couple in traditional indian wedding attire holding hands",
+   "photographer": "roshan pms",
+   "photographer_url": "https://unsplash.com/@roshanpms?utm_source=atelier_demo&utm_medium=referral",
+   "photo_url": "https://unsplash.com/photos/couple-in-traditional-indian-wedding-attire-holding-hands-2XXQkrL0k-Q?utm_source=atelier_demo&utm_medium=referral",
+   "download_location": "https://api.unsplash.com/photos/2XXQkrL0k-Q/download?ixid=M3wxMTM2NTE4fDB8MXxzZWFyY2h8MjZ8fGluZGlhbiUyMHdlZGRpbmd8ZW58MXwwfHx8MTc5NDkwMjkxN3ww"
+  }
+ }
+}

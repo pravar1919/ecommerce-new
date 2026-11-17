@@ -23,6 +23,7 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   images: {
+    loaderFile: "./src/lib/image-loader.ts",
     formats: ["image/avif", "image/webp"],
     deviceSizes: [375, 480, 640, 768, 1024, 1280, 1440, 1920, 2560],
     imageSizes: [96, 160, 240, 320, 400],

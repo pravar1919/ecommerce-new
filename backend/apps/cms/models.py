@@ -35,13 +35,19 @@ class MediaAsset(UUIDModel):
         VIDEO = "video", "Video"
 
     kind = models.CharField(max_length=5, choices=Kind.choices, default=Kind.IMAGE)
-    file = models.FileField(upload_to=cms_media_path, max_length=300)
+    file = models.FileField(upload_to=cms_media_path, max_length=300, blank=True)
+    external_url = models.URLField(
+        max_length=500,
+        blank=True,
+        help_text="Hotlinked image (e.g. Unsplash demo stock). Takes precedence over the uploaded file.",
+    )
     poster = models.FileField(upload_to=cms_media_path, max_length=300, blank=True, help_text="Video poster")
     alt_text = models.CharField(
         max_length=200, blank=True, help_text="Required for meaningful images; leave empty only if decorative"
     )
     is_decorative = models.BooleanField(default=False, help_text="Rendered with alt=''")
     credit = models.CharField(max_length=120, blank=True)
+    credit_url = models.URLField(max_length=300, blank=True)
     usage_rights = models.CharField(max_length=200, blank=True, help_text="Licence / expiry of usage rights")
     width = models.PositiveIntegerField(null=True, blank=True)
     height = models.PositiveIntegerField(null=True, blank=True)
@@ -64,10 +70,17 @@ class MediaAsset(UUIDModel):
                 condition=models.Q(focal_x__gte=0, focal_x__lte=1, focal_y__gte=0, focal_y__lte=1),
                 name="cms_media_focal_in_unit_range",
             ),
+            models.CheckConstraint(
+                condition=~models.Q(file="") | ~models.Q(external_url=""), name="cms_media_has_source"
+            ),
         ]
 
     def __str__(self) -> str:
         return self.alt_text or self.file.name
+
+    @property
+    def src_url(self) -> str:
+        return self.external_url or self.file.url
 
 
 class SiteSettings(TimeStampedModel):

@@ -170,7 +170,8 @@ def product_media_path(instance: ProductMedia, filename: str) -> str:
 
 
 class ProductMedia(UUIDModel):
-    """Real product photography/video only. Campaign imagery belongs to the CMS media library."""
+    """Product photography/video (in dev: placeholders or hotlinked demo stock, both flagged
+    `is_placeholder`). Campaign imagery belongs to the CMS media library."""
 
     class Kind(models.TextChoices):
         IMAGE = "image", "Image"
@@ -193,7 +194,12 @@ class ProductMedia(UUIDModel):
     )
     kind = models.CharField(max_length=5, choices=Kind.choices, default=Kind.IMAGE)
     role = models.CharField(max_length=10, choices=Role.choices, default=Role.GALLERY)
-    file = models.FileField(upload_to=product_media_path, max_length=300)
+    file = models.FileField(upload_to=product_media_path, max_length=300, blank=True)
+    external_url = models.URLField(
+        max_length=500,
+        blank=True,
+        help_text="Hotlinked image (e.g. Unsplash demo stock). Takes precedence over the uploaded file.",
+    )
     poster = models.FileField(
         upload_to=product_media_path, max_length=300, blank=True, help_text="Video poster"
     )
@@ -203,6 +209,8 @@ class ProductMedia(UUIDModel):
     focal_x = models.FloatField(default=0.5)
     focal_y = models.FloatField(default=0.5)
     position = models.PositiveIntegerField(default=0)
+    credit = models.CharField(max_length=120, blank=True, help_text="Photographer, for licensed stock")
+    credit_url = models.URLField(max_length=300, blank=True)
     is_placeholder = models.BooleanField(
         default=False, help_text="Development placeholder, never real inventory"
     )
@@ -216,10 +224,17 @@ class ProductMedia(UUIDModel):
                 condition=models.Q(focal_x__gte=0, focal_x__lte=1, focal_y__gte=0, focal_y__lte=1),
                 name="media_focal_in_unit_range",
             ),
+            models.CheckConstraint(
+                condition=~models.Q(file="") | ~models.Q(external_url=""), name="media_has_source"
+            ),
         ]
 
     def __str__(self) -> str:
         return f"{self.product} · {self.role} #{self.position}"
+
+    @property
+    def src_url(self) -> str:
+        return self.external_url or self.file.url
 
 
 class ProductVariant(UUIDModel):

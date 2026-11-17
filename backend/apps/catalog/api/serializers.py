@@ -64,10 +64,21 @@ class ImageSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ProductMedia
-        fields = ["id", "url", "alt", "width", "height", "focal_x", "focal_y", "is_placeholder"]
+        fields = [
+            "id",
+            "url",
+            "alt",
+            "width",
+            "height",
+            "focal_x",
+            "focal_y",
+            "credit",
+            "credit_url",
+            "is_placeholder",
+        ]
 
     def get_url(self, obj) -> str:
-        return obj.file.url
+        return obj.src_url
 
 
 class MediaSerializer(ImageSerializer):

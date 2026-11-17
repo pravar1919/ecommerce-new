@@ -24,12 +24,14 @@ test.describe("homepage", () => {
     await expect(page.getByRole("link", { name: /home/ }).first()).toContainText("DEV");
   });
 
-  test("hero image is the prioritised LCP candidate and served same-origin", async ({ page }) => {
+  test("hero image is the prioritised LCP candidate and resolves", async ({ page }) => {
     await page.goto("/");
     const hero = page.locator("[data-section=hero] img").first();
     await expect(hero).toHaveAttribute("fetchpriority", "high");
     const src = (await hero.getAttribute("src")) ?? "";
-    expect(src).toMatch(/^\/_next\/image\?url=%2Fmedia%2F/);
+    // Our own media goes through the same-origin optimiser; Unsplash demo stock (make demo-photos)
+    // is hotlinked from its CDN, as the Unsplash API guidelines require.
+    expect(src).toMatch(/^(\/_next\/image\?url=%2Fmedia%2F|https:\/\/images\.unsplash\.com\/)/);
     const res = await page.request.get(src);
     expect(res.status()).toBe(200);
   });

@@ -208,6 +208,8 @@ NEWSLETTER_CONFIRM_URL = env.str("NEWSLETTER_CONFIRM_URL", default=f"{SITE_URL}/
 FRONTEND_REVALIDATE_URL = env.str("FRONTEND_REVALIDATE_URL", default="")
 REVALIDATE_SECRET = env.str("REVALIDATE_SECRET", default="")
 PASSWORD_RESET_URL = env.str("PASSWORD_RESET_URL", default=f"{SITE_URL}/account/reset-password")
+# Dev-only demo photography (devtools seed_demo_photos). Used to record downloads per Unsplash API rules.
+UNSPLASH_ACCESS_KEY = env.str("UNSPLASH_ACCESS_KEY", default="")
 
 # --- Logging ---------------------------------------------------------------------------
 LOG_LEVEL = env.str("LOG_LEVEL", default="INFO")

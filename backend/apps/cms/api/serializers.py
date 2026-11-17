@@ -29,6 +29,7 @@ class MediaOutSerializer(serializers.Serializer):
     dominant_hex = serializers.CharField(allow_blank=True)
     blurhash = serializers.CharField(allow_blank=True)
     credit = serializers.CharField(allow_blank=True)
+    credit_url = serializers.CharField(allow_blank=True)
     is_placeholder = serializers.BooleanField()
 
 

@@ -13,6 +13,7 @@ export const media = (over: Partial<Media> = {}): Media => ({
   dominant_hex: "#651E35",
   blurhash: "",
   credit: "",
+  credit_url: "",
   is_placeholder: true,
   ...over,
 });

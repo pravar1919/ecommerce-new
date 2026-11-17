@@ -6,6 +6,7 @@ import { focalPosition } from "@/lib/media";
 import { routes } from "@/lib/routes";
 import { cn } from "@/lib/utils";
 
+import { PhotoCredit } from "../media/photo-credit";
 import { Price } from "./price";
 
 const BADGE_LABEL: Record<string, string> = {
@@ -34,7 +35,7 @@ export function ProductCard({
   return (
     <article className="group/card relative">
       <Link href={routes.product(product.slug)} className="block">
-        <div className="relative aspect-[4/5] overflow-hidden bg-skeleton">
+        <div className="group/img relative aspect-[4/5] overflow-hidden bg-skeleton">
           {img && (
             <Image
               src={img.url}
@@ -57,6 +58,7 @@ export function ProductCard({
               style={{ objectPosition: focalPosition(hover.focal_x, hover.focal_y) }}
             />
           )}
+          <PhotoCredit credit={img?.credit} />
           {badges.length > 0 && (
             <ul className="absolute top-3 left-3 flex flex-col items-start gap-1">
               {badges.map((b) => (

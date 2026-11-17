@@ -1925,6 +1925,17 @@ components:
         focal_y:
           type: number
           format: double
+        credit:
+          type: string
+          description: Photographer, for licensed stock
+          maxLength: 120
+        credit_url:
+          oneOf:
+          - type: string
+            format: uri
+            maxLength: 300
+          - type: string
+            maxLength: 0
         is_placeholder:
           type: boolean
           description: Development placeholder, never real inventory
@@ -2175,6 +2186,17 @@ components:
         focal_y:
           type: number
           format: double
+        credit:
+          type: string
+          description: Photographer, for licensed stock
+          maxLength: 120
+        credit_url:
+          oneOf:
+          - type: string
+            format: uri
+            maxLength: 300
+          - type: string
+            maxLength: 0
         is_placeholder:
           type: boolean
           description: Development placeholder, never real inventory
@@ -2237,12 +2259,15 @@ components:
           type: string
         credit:
           type: string
+        credit_url:
+          type: string
         is_placeholder:
           type: boolean
       required:
       - alt
       - blurhash
       - credit
+      - credit_url
       - dominant_hex
       - focal_x
       - focal_y
