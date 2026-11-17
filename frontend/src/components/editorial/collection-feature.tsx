@@ -56,6 +56,7 @@ export function CollectionFeature({ block }: { block: BlockOf<"collection_featur
               ratio="4/5"
               sizes="(min-width: 1024px) 50vw, (min-width: 768px) 50vw, 100vw"
               className="lg:w-[78%]"
+              imgClassName="parallax-img"
             />
           </div>
           {detail && (

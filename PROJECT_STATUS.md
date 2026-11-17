@@ -41,6 +41,15 @@ _Last updated: 2026-11-17_
 - These are stock photos of *similar* garments, not this catalogue's products. Rows stay `is_placeholder=True`, and every one carries a photographer credit (shown on hover).
 - Unsplash API rules are followed: photos are hotlinked from `images.unsplash.com` (new `external_url` field on `ProductMedia` and `MediaAsset`, plus `credit` / `credit_url`). A global `next/image` loader (`src/lib/image-loader.ts`) sends them to Unsplash's CDN, and each photo's download is recorded once (needs `UNSPLASH_ACCESS_KEY` in `.env`).
 
+### Homepage motion pass (2026-11-17)
+Interactions modelled on ecommerce motion references (virtual store, depth lookbooks, ink reveal), rebuilt in the heirloom language.
+- **Virtual salon** (`components/showroom`, new `showroom` section after the category mosaic): a CSS-3D room with one wall per category. Pills turn the camera with a step back, and a frame dollies the camera in beside a quick-view panel. Keyboard, swipe and Escape work. The server renders a flat, linked first wall; the room loads lazily. Walls are a frontend constant until a CMS `showroom` block exists.
+- **Depth lookbook** (`components/lookbook`): collection product rails (≥3 pieces) become a depth-of-field carousel with a floating active piece, blurred neighbours, a title rise and an "In this edit" list. The rail stays as the SSR/no-JS form.
+- **Lens reveal** (`media/lens-image.tsx`): a soft pointer-following circle shows a second image (editorial split, craft story). One delegated listener in `RevealObserver`, eased with CSS `@property`. Fine pointers only.
+- **Zero-JS scroll motion** (`globals.css`): scroll-timeline parallax inside frames, the hero easing back and its copy lifting on scroll, and a curtain "unveil" for the mosaic. Gated on `data-motion="ok"` and `@supports`.
+- Islands get `ProductLite` props (`lib/product-lite.ts`) to keep the hydrated payload small.
+- Checks: typecheck, ESLint, Prettier, Vitest (30), cn tables, Playwright 41 passed / 10 skipped. Lighthouse: JS 168.8 / 170 KB, TBT 72 ms (main 65 ms). LCP 9.2 s and CLS 0.052 fail, as they do on main (8.7 s / 0.052) since the Unsplash hero; not caused by this pass.
+
 ## In progress
 - None. Phase 3 is ready to commit; awaiting go-ahead for Phase 4.
 

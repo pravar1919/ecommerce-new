@@ -7,7 +7,7 @@ import { rewriteMediaUrls } from "@/lib/media";
 
 import type { paths } from "./schema";
 import { TAGS } from "./tags";
-import type { Navigation, Page, SiteSettings } from "./types";
+import type { Navigation, Page, ProductCard, SiteSettings } from "./types";
 
 /**
  * Server-side API access. Next.js talks to Django inside the network (INTERNAL_API_URL),
@@ -74,4 +74,22 @@ export async function getPage(slug: string): Promise<{ page: Page | null; status
     cacheLife("seconds");
     return { page: null, status: 503 };
   }
+}
+
+/**
+ * A few product cards from one category subtree (the homepage showroom). An empty list means the
+ * category is empty or the API is unavailable; callers leave that wall out.
+ */
+export async function getCategoryProducts(path: string, limit = 4): Promise<ProductCard[]> {
+  "use cache";
+  cacheTag("catalog:products", "catalog:categories");
+  const data = await read(
+    api.GET("/api/v1/catalog/products/", {
+      params: { query: { category: path, page_size: limit } },
+      ...opts(),
+    }),
+  );
+  if (data) cacheLife("hours");
+  else cacheLife("seconds");
+  return data?.results ?? [];
 }

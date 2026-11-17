@@ -38,12 +38,16 @@ export function useFinePointer(): boolean {
  * on screen at hydration never arm, so they are not re-animated. Motion wrappers use it to keep
  * their lazily imported libraries (motion, GSAP) out of the first-load JS.
  */
-export function useNearViewport(ref: RefObject<HTMLElement | null>, enabled: boolean): boolean {
+export function useNearViewport(
+  ref: RefObject<HTMLElement | null>,
+  enabled: boolean,
+  { includeVisible = false }: { includeVisible?: boolean } = {},
+): boolean {
   const [armed, setArmed] = useState(false);
   useEffect(() => {
     const el = ref.current;
     if (!enabled || armed || !el) return;
-    if (el.getBoundingClientRect().top < window.innerHeight) return;
+    if (!includeVisible && el.getBoundingClientRect().top < window.innerHeight) return;
     const io = new IntersectionObserver(
       ([e]) => {
         if (e.isIntersecting) {
@@ -55,7 +59,7 @@ export function useNearViewport(ref: RefObject<HTMLElement | null>, enabled: boo
     );
     io.observe(el);
     return () => io.disconnect();
-  }, [ref, enabled, armed]);
+  }, [ref, enabled, armed, includeVisible]);
   return armed;
 }
 

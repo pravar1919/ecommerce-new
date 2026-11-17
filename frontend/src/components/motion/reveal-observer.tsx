@@ -48,5 +48,37 @@ export function RevealObserver() {
     });
     return () => io.disconnect();
   }, [pathname]);
+
+  // Lens reveal ([data-lens], see globals.css): one delegated listener feeds the pointer position.
+  useEffect(() => {
+    let lens: HTMLElement | null = null;
+    const onMove = (e: PointerEvent) => {
+      if (e.pointerType !== "mouse") return;
+      const el = (e.target as Element | null)?.closest?.<HTMLElement>("[data-lens]") ?? null;
+      if (el !== lens) {
+        lens?.removeAttribute("data-lens-on");
+        lens = el;
+        lens?.setAttribute("data-lens-on", "");
+      }
+      if (!el) return;
+      const r = el.getBoundingClientRect();
+      const x = `${e.clientX - r.left}px`;
+      const y = `${e.clientY - r.top}px`;
+      el.style.setProperty("--lens-x", x);
+      el.style.setProperty("--lens-y", y);
+      el.style.setProperty("--lens-tx", x);
+      el.style.setProperty("--lens-ty", y);
+    };
+    const onLeave = () => {
+      lens?.removeAttribute("data-lens-on");
+      lens = null;
+    };
+    document.addEventListener("pointermove", onMove, { passive: true });
+    document.documentElement.addEventListener("mouseleave", onLeave);
+    return () => {
+      document.removeEventListener("pointermove", onMove);
+      document.documentElement.removeEventListener("mouseleave", onLeave);
+    };
+  }, []);
   return null;
 }

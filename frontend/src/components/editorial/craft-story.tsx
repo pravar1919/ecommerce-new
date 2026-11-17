@@ -1,4 +1,5 @@
 import { CmsImage } from "@/components/media/cms-image";
+import { LensImage } from "@/components/media/lens-image";
 import { CountStat } from "@/components/motion/count-stat";
 import { FilmGrain } from "@/components/motion/film-grain";
 import { SplitHeading } from "@/components/motion/split-heading";
@@ -42,7 +43,13 @@ export function CraftStory({ block }: { block: BlockOf<"craft_story"> }) {
         </div>
         <div className="col-span-4 grid grid-cols-2 gap-gutter md:col-span-8 lg:col-span-5 lg:col-start-8">
           <div data-reveal suppressHydrationWarning className="col-span-2">
-            <CmsImage media={main} ratio="4/3" sizes="(min-width: 1024px) 40vw, 100vw" />
+            <LensImage
+              media={main}
+              reveal={second}
+              ratio="4/3"
+              sizes="(min-width: 1024px) 40vw, 100vw"
+              hint="Move to see the hand"
+            />
           </div>
           {second && (
             <div

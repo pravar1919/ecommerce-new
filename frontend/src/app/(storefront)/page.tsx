@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
+import { Fragment, Suspense } from "react";
 
 import { BlockRenderer } from "@/components/editorial/block-renderer";
+import { ShowroomSection } from "@/components/showroom/showroom-section";
 import { Skeleton } from "@/components/ui/skeleton";
 import { resolveBrand } from "@/config/brand";
 import { getPage, getSiteSettings } from "@/lib/api/server";
@@ -47,7 +48,13 @@ async function HomeContent() {
         {brand.tagline ? `: ${brand.tagline}` : ""}
       </h1>
       {page ? (
-        page.blocks.map((block) => <BlockRenderer key={block.id} block={block} />)
+        page.blocks.map((block) => (
+          <Fragment key={block.id}>
+            <BlockRenderer block={block} />
+            {/* The virtual salon follows the category mosaic (frontend-placed until it is a CMS block). */}
+            {block.type === "category_grid" && <ShowroomSection />}
+          </Fragment>
+        ))
       ) : (
         <div className="container-page py-section text-center">
           <p className="font-display text-display-md">The collection is being prepared.</p>
@@ -65,7 +72,7 @@ async function HomeContent() {
 function HomeSkeleton() {
   return (
     <div aria-busy="true" aria-label="Loading">
-      <Skeleton className="aspect-[4/5] max-h-[calc(100svh-var(--header-h)-2.5rem)] min-h-[32rem] w-full md:aspect-[21/9] md:min-h-0" />
+      <Skeleton className="h-svh min-h-[34rem] w-full" />
       <div className="container-page grid grid-cols-2 gap-gutter py-section-sm md:grid-cols-4">
         {Array.from({ length: 4 }, (_, i) => (
           <Skeleton key={i} className="aspect-[4/5]" />

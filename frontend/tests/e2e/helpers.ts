@@ -5,6 +5,7 @@ export const HOME_SECTIONS = [
   "header",
   "hero",
   "category_grid",
+  "showroom",
   "product_rail",
   "collection_feature",
   "occasion_tiles",
@@ -36,4 +37,12 @@ export async function scrollThrough(page: Page) {
     }
     window.scrollTo(0, 0);
   });
+}
+
+/** The homepage hero is immersive: the site chrome slides in only once the visitor scrolls. */
+export async function revealHeader(page: Page) {
+  await page.evaluate(() => window.scrollTo(0, 400));
+  await page.locator('[data-chrome="immersive"][data-revealed="true"]').waitFor();
+  // let the slide-in transition settle before pointer interactions
+  await page.waitForTimeout(700);
 }

@@ -1,0 +1,105 @@
+/*
+ * Depth lookbook (components/lookbook): the active piece is sharp and floating; its neighbours
+ * recede, shrink and fall out of focus, like a shallow depth of field. Offsets come from React as
+ * --o (signed distance from the active item); everything else is CSS.
+ */
+.lb-track {
+  position: relative;
+  height: clamp(24rem, 34vw, 34rem);
+  overflow: hidden;
+  touch-action: pan-y;
+}
+
+.lb-item {
+  --abs: max(var(--o), calc(var(--o) * -1));
+  --near: clamp(0, var(--abs), 1);
+  position: absolute;
+  bottom: 9%;
+  left: 50%;
+  width: clamp(13rem, 34%, 22rem);
+  z-index: calc(10 - var(--abs));
+  transform: translateX(calc(-50% + var(--o) * 90%))
+    scale(calc(1 - var(--near) * 0.3 - (var(--abs) - var(--near)) * 0.12));
+  transform-origin: 50% 100%;
+  opacity: clamp(0, calc(2.8 - var(--abs) * 1.4), 1);
+  filter: blur(calc(var(--near) * 5px + (var(--abs) - var(--near)) * 6px))
+    saturate(calc(1 - var(--near) * 0.35));
+  transition:
+    transform 1s var(--ease-out-expo),
+    opacity 1s var(--ease-out-expo),
+    filter 1s var(--ease-out-expo);
+}
+@media (max-width: 47.99rem) {
+  .lb-item {
+    width: 58%;
+    transform: translateX(calc(-50% + var(--o) * 92%)) scale(calc(1 - var(--near) * 0.22));
+  }
+}
+
+.lb-float {
+  display: block;
+}
+[data-motion="ok"] .lb-item[data-active] .lb-float {
+  animation: lb-float 6s ease-in-out infinite;
+}
+@keyframes lb-float {
+  50% {
+    translate: 0 -0.6rem;
+  }
+}
+
+/* Soft contact shadow under the floating piece */
+.lb-shadow {
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  width: clamp(10rem, 26%, 17rem);
+  height: 1.5rem;
+  translate: -50% 0;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgb(36 35 35 / 0.28), transparent);
+  pointer-events: none;
+}
+[data-motion="ok"] .lb-shadow {
+  animation: lb-shadow 6s ease-in-out infinite;
+}
+@keyframes lb-shadow {
+  50% {
+    scale: 0.82 1;
+    opacity: 0.7;
+  }
+}
+
+.lb-ghost {
+  position: absolute;
+  inset: 4% 0 auto;
+  font-family: var(--font-display);
+  font-size: clamp(9rem, 26vw, 22rem);
+  line-height: 0.8;
+  text-align: center;
+  color: transparent;
+  -webkit-text-stroke: 1px rgb(101 30 53 / 0.16);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Masked rise for the swapped title */
+.lb-rise {
+  display: inline-block;
+  animation: rise var(--dur-cinematic) var(--ease-out-expo) both;
+}
+.lb-fade {
+  animation: lb-fade 900ms var(--ease-out-expo) both 120ms;
+}
+@keyframes lb-fade {
+  from {
+    opacity: 0;
+    translate: 0 0.5rem;
+  }
+}
+
+.lb-progress > span {
+  transition:
+    flex-grow 700ms var(--ease-out-expo),
+    background-color 400ms;
+}

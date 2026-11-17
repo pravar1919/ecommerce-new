@@ -32,7 +32,12 @@ export function CategoryMosaic({ block }: { block: BlockOf<"category_grid"> }) {
             )}
           >
             <Link href={routes.category(item.category.path)} className="group block">
-              <div className="overflow-hidden">
+              <div
+                className="overflow-hidden"
+                data-reveal="unveil"
+                suppressHydrationWarning
+                style={{ ["--i" as string]: i }}
+              >
                 <CmsImage
                   media={item.media}
                   ratio="4/5"

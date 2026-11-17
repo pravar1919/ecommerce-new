@@ -1,4 +1,5 @@
 import { CmsImage } from "@/components/media/cms-image";
+import { LensImage } from "@/components/media/lens-image";
 import { SplitHeading } from "@/components/motion/split-heading";
 import type { BlockOf } from "@/lib/api/types";
 import { cn } from "@/lib/utils";
@@ -20,10 +21,12 @@ export function EditorialSplit({ block }: { block: BlockOf<"editorial_split"> })
           suppressHydrationWarning
           className={cn("col-span-4 md:col-span-5 lg:col-span-7", mirrored && "lg:order-2 lg:col-start-6")}
         >
-          <CmsImage
+          <LensImage
             media={main}
+            reveal={second}
             ratio="3/4"
             sizes="(min-width: 1024px) 58vw, (min-width: 768px) 62vw, 100vw"
+            parallax
           />
         </div>
         <div

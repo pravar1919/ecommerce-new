@@ -49,7 +49,7 @@ function HeroPicture({ slide, priority }: { slide: Slide; priority: boolean }) {
 function Headline({ text }: { text: string }) {
   const words = text.split(/\s+/);
   return (
-    <h2 className="max-w-[11ch] font-display text-[clamp(3rem,1.6rem+5.2vw,7rem)] leading-[0.92] tracking-[-0.02em] uppercase md:max-w-[15ch]">
+    <h2 className="max-w-[12ch] font-display text-[clamp(2.5rem,1.4rem+3.4vw,5rem)] leading-[0.95] tracking-[-0.015em] uppercase">
       <span className="sr-only">{text}</span>
       <span aria-hidden className="block">
         {words.map((w, i) => (
@@ -108,13 +108,14 @@ export function CampaignHero({ config }: { config: BlockOf<"hero">["config"] }) 
       data-section="hero"
       aria-roledescription={count > 1 ? "carousel" : undefined}
       aria-label="Featured campaigns"
+      data-theme={slides[index]?.theme}
       className="relative"
       onMouseEnter={() => setInteracting(true)}
       onMouseLeave={() => setInteracting(false)}
       onFocusCapture={() => setInteracting(true)}
       onBlurCapture={() => setInteracting(false)}
     >
-      <div className="relative aspect-[4/5] max-h-[calc(100svh-var(--header-h)-2.5rem)] min-h-[32rem] w-full overflow-hidden md:aspect-[21/9] md:min-h-0">
+      <div className="relative h-svh min-h-[34rem] w-full overflow-hidden">
         {slides.map((slide, i) => {
           const active = i === index;
           const dark = slide.theme === "dark";
@@ -132,12 +133,32 @@ export function CampaignHero({ config }: { config: BlockOf<"hero">["config"] }) 
                 active ? "z-[2] opacity-100" : "z-0 opacity-0",
               )}
             >
-              <HeroPicture slide={slide} priority={i === 0} />
-              {dark && <div aria-hidden className="absolute inset-0 bg-[rgb(36_35_35/0.32)]" />}
+              <div className="hero-media absolute inset-0">
+                <HeroPicture slide={slide} priority={i === 0} />
+              </div>
+              {/* Scrims instead of a flat wash: the photograph stays rich in the middle, while the
+                  wordmark (top) and the copy (bottom) keep their contrast. */}
+              {dark ? (
+                <>
+                  <div
+                    aria-hidden
+                    className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-[rgb(20_18_18/0.55)] to-transparent"
+                  />
+                  <div
+                    aria-hidden
+                    className="absolute inset-0 bg-gradient-to-t from-[rgb(20_18_18/0.78)] via-[rgb(20_18_18/0.22)] via-45% to-transparent to-75%"
+                  />
+                </>
+              ) : (
+                <div
+                  aria-hidden
+                  className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-[rgb(247_243_236/0.85)] to-transparent"
+                />
+              )}
               <FilmGrain />
               <div
                 className={cn(
-                  "absolute inset-x-0 bottom-0 z-[3] pb-14 md:pb-16",
+                  "hero-copy absolute inset-x-0 bottom-0 z-[3] pb-20 md:pb-24",
                   dark ? "text-text-inverse" : "text-text",
                 )}
               >
@@ -154,7 +175,7 @@ export function CampaignHero({ config }: { config: BlockOf<"hero">["config"] }) 
                       className="thread mt-6 w-24 animate-thread text-ornament [animation-delay:600ms]"
                     />
                     {slide.subline && (
-                      <p className="mt-5 max-w-md animate-in text-body-lg duration-1000 [animation-delay:500ms] [animation-fill-mode:both] fade-in">
+                      <p className="mt-5 max-w-sm animate-in text-body opacity-90 duration-1000 [animation-delay:500ms] [animation-fill-mode:both] fade-in">
                         {slide.subline}
                       </p>
                     )}
@@ -189,6 +210,23 @@ export function CampaignHero({ config }: { config: BlockOf<"hero">["config"] }) 
           style={{ clipPath: curtain ? "inset(0 0 0 0)" : "inset(0 0 0 100%)" }}
         />
       </div>
+
+      {/* Scroll cue: an invitation past the fold, where the header takes over. */}
+      <button
+        type="button"
+        onClick={() => window.scrollTo({ top: window.innerHeight, behavior: motionOk ? "smooth" : "auto" })}
+        className={cn(
+          "group absolute bottom-5 left-1/2 z-[6] hidden -translate-x-1/2 flex-col items-center gap-3 md:flex",
+          slides[index]?.theme === "dark" ? "text-text-inverse" : "text-text",
+        )}
+      >
+        <span className="eyebrow text-[0.6875rem] opacity-80 transition-opacity group-hover:opacity-100">
+          Scroll to explore
+        </span>
+        <span aria-hidden className="relative block h-10 w-px overflow-hidden bg-current/25">
+          <span className="scroll-cue absolute inset-x-0 top-0 h-1/2 bg-current" />
+        </span>
+      </button>
 
       {count > 1 && (
         <div

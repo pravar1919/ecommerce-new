@@ -109,6 +109,134 @@
   to {
     opacity: 1;
     transform: none;
+    clip-path: none;
+  }
+}
+
+/* "Unveil": the image is drawn up from below like a curtain, settling from a slight zoom. */
+[data-motion="ok"] [data-reveal="unveil"] {
+  transition: clip-path var(--dur-cinematic) var(--ease-in-out-quart);
+  transition-delay: calc(var(--i, 0) * var(--stagger) * 2);
+}
+[data-motion="ok"] [data-reveal="unveil"]:not([data-revealed]) {
+  opacity: 1;
+  transform: none;
+  clip-path: inset(100% 0 0 0);
+}
+[data-motion="ok"] [data-reveal="unveil"] img {
+  transition: scale 1.6s var(--ease-out-expo);
+}
+[data-motion="ok"] [data-reveal="unveil"]:not([data-revealed]) img {
+  scale: 1.18;
+}
+
+/*
+ * Scroll-driven motion (no JS): parallax inside image frames, and the hero easing back as the
+ * page scrolls. Only where the browser supports scroll timelines and motion is allowed.
+ */
+@supports (animation-timeline: view()) {
+  [data-motion="ok"] .parallax-img {
+    animation: parallax-y linear both;
+    animation-timeline: view();
+  }
+  [data-motion="ok"] .hero-media {
+    animation: hero-media linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 100svh;
+  }
+  [data-motion="ok"] .hero-copy {
+    animation: hero-copy linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 75svh;
+  }
+}
+@keyframes parallax-y {
+  from {
+    scale: 1.14;
+    translate: 0 -6%;
+  }
+  to {
+    scale: 1.14;
+    translate: 0 6%;
+  }
+}
+@keyframes hero-media {
+  to {
+    scale: 1.1;
+    translate: 0 8%;
+  }
+}
+@keyframes hero-copy {
+  to {
+    translate: 0 -10vh;
+    opacity: 0;
+  }
+}
+
+/*
+ * Lens reveal: a soft ink-like circle follows the pointer and shows a second image through the
+ * first. Pointer tracking is one delegated listener (reveal-observer.tsx); the easing is CSS, via
+ * registered properties so the circle trails the pointer. Fine pointers only.
+ */
+@property --lens-r {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 0px;
+}
+@property --lens-x {
+  syntax: "<length-percentage>";
+  inherits: true;
+  initial-value: 50%;
+}
+@property --lens-y {
+  syntax: "<length-percentage>";
+  inherits: true;
+  initial-value: 50%;
+}
+@property --lens-tx {
+  syntax: "<length-percentage>";
+  inherits: true;
+  initial-value: 50%;
+}
+@property --lens-ty {
+  syntax: "<length-percentage>";
+  inherits: true;
+  initial-value: 50%;
+}
+[data-lens] {
+  position: relative;
+  transition:
+    --lens-r 900ms var(--ease-out-expo),
+    --lens-x 350ms var(--ease-out-expo),
+    --lens-y 350ms var(--ease-out-expo),
+    --lens-tx 900ms var(--ease-out-expo),
+    --lens-ty 900ms var(--ease-out-expo);
+}
+[data-lens][data-lens-on] {
+  --lens-r: clamp(6rem, 13vw, 11rem);
+}
+.lens-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  mask-image:
+    radial-gradient(circle var(--lens-r) at var(--lens-x) var(--lens-y), #000 62%, transparent 100%),
+    radial-gradient(
+      circle calc(var(--lens-r) * 0.55) at var(--lens-tx) var(--lens-ty),
+      #000 50%,
+      transparent 100%
+    );
+}
+.lens-hint {
+  transition: opacity var(--dur-slow) var(--ease-out-expo);
+}
+[data-lens-on] .lens-hint {
+  opacity: 0;
+}
+@media not ((hover: hover) and (pointer: fine)) {
+  .lens-layer,
+  .lens-hint {
+    display: none;
   }
 }
 
@@ -121,5 +249,32 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/*
+ * Immersive homepage hero: the wordmark that signs it before the header slides in. Ivory over
+ * dark slides, ink over light ones (the hero publishes its active slide theme).
+ */
+.hero-mark {
+  color: var(--text-inverse);
+  text-shadow: 0 1px 18px rgb(20 18 18 / 0.35);
+}
+body:has([data-section="hero"][data-theme="light"]) .hero-mark {
+  color: var(--text);
+  text-shadow: none;
+}
+
+/* Scroll cue: a bead of light travelling down a thread. Still under reduced motion. */
+[data-motion="ok"] .scroll-cue {
+  animation: scroll-cue 2.4s var(--ease-in-out-quart) infinite;
+}
+@keyframes scroll-cue {
+  0% {
+    translate: 0 -100%;
+  }
+  60%,
+  100% {
+    translate: 0 200%;
   }
 }
