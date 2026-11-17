@@ -929,6 +929,130 @@ paths:
               schema:
                 $ref: '#/components/schemas/SizeChart'
           description: ''
+  /api/v1/cms/navigation/:
+    get:
+      operationId: cms_navigation_retrieve
+      description: 'Mega-menu: top-level categories with children, editorial feature
+        tiles, live collections.'
+      tags:
+      - cms
+      security:
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NavigationOut'
+          description: ''
+  /api/v1/cms/newsletter/:
+    post:
+      operationId: cms_newsletter_create
+      tags:
+      - cms
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NewsletterSignupRequest'
+        required: true
+      security:
+      - cookieAuth: []
+      - {}
+      responses:
+        '202':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NewsletterStatus'
+          description: ''
+  /api/v1/cms/newsletter/confirm/:
+    post:
+      operationId: cms_newsletter_confirm_create
+      tags:
+      - cms
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NewsletterTokenRequest'
+        required: true
+      security:
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NewsletterStatus'
+          description: ''
+  /api/v1/cms/newsletter/unsubscribe/:
+    post:
+      operationId: cms_newsletter_unsubscribe_create
+      tags:
+      - cms
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NewsletterTokenRequest'
+        required: true
+      security:
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NewsletterStatus'
+          description: ''
+  /api/v1/cms/pages/{slug}/:
+    get:
+      operationId: cms_pages_retrieve
+      description: The published version of a page. Staff may preview any version
+        with `?version=<id>`.
+      parameters:
+      - in: path
+        name: slug
+        schema:
+          type: string
+        required: true
+      - in: query
+        name: version
+        schema:
+          type: string
+        description: Staff-only preview
+      tags:
+      - cms
+      security:
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PageOut'
+          description: ''
+  /api/v1/cms/site-settings/:
+    get:
+      operationId: cms_site_settings_retrieve
+      description: Brand configuration, announcement bar, footer and social links.
+      tags:
+      - cms
+      security:
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SiteSettingsOut'
+          description: ''
   /api/v1/health/:
     get:
       operationId: health_retrieve
@@ -968,9 +1092,9 @@ components:
       - royal
       type: string
       description: |-
-        * `burgundy` - Burgundy
-        * `emerald` - Emerald
-        * `royal` - Royal blue
+        * `burgundy` - burgundy
+        * `emerald` - emerald
+        * `royal` - royal
     Address:
       type: object
       properties:
@@ -1073,6 +1197,44 @@ components:
       - phone
       - pincode
       - state_code
+    AnnouncementAccentEnum:
+      enum:
+      - burgundy
+      - emerald
+      - royal
+      - charcoal
+      type: string
+      description: |-
+        * `burgundy` - burgundy
+        * `emerald` - emerald
+        * `royal` - royal
+        * `charcoal` - charcoal
+    AnnouncementMessageOut:
+      type: object
+      properties:
+        text:
+          type: string
+        href:
+          type: string
+          nullable: true
+      required:
+      - href
+      - text
+    AnnouncementOut:
+      type: object
+      properties:
+        enabled:
+          type: boolean
+        accent:
+          $ref: '#/components/schemas/AnnouncementAccentEnum'
+        messages:
+          type: array
+          items:
+            $ref: '#/components/schemas/AnnouncementMessageOut'
+      required:
+      - accent
+      - enabled
+      - messages
     AppliesToEnum:
       enum:
       - body
@@ -1083,6 +1245,33 @@ components:
         * `body` - Body
         * `garment` - Garment
         * `both` - Body and garment
+    Block:
+      oneOf:
+      - $ref: '#/components/schemas/HeroBlock'
+      - $ref: '#/components/schemas/CategoryGridBlock'
+      - $ref: '#/components/schemas/CollectionFeatureBlock'
+      - $ref: '#/components/schemas/ProductRailBlock'
+      - $ref: '#/components/schemas/OccasionTilesBlock'
+      - $ref: '#/components/schemas/EditorialSplitBlock'
+      - $ref: '#/components/schemas/CraftStoryBlock'
+      - $ref: '#/components/schemas/TestimonialsBlock'
+      - $ref: '#/components/schemas/InstagramGalleryBlock'
+      - $ref: '#/components/schemas/NewsletterBlock'
+      - $ref: '#/components/schemas/RichTextBlock'
+      discriminator:
+        propertyName: type
+        mapping:
+          hero: '#/components/schemas/HeroBlock'
+          category_grid: '#/components/schemas/CategoryGridBlock'
+          collection_feature: '#/components/schemas/CollectionFeatureBlock'
+          product_rail: '#/components/schemas/ProductRailBlock'
+          occasion_tiles: '#/components/schemas/OccasionTilesBlock'
+          editorial_split: '#/components/schemas/EditorialSplitBlock'
+          craft_story: '#/components/schemas/CraftStoryBlock'
+          testimonials: '#/components/schemas/TestimonialsBlock'
+          instagram_gallery: '#/components/schemas/InstagramGalleryBlock'
+          newsletter: '#/components/schemas/NewsletterBlock'
+          rich_text: '#/components/schemas/RichTextBlock'
     CategoryDetail:
       type: object
       properties:
@@ -1129,6 +1318,40 @@ components:
       - path
       - seo
       - slug
+    CategoryGridBlock:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        type:
+          $ref: '#/components/schemas/CategoryGridBlockTypeEnum'
+        config:
+          $ref: '#/components/schemas/CategoryGridOut'
+      required:
+      - config
+      - id
+      - type
+    CategoryGridBlockTypeEnum:
+      enum:
+      - category_grid
+      type: string
+      description: '* `category_grid` - category_grid'
+    CategoryGridOut:
+      type: object
+      properties:
+        eyebrow:
+          type: string
+        title:
+          type: string
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/CategoryTileOut'
+      required:
+      - eyebrow
+      - items
+      - title
     CategoryNode:
       type: object
       properties:
@@ -1186,6 +1409,36 @@ components:
       - name
       - path
       - slug
+    CategoryRefOut:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+        slug:
+          type: string
+        path:
+          type: string
+      required:
+      - id
+      - name
+      - path
+      - slug
+    CategoryTileOut:
+      type: object
+      properties:
+        category:
+          $ref: '#/components/schemas/CategoryRefOut'
+        media:
+          $ref: '#/components/schemas/MediaOut'
+        label:
+          type: string
+      required:
+      - category
+      - label
+      - media
     Collection:
       type: object
       properties:
@@ -1206,7 +1459,7 @@ components:
         description:
           type: string
         accent:
-          $ref: '#/components/schemas/AccentEnum'
+          $ref: '#/components/schemas/CollectionAccentEnum'
         starts_at:
           type: string
           format: date-time
@@ -1223,6 +1476,95 @@ components:
       - id
       - name
       - seo
+      - slug
+    CollectionAccentEnum:
+      enum:
+      - burgundy
+      - emerald
+      - royal
+      type: string
+      description: |-
+        * `burgundy` - Burgundy
+        * `emerald` - Emerald
+        * `royal` - Royal blue
+    CollectionFeatureBlock:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        type:
+          $ref: '#/components/schemas/CollectionFeatureBlockTypeEnum'
+        config:
+          $ref: '#/components/schemas/CollectionFeatureOut'
+      required:
+      - config
+      - id
+      - type
+    CollectionFeatureBlockTypeEnum:
+      enum:
+      - collection_feature
+      type: string
+      description: '* `collection_feature` - collection_feature'
+    CollectionFeatureOut:
+      type: object
+      properties:
+        collection:
+          $ref: '#/components/schemas/CollectionRefOut'
+        layout:
+          $ref: '#/components/schemas/CollectionFeatureOutLayoutEnum'
+        media:
+          type: array
+          items:
+            $ref: '#/components/schemas/MediaOut'
+        eyebrow:
+          type: string
+        headline:
+          type: string
+        body:
+          type: string
+        cta_label:
+          type: string
+      required:
+      - body
+      - collection
+      - cta_label
+      - eyebrow
+      - headline
+      - layout
+      - media
+    CollectionFeatureOutLayoutEnum:
+      enum:
+      - split_left
+      - split_right
+      - full_bleed
+      type: string
+      description: |-
+        * `split_left` - split_left
+        * `split_right` - split_right
+        * `full_bleed` - full_bleed
+    CollectionRefOut:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+        slug:
+          type: string
+        eyebrow:
+          type: string
+        description:
+          type: string
+        accent:
+          $ref: '#/components/schemas/AccentEnum'
+      required:
+      - accent
+      - description
+      - eyebrow
+      - id
+      - name
       - slug
     ColourFacet:
       type: object
@@ -1261,6 +1603,53 @@ components:
       - image
       - name
       - slug
+    CraftStoryBlock:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        type:
+          $ref: '#/components/schemas/CraftStoryBlockTypeEnum'
+        config:
+          $ref: '#/components/schemas/CraftStoryOut'
+      required:
+      - config
+      - id
+      - type
+    CraftStoryBlockTypeEnum:
+      enum:
+      - craft_story
+      type: string
+      description: '* `craft_story` - craft_story'
+    CraftStoryOut:
+      type: object
+      properties:
+        eyebrow:
+          type: string
+        headline:
+          type: string
+        body:
+          type: string
+        stats:
+          type: array
+          items:
+            $ref: '#/components/schemas/StatOut'
+        media:
+          type: array
+          items:
+            $ref: '#/components/schemas/MediaOut'
+        cta:
+          allOf:
+          - $ref: '#/components/schemas/LinkOut'
+          nullable: true
+      required:
+      - body
+      - cta
+      - eyebrow
+      - headline
+      - media
+      - stats
     Detail:
       type: object
       properties:
@@ -1268,6 +1657,61 @@ components:
           type: string
       required:
       - detail
+    EditorialSplitBlock:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        type:
+          $ref: '#/components/schemas/EditorialSplitBlockTypeEnum'
+        config:
+          $ref: '#/components/schemas/EditorialSplitOut'
+      required:
+      - config
+      - id
+      - type
+    EditorialSplitBlockTypeEnum:
+      enum:
+      - editorial_split
+      type: string
+      description: '* `editorial_split` - editorial_split'
+    EditorialSplitOut:
+      type: object
+      properties:
+        eyebrow:
+          type: string
+        headline:
+          type: string
+        body:
+          type: string
+        media:
+          type: array
+          items:
+            $ref: '#/components/schemas/MediaOut'
+        cta:
+          allOf:
+          - $ref: '#/components/schemas/LinkOut'
+          nullable: true
+        layout:
+          $ref: '#/components/schemas/EditorialSplitOutLayoutEnum'
+      required:
+      - body
+      - cta
+      - eyebrow
+      - headline
+      - layout
+      - media
+    EditorialSplitOutLayoutEnum:
+      enum:
+      - '7_5'
+      - '5_7'
+      - overlap
+      type: string
+      description: |-
+        * `7_5` - 7_5
+        * `5_7` - 5_7
+        * `overlap` - overlap
     FacetValue:
       type: object
       properties:
@@ -1328,6 +1772,30 @@ components:
       - pattern
       - price
       - size
+    FooterColumnOut:
+      type: object
+      properties:
+        title:
+          type: string
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/LinkOut'
+      required:
+      - links
+      - title
+    FooterOut:
+      type: object
+      properties:
+        columns:
+          type: array
+          items:
+            $ref: '#/components/schemas/FooterColumnOut'
+        note:
+          type: string
+      required:
+      - columns
+      - note
     FulfilmentFacet:
       type: object
       properties:
@@ -1360,6 +1828,75 @@ components:
       required:
       - checks
       - status
+    HeroBlock:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        type:
+          $ref: '#/components/schemas/HeroBlockTypeEnum'
+        config:
+          $ref: '#/components/schemas/HeroOut'
+      required:
+      - config
+      - id
+      - type
+    HeroBlockTypeEnum:
+      enum:
+      - hero
+      type: string
+      description: '* `hero` - hero'
+    HeroOut:
+      type: object
+      properties:
+        slides:
+          type: array
+          items:
+            $ref: '#/components/schemas/HeroSlideOut'
+        autoplay_ms:
+          type: integer
+          nullable: true
+      required:
+      - autoplay_ms
+      - slides
+    HeroSlideOut:
+      type: object
+      properties:
+        eyebrow:
+          type: string
+        headline:
+          type: string
+        subline:
+          type: string
+        media:
+          $ref: '#/components/schemas/MediaOut'
+        mobile_media:
+          allOf:
+          - $ref: '#/components/schemas/MediaOut'
+          nullable: true
+        cta:
+          allOf:
+          - $ref: '#/components/schemas/LinkOut'
+          nullable: true
+        secondary_cta:
+          allOf:
+          - $ref: '#/components/schemas/LinkOut'
+          nullable: true
+        accent:
+          $ref: '#/components/schemas/AccentEnum'
+        theme:
+          $ref: '#/components/schemas/ThemeEnum'
+      required:
+      - accent
+      - cta
+      - eyebrow
+      - headline
+      - media
+      - mobile_media
+      - secondary_cta
+      - subline
+      - theme
     Image:
       type: object
       properties:
@@ -1395,6 +1932,45 @@ components:
       - alt
       - id
       - url
+    InstagramGalleryBlock:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        type:
+          $ref: '#/components/schemas/InstagramGalleryBlockTypeEnum'
+        config:
+          $ref: '#/components/schemas/InstagramGalleryOut'
+      required:
+      - config
+      - id
+      - type
+    InstagramGalleryBlockTypeEnum:
+      enum:
+      - instagram_gallery
+      type: string
+      description: '* `instagram_gallery` - instagram_gallery'
+    InstagramGalleryOut:
+      type: object
+      properties:
+        title:
+          type: string
+        handle:
+          type: string
+          nullable: true
+        profile_url:
+          type: string
+          nullable: true
+        media:
+          type: array
+          items:
+            $ref: '#/components/schemas/MediaOut'
+      required:
+      - handle
+      - media
+      - profile_url
+      - title
     InventoryPolicyEnum:
       enum:
       - track
@@ -1403,14 +1979,16 @@ components:
       description: |-
         * `track` - Track stock
         * `made_to_order` - Made to order (not stock-tracked)
-    KindEnum:
-      enum:
-      - image
-      - video
-      type: string
-      description: |-
-        * `image` - Image
-        * `video` - Video
+    LinkOut:
+      type: object
+      properties:
+        label:
+          type: string
+        href:
+          type: string
+      required:
+      - href
+      - label
     LoginRequest:
       type: object
       properties:
@@ -1601,7 +2179,7 @@ components:
           type: boolean
           description: Development placeholder, never real inventory
         kind:
-          $ref: '#/components/schemas/KindEnum'
+          $ref: '#/components/schemas/MediaKindEnum'
         role:
           $ref: '#/components/schemas/RoleEnum'
         colour:
@@ -1617,6 +2195,72 @@ components:
       - id
       - poster_url
       - url
+    MediaKindEnum:
+      enum:
+      - image
+      - video
+      type: string
+      description: |-
+        * `image` - Image
+        * `video` - Video
+    MediaOut:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        kind:
+          $ref: '#/components/schemas/MediaOutKindEnum'
+        url:
+          type: string
+        poster_url:
+          type: string
+          nullable: true
+        alt:
+          type: string
+          description: Empty string means decorative
+        width:
+          type: integer
+          nullable: true
+        height:
+          type: integer
+          nullable: true
+        focal_x:
+          type: number
+          format: double
+        focal_y:
+          type: number
+          format: double
+        dominant_hex:
+          type: string
+        blurhash:
+          type: string
+        credit:
+          type: string
+        is_placeholder:
+          type: boolean
+      required:
+      - alt
+      - blurhash
+      - credit
+      - dominant_hex
+      - focal_x
+      - focal_y
+      - height
+      - id
+      - is_placeholder
+      - kind
+      - poster_url
+      - url
+      - width
+    MediaOutKindEnum:
+      enum:
+      - image
+      - video
+      type: string
+      description: |-
+        * `image` - image
+        * `video` - video
     Money:
       type: object
       properties:
@@ -1641,6 +2285,260 @@ components:
       required:
       - name
       - slug
+    NavChildOut:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+        path:
+          type: string
+      required:
+      - id
+      - name
+      - path
+    NavCollectionOut:
+      type: object
+      properties:
+        name:
+          type: string
+        slug:
+          type: string
+        accent:
+          type: string
+      required:
+      - accent
+      - name
+      - slug
+    NavFeatureOut:
+      type: object
+      properties:
+        eyebrow:
+          type: string
+        title:
+          type: string
+        href:
+          type: string
+        media:
+          $ref: '#/components/schemas/MediaOut'
+      required:
+      - eyebrow
+      - href
+      - media
+      - title
+    NavItemOut:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+        path:
+          type: string
+        eyebrow:
+          type: string
+        children:
+          type: array
+          items:
+            $ref: '#/components/schemas/NavChildOut'
+        features:
+          type: array
+          items:
+            $ref: '#/components/schemas/NavFeatureOut'
+      required:
+      - children
+      - eyebrow
+      - features
+      - id
+      - name
+      - path
+    NavigationOut:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/NavItemOut'
+        collections:
+          type: array
+          items:
+            $ref: '#/components/schemas/NavCollectionOut'
+      required:
+      - collections
+      - items
+    NewsletterBlock:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        type:
+          $ref: '#/components/schemas/NewsletterBlockTypeEnum'
+        config:
+          $ref: '#/components/schemas/NewsletterOut'
+      required:
+      - config
+      - id
+      - type
+    NewsletterBlockTypeEnum:
+      enum:
+      - newsletter
+      type: string
+      description: '* `newsletter` - newsletter'
+    NewsletterOut:
+      type: object
+      properties:
+        eyebrow:
+          type: string
+        headline:
+          type: string
+        body:
+          type: string
+        consent_text:
+          type: string
+      required:
+      - body
+      - consent_text
+      - eyebrow
+      - headline
+    NewsletterSignupRequest:
+      type: object
+      properties:
+        email:
+          type: string
+          format: email
+          minLength: 1
+          maxLength: 254
+        consent:
+          type: boolean
+          description: 'Must be true: explicit marketing consent'
+        source:
+          type: string
+          default: ''
+          maxLength: 40
+      required:
+      - consent
+      - email
+    NewsletterStatus:
+      type: object
+      properties:
+        status:
+          $ref: '#/components/schemas/NewsletterStatusStatusEnum'
+      required:
+      - status
+    NewsletterStatusStatusEnum:
+      enum:
+      - pending
+      - confirmed
+      - unsubscribed
+      type: string
+      description: |-
+        * `pending` - pending
+        * `confirmed` - confirmed
+        * `unsubscribed` - unsubscribed
+    NewsletterTokenRequest:
+      type: object
+      properties:
+        token:
+          type: string
+          minLength: 1
+          maxLength: 300
+      required:
+      - token
+    OccasionTileOut:
+      type: object
+      properties:
+        occasion:
+          $ref: '#/components/schemas/Ref'
+        media:
+          $ref: '#/components/schemas/MediaOut'
+        label:
+          type: string
+      required:
+      - label
+      - media
+      - occasion
+    OccasionTilesBlock:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        type:
+          $ref: '#/components/schemas/OccasionTilesBlockTypeEnum'
+        config:
+          $ref: '#/components/schemas/OccasionTilesOut'
+      required:
+      - config
+      - id
+      - type
+    OccasionTilesBlockTypeEnum:
+      enum:
+      - occasion_tiles
+      type: string
+      description: '* `occasion_tiles` - occasion_tiles'
+    OccasionTilesOut:
+      type: object
+      properties:
+        eyebrow:
+          type: string
+        title:
+          type: string
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/OccasionTileOut'
+      required:
+      - eyebrow
+      - items
+      - title
+    PageOut:
+      type: object
+      properties:
+        blocks:
+          type: array
+          items:
+            $ref: '#/components/schemas/Block'
+        slug:
+          type: string
+        title:
+          type: string
+        template:
+          $ref: '#/components/schemas/TemplateEnum'
+        version:
+          type: integer
+        status:
+          $ref: '#/components/schemas/PageOutStatusEnum'
+        published_at:
+          type: string
+          format: date-time
+          nullable: true
+        seo:
+          $ref: '#/components/schemas/SeoOut'
+      required:
+      - blocks
+      - published_at
+      - seo
+      - slug
+      - status
+      - template
+      - title
+      - version
+    PageOutStatusEnum:
+      enum:
+      - draft
+      - scheduled
+      - published
+      - archived
+      type: string
+      description: |-
+        * `draft` - draft
+        * `scheduled` - scheduled
+        * `published` - published
+        * `archived` - archived
     PaginatedProductCardList:
       type: object
       required:
@@ -1989,6 +2887,52 @@ components:
       - slug
       - specifications
       - variants
+    ProductRailBlock:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        type:
+          $ref: '#/components/schemas/ProductRailBlockTypeEnum'
+        config:
+          $ref: '#/components/schemas/ProductRailOut'
+      required:
+      - config
+      - id
+      - type
+    ProductRailBlockTypeEnum:
+      enum:
+      - product_rail
+      type: string
+      description: '* `product_rail` - product_rail'
+    ProductRailOut:
+      type: object
+      properties:
+        eyebrow:
+          type: string
+        title:
+          type: string
+        source:
+          $ref: '#/components/schemas/SourceEnum'
+        collection_slug:
+          type: string
+          nullable: true
+        products:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProductCard'
+        cta:
+          allOf:
+          - $ref: '#/components/schemas/LinkOut'
+          nullable: true
+      required:
+      - collection_slug
+      - cta
+      - eyebrow
+      - products
+      - source
+      - title
     Profile:
       type: object
       properties:
@@ -2013,6 +2957,20 @@ components:
       - email
       - first_name
       - last_name
+    Ref:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+        slug:
+          type: string
+      required:
+      - id
+      - name
+      - slug
     RegisterRequest:
       type: object
       properties:
@@ -2040,6 +2998,33 @@ components:
       - email
       - first_name
       - password
+    RichTextBlock:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        type:
+          $ref: '#/components/schemas/RichTextBlockTypeEnum'
+        config:
+          $ref: '#/components/schemas/RichTextOut'
+      required:
+      - config
+      - id
+      - type
+    RichTextBlockTypeEnum:
+      enum:
+      - rich_text
+      type: string
+      description: '* `rich_text` - rich_text'
+    RichTextOut:
+      type: object
+      properties:
+        html:
+          type: string
+          description: Sanitised server-side (nh3 allow-list)
+      required:
+      - html
     RoleEnum:
       enum:
       - primary
@@ -2064,6 +3049,78 @@ components:
       required:
       - description
       - title
+    SeoOut:
+      type: object
+      properties:
+        title:
+          type: string
+        description:
+          type: string
+        og_image:
+          allOf:
+          - $ref: '#/components/schemas/MediaOut'
+          nullable: true
+      required:
+      - description
+      - og_image
+      - title
+    SiteSettingsOut:
+      type: object
+      properties:
+        brand_name:
+          type: string
+        legal_name:
+          type: string
+        tagline:
+          type: string
+        monogram:
+          type: string
+        logo:
+          allOf:
+          - $ref: '#/components/schemas/MediaOut'
+          nullable: true
+        theme_key:
+          type: string
+        environment:
+          type: string
+        is_dev_identity:
+          type: boolean
+          description: True while the temporary development identity is in use
+        support_email:
+          type: string
+        support_phone:
+          type: string
+        registered_address:
+          type: string
+        social_links:
+          type: array
+          items:
+            $ref: '#/components/schemas/SocialLinkOut'
+        announcement:
+          $ref: '#/components/schemas/AnnouncementOut'
+        footer:
+          $ref: '#/components/schemas/FooterOut'
+        seo_title:
+          type: string
+        seo_description:
+          type: string
+      required:
+      - announcement
+      - brand_name
+      - environment
+      - footer
+      - is_dev_identity
+      - legal_name
+      - logo
+      - monogram
+      - registered_address
+      - seo_description
+      - seo_title
+      - social_links
+      - support_email
+      - support_phone
+      - tagline
+      - theme_key
     SizeChart:
       type: object
       properties:
@@ -2131,6 +3188,28 @@ components:
       - count
       - label
       - system
+    SocialLinkOut:
+      type: object
+      properties:
+        network:
+          type: string
+        url:
+          type: string
+      required:
+      - network
+      - url
+    SourceEnum:
+      enum:
+      - collection
+      - manual
+      - new_arrivals
+      - trending
+      type: string
+      description: |-
+        * `collection` - collection
+        * `manual` - manual
+        * `new_arrivals` - new_arrivals
+        * `trending` - trending
     Specification:
       type: object
       properties:
@@ -2140,6 +3219,19 @@ components:
           type: string
       required:
       - key
+      - value
+    StatOut:
+      type: object
+      properties:
+        value:
+          type: integer
+        suffix:
+          type: string
+        label:
+          type: string
+      required:
+      - label
+      - suffix
       - value
     StateCodeEnum:
       enum:
@@ -2276,6 +3368,86 @@ components:
       - categories
       - products
       - queries
+    TemplateEnum:
+      enum:
+      - home
+      - landing
+      - content
+      type: string
+      description: |-
+        * `home` - home
+        * `landing` - landing
+        * `content` - content
+    TestimonialOut:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+        quote:
+          type: string
+        occasion:
+          type: string
+        location:
+          type: string
+        media:
+          allOf:
+          - $ref: '#/components/schemas/MediaOut'
+          nullable: true
+        is_placeholder:
+          type: boolean
+      required:
+      - id
+      - is_placeholder
+      - location
+      - media
+      - name
+      - occasion
+      - quote
+    TestimonialsBlock:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        type:
+          $ref: '#/components/schemas/TestimonialsBlockTypeEnum'
+        config:
+          $ref: '#/components/schemas/TestimonialsOut'
+      required:
+      - config
+      - id
+      - type
+    TestimonialsBlockTypeEnum:
+      enum:
+      - testimonials
+      type: string
+      description: '* `testimonials` - testimonials'
+    TestimonialsOut:
+      type: object
+      properties:
+        eyebrow:
+          type: string
+        title:
+          type: string
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/TestimonialOut'
+      required:
+      - eyebrow
+      - items
+      - title
+    ThemeEnum:
+      enum:
+      - light
+      - dark
+      type: string
+      description: |-
+        * `light` - light
+        * `dark` - dark
     Variant:
       type: object
       properties:

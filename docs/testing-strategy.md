@@ -39,7 +39,9 @@ make lint-backend     # ruff check + ruff format --check + import-linter (mypy p
 make schema           # regenerate + validate backend/schema/openapi.yaml
 make check-backend    # all of the above + makemigrations --check + schema drift
 make test-frontend    # npm run typecheck && npm run lint && npm run test
-make e2e              # npx playwright test
+make check-frontend   # + prettier, API types and cn tables drift
+make e2e              # npx playwright test (compose stack through Caddy)
+make lighthouse       # mobile budgets (design-system.md §9) on a production build in .next-lighthouse
 make check            # all of the above, used before marking a milestone complete
 ```
 

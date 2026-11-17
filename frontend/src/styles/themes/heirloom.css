@@ -1,0 +1,49 @@
+/* Theme: Direction B "Quiet Heirloom" (approved 2026-11-17). Also the default when no theme matches. */
+:root,
+[data-theme="heirloom"] {
+  --bg: var(--ivory-100);
+  --surface: var(--ivory-50);
+  --surface-inverse: var(--charcoal-900);
+  --text: var(--charcoal-900);
+  --text-muted: var(--stone-500);
+  --text-inverse: var(--ivory-100);
+  --text-inverse-muted: #c9c2b6; /* 9.0:1 on charcoal */
+  --border: var(--sand-200);
+  --border-strong: var(--charcoal-900);
+  --border-inverse: rgb(248 244 236 / 0.18);
+  --primary: var(--burgundy-700);
+  --primary-fg: var(--ivory-100);
+  --accent: var(--burgundy-700);
+  --accent-fg: var(--ivory-100);
+  --ornament: var(--gold-300); /* dark grounds only for text (contrast rules) */
+  --highlight: var(--marigold-400); /* dark grounds only */
+  --focus: var(--royal-700);
+  --error: var(--error-700);
+  --skeleton: var(--sand-200);
+}
+
+/* Campaign accents: a campaign "owns" one accent, set per CMS block via data-accent. */
+[data-accent="burgundy"] {
+  --accent: var(--burgundy-700);
+}
+[data-accent="emerald"] {
+  --accent: var(--emerald-800);
+}
+[data-accent="royal"] {
+  --accent: var(--royal-700);
+}
+[data-accent="charcoal"] {
+  --accent: var(--charcoal-900);
+}
+
+/* Inverse composition (campaign bands, footer): not an OS dark mode. */
+.surface-inverse {
+  --text: var(--ivory-100);
+  --text-muted: #c9c2b6;
+  --border: rgb(248 244 236 / 0.18);
+  --border-strong: var(--ivory-100);
+  --focus: var(--marigold-400);
+  --skeleton: #3a3938;
+  background-color: var(--surface-inverse);
+  color: var(--text);
+}

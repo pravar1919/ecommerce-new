@@ -1,0 +1,125 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "../styles/tokens.css";
+@import "../styles/themes/heirloom.css";
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    @apply bg-bg font-sans text-text antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply min-h-dvh bg-bg text-body;
+  }
+  :focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+  }
+  ::selection {
+    background: var(--primary);
+    color: var(--primary-fg);
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@layer components {
+  .page-x {
+    padding-inline: var(--page-margin);
+  }
+  .container-page {
+    width: 100%;
+    max-width: var(--content-max);
+    margin-inline: auto;
+    padding-inline: var(--page-margin);
+  }
+  /* 4 → 8 → 12 column editorial grid */
+  .grid-editorial {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: var(--gutter);
+  }
+  @media (min-width: 48rem) {
+    .grid-editorial {
+      grid-template-columns: repeat(8, minmax(0, 1fr));
+    }
+  }
+  @media (min-width: 64rem) {
+    .grid-editorial {
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+  }
+  .eyebrow {
+    @apply text-label font-medium uppercase;
+  }
+  .price {
+    font-variant-numeric: tabular-nums lining-nums;
+  }
+  /* "Thread" motif: a 1px line that stitches in (scaleX) */
+  .thread {
+    display: block;
+    height: 1px;
+    background: currentColor;
+    transform-origin: left center;
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/*
+ * Scroll reveals (components/motion/reveal-observer.tsx). Only pre-hidden when the head bootstrap
+ * marked the document motion-capable; a failsafe shows everything if hydration never happens.
+ */
+[data-motion="ok"] [data-reveal] {
+  transition:
+    opacity var(--dur-slow) var(--ease-out-expo),
+    transform var(--dur-slow) var(--ease-out-expo);
+  transition-delay: calc(var(--i, 0) * var(--stagger));
+}
+[data-motion="ok"] [data-reveal]:not([data-revealed]) {
+  opacity: 0;
+  transform: translate3d(0, 1.5rem, 0);
+}
+[data-motion="ok"] [data-reveal="thread"]:not([data-revealed]) {
+  opacity: 1;
+  transform: scaleX(0);
+}
+[data-motion="ok"] [data-reveal="thread"] {
+  transition-duration: var(--dur-cinematic);
+}
+[data-motion="ok"]:not([data-reveal-ready]) [data-reveal]:not([data-revealed]) {
+  animation: reveal-failsafe 0s 3s forwards;
+}
+@keyframes reveal-failsafe {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Reduced motion: instant states everywhere (motion components also guard in JS). */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -587,22 +587,23 @@ COLLECTIONS = [
 ]
 
 
-def placeholder_png(label: str, hex_colour: str, index: int) -> bytes:
+def placeholder_png(
+    label: str, hex_colour: str, index: int, size=(1600, 2000), note="not product photography"
+) -> bytes:
     from PIL import Image, ImageDraw, ImageFont
 
-    w, h = 1600, 2000
+    w, h = size
     rgb = tuple(int(hex_colour[i : i + 2], 16) for i in (1, 3, 5))
     light = sum(rgb) / 3 > 140
     fg = (36, 35, 35) if light else (248, 244, 236)
     img = Image.new("RGB", (w, h), rgb)
     d = ImageDraw.Draw(img)
     d.rectangle([60, 60, w - 60, h - 60], outline=fg, width=4)
-    big, small = ImageFont.load_default(size=96), ImageFont.load_default(size=56)
-    d.text((w / 2, h / 2 - 120), "DEV PLACEHOLDER", fill=fg, font=big, anchor="mm")
-    d.text((w / 2, h / 2 + 20), label[:40], fill=fg, font=small, anchor="mm")
-    d.text(
-        (w / 2, h / 2 + 110), f"image {index + 1} · not product photography", fill=fg, font=small, anchor="mm"
-    )
+    scale = min(w, h) / 1600
+    big, small = ImageFont.load_default(size=int(96 * scale)), ImageFont.load_default(size=int(56 * scale))
+    d.text((w / 2, h / 2 - 120 * scale), "DEV PLACEHOLDER", fill=fg, font=big, anchor="mm")
+    d.text((w / 2, h / 2 + 20 * scale), label[:48], fill=fg, font=small, anchor="mm")
+    d.text((w / 2, h / 2 + 110 * scale), f"image {index + 1} · {note}", fill=fg, font=small, anchor="mm")
     buf = io.BytesIO()
     img.save(buf, format="PNG", optimize=True)
     return buf.getvalue()
@@ -636,6 +637,9 @@ class Command(BaseCommand):
                 if p.status != Product.Status.PUBLISHED and p.media.exists():
                     catalog_services.publish_product(p)
         catalog_services.update_search_vectors([p.pk for p in products.values()])
+        from devtools.cms_seed import seed_cms
+
+        seed_cms(images=not opts["no_images"], placeholder_png=placeholder_png, log=self.stdout.write)
         self.admin_user(opts["admin_email"])
         self.stdout.write(self.style.SUCCESS(f"Seeded {len(products)} products."))
 

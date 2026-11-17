@@ -14,6 +14,7 @@ dependencies = [
     "djangorestframework>=3.18.3",
     "drf-spectacular>=0.30.0",
     "gunicorn>=27.0.1",
+    "nh3>=0.3.7",
     "pillow>=13.0.0",
     "psycopg[binary]>=3.3.9",
     "redis>=8.1.0",
@@ -55,7 +56,8 @@ ignore = ["RUF012", "S101", "RUF001", "RUF002", "RUF003"]  # typographic copy (â
 [tool.ruff.lint.per-file-ignores]
 "*/tests/*" = ["S105", "S106", "S311"]
 "conftest.py" = ["S105", "S106"]
-"devtools/management/commands/seed_dev.py" = ["S311", "E501"]  # deterministic dev data, tabular literals
+"devtools/management/commands/seed_dev.py" = ["S311", "E501"]
+"devtools/cms_seed.py" = ["E501"]  # tabular seed copy  # deterministic dev data, tabular literals
 "config/settings/*" = ["S105"]
 
 [tool.importlinter]
@@ -75,6 +77,13 @@ source_modules = ["apps.categories", "apps.attributes", "apps.catalog", "apps.ac
 # extend with carts/checkout/orders/payments/shipping/returns as those apps are added (Phase 5+)
 forbidden_modules = ["apps.inventory"]
 ignore_imports = ["apps.*.tests.** -> apps.**"]  # tests may build cross-app fixtures
+
+[[tool.importlinter.contracts]]
+name = "Catalogue and commerce apps do not depend on content"
+type = "forbidden"
+source_modules = ["apps.categories", "apps.attributes", "apps.catalog", "apps.inventory", "apps.pricing", "apps.accounts", "apps.customers"]
+forbidden_modules = ["apps.cms"]
+ignore_imports = ["apps.*.tests.** -> apps.**"]
 
 [[tool.importlinter.contracts]]
 name = "Taxonomy apps do not depend on catalog"

@@ -37,6 +37,7 @@ LOCAL_APPS = [
     "apps.catalog",
     "apps.inventory",
     "apps.pricing",
+    "apps.cms",
     "devtools",
 ]
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -139,6 +140,7 @@ REST_FRAMEWORK = {
         "auth": env.str("THROTTLE_AUTH", default="10/min"),
         "password_reset": env.str("THROTTLE_PASSWORD_RESET", default="5/hour"),
         "search": env.str("THROTTLE_SEARCH", default="120/min"),
+        "newsletter": env.str("THROTTLE_NEWSLETTER", default="5/hour"),
     },
     "TEST_REQUEST_DEFAULT_FORMAT": "json",
 }
@@ -149,7 +151,10 @@ SPECTACULAR_SETTINGS = {
     "SERVE_INCLUDE_SCHEMA": False,
     "SCHEMA_PATH_PREFIX": r"/api/v1",
     "COMPONENT_SPLIT_REQUEST": True,
-    "ENUM_NAME_OVERRIDES": {},
+    "ENUM_NAME_OVERRIDES": {
+        "AccentEnum": ["burgundy", "emerald", "royal"],
+        "AnnouncementAccentEnum": ["burgundy", "emerald", "royal", "charcoal"],
+    },
 }
 
 # --- Celery -------------------------------------------------------------------------
@@ -164,6 +169,10 @@ CELERY_TIMEZONE = TIME_ZONE
 CELERY_BEAT_SCHEDULE = {
     "release-expired-reservations": {
         "task": "apps.inventory.tasks.release_expired_reservations",
+        "schedule": 60.0,
+    },
+    "publish-due-cms-versions": {
+        "task": "apps.cms.tasks.publish_due_versions",
         "schedule": 60.0,
     },
 }
@@ -187,12 +196,17 @@ DEFAULT_FROM_EMAIL = env.str("DEFAULT_FROM_EMAIL", default="orders@localhost")
 # --- Commerce ------------------------------------------------------------------------
 BRAND_NAME = env.str("BRAND_NAME", default="ATELIER")
 BRAND_THEME = env.str("BRAND_THEME", default="heirloom")
+BRAND_TAGLINE = env.str("BRAND_TAGLINE", default="")
 DEV_BRAND_NAME = "ATELIER"
 ORDER_NUMBER_PREFIX = env.str("ORDER_NUMBER_PREFIX", default="AT")
 SELLER_STATE_CODE = env.str("SELLER_STATE_CODE", default="27")
 CHECKOUT_RESERVATION_TTL_MINUTES = env.int("CHECKOUT_RESERVATION_TTL_MINUTES", default=15)
 LOW_STOCK_DISPLAY_THRESHOLD = env.int("LOW_STOCK_DISPLAY_THRESHOLD", default=3)
 MAX_CART_LINE_QUANTITY = 10
+NEWSLETTER_CONFIRM_URL = env.str("NEWSLETTER_CONFIRM_URL", default=f"{SITE_URL}/newsletter/confirm")
+# Next.js on-demand ISR revalidation (frontend/src/app/api/revalidate/route.ts). Empty URL disables it.
+FRONTEND_REVALIDATE_URL = env.str("FRONTEND_REVALIDATE_URL", default="")
+REVALIDATE_SECRET = env.str("REVALIDATE_SECRET", default="")
 PASSWORD_RESET_URL = env.str("PASSWORD_RESET_URL", default=f"{SITE_URL}/account/reset-password")
 
 # --- Logging ---------------------------------------------------------------------------

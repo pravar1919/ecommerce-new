@@ -19,7 +19,7 @@ Small, buildable increments. Each phase ends with the milestone gate in `testing
 7. Django Admin registrations, `seed_dev` command with labelled placeholder data
 - **Exit:** migrations clean, ≥ 90% service coverage for inventory/pricing, OpenAPI validates, catalogue API manually verified
 
-## Phase 3: Frontend design system, homepage, navigation
+## Phase 3: Frontend design system, homepage, navigation ✅ (2026-11-17)
 1. Next.js scaffold, Tailwind v4 tokens, themes, fonts, typed API client generation
 2. UI primitives (shadcn/ui restyled), motion wrappers, React Bits installs
 3. Header / mega-menu / mobile nav / announcement bar / footer

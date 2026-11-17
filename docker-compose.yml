@@ -2,7 +2,7 @@
 #
 #   docker compose up -d                 → infrastructure only (postgres, redis, s3, mailpit)
 #   docker compose --profile app up -d   → + backend, worker, beat, frontend, caddy
-#                                          (backend available from Phase 2, frontend from Phase 3)
+#                                          site on http://localhost:8080 (Caddy)
 #
 # Ports bind to 127.0.0.1 only.
 
@@ -127,10 +127,21 @@ services:
     build:
       context: ./frontend
       target: dev
-    command: ["npm", "run", "dev"]
+    # install when package-lock changes (fast no-op otherwise), then serve with HMR
+    command: ["sh", "-c", "npm ci --no-audit --no-fund --prefer-offline --loglevel=error && npm run dev"]
+    environment:
+      WATCHPACK_POLLING: "true"
     volumes:
       - ./frontend:/app
       - frontend-node-modules:/app/node_modules
+      - frontend-next:/app/.next
+    depends_on:
+      backend: { condition: service_healthy }
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O /dev/null http://127.0.0.1:3000/robots.txt"]
+      interval: 5s
+      timeout: 5s
+      retries: 60
     ports: ["127.0.0.1:3000:3000"]
     profiles: ["app"]
 
@@ -143,7 +154,9 @@ services:
     volumes:
       - ./infra/caddy/Caddyfile:/etc/caddy/Caddyfile:ro
       - caddy-data:/data
-    depends_on: [backend, frontend]
+    depends_on:
+      backend: { condition: service_healthy }
+      frontend: { condition: service_healthy }
     profiles: ["app"]
 
 volumes:
@@ -152,4 +165,5 @@ volumes:
   s3-data:
   backend-venv:
   frontend-node-modules:
+  frontend-next:
   caddy-data:

@@ -1,0 +1,8 @@
+node_modules
+.next
+.next-lighthouse
+.env*
+test-results
+playwright-report
+lighthouse
+coverage

@@ -161,6 +161,11 @@ def list_products(f: ProductFilters) -> QuerySet[Product]:
     return _listing_prefetch(qs.distinct() if f.collection else qs)
 
 
+def products_by_ids(ids) -> QuerySet[Product]:
+    """Published products for curated lists (CMS rails). Caller restores the curated order."""
+    return _listing_prefetch(published_products().filter(pk__in=list(ids)))
+
+
 def _ids(f: ProductFilters, skip: str) -> QuerySet:
     return apply_filters(published_products(), f, skip=skip).values("pk")
 
