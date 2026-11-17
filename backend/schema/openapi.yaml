@@ -1,0 +1,2322 @@
+openapi: 3.0.3
+info:
+  title: Commerce API
+  version: 1.0.0
+  description: Storefront and administration API. Money amounts are integer paise
+    (INR).
+paths:
+  /api/v1/account/addresses/:
+    get:
+      operationId: account_addresses_list
+      description: 'Customer-owned resources: queryset is always scoped to the requesting
+        user (no IDOR).'
+      tags:
+      - account
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Address'
+          description: ''
+    post:
+      operationId: account_addresses_create
+      description: 'Customer-owned resources: queryset is always scoped to the requesting
+        user (no IDOR).'
+      tags:
+      - account
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AddressRequest'
+        required: true
+      security:
+      - cookieAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Address'
+          description: ''
+  /api/v1/account/addresses/{id}/:
+    get:
+      operationId: account_addresses_retrieve
+      description: 'Customer-owned resources: queryset is always scoped to the requesting
+        user (no IDOR).'
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+          format: uuid
+        description: A UUID string identifying this address.
+        required: true
+      tags:
+      - account
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Address'
+          description: ''
+    put:
+      operationId: account_addresses_update
+      description: 'Customer-owned resources: queryset is always scoped to the requesting
+        user (no IDOR).'
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+          format: uuid
+        description: A UUID string identifying this address.
+        required: true
+      tags:
+      - account
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AddressRequest'
+        required: true
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Address'
+          description: ''
+    patch:
+      operationId: account_addresses_partial_update
+      description: 'Customer-owned resources: queryset is always scoped to the requesting
+        user (no IDOR).'
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+          format: uuid
+        description: A UUID string identifying this address.
+        required: true
+      tags:
+      - account
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedAddressRequest'
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Address'
+          description: ''
+    delete:
+      operationId: account_addresses_destroy
+      description: 'Customer-owned resources: queryset is always scoped to the requesting
+        user (no IDOR).'
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+          format: uuid
+        description: A UUID string identifying this address.
+        required: true
+      tags:
+      - account
+      security:
+      - cookieAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/v1/account/addresses/{id}/set-default/:
+    post:
+      operationId: account_addresses_set_default_create
+      description: 'Customer-owned resources: queryset is always scoped to the requesting
+        user (no IDOR).'
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+          format: uuid
+        description: A UUID string identifying this address.
+        required: true
+      tags:
+      - account
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Address'
+          description: ''
+  /api/v1/account/measurements/:
+    get:
+      operationId: account_measurements_list
+      description: 'Customer-owned resources: queryset is always scoped to the requesting
+        user (no IDOR).'
+      tags:
+      - account
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MeasurementProfile'
+          description: ''
+    post:
+      operationId: account_measurements_create
+      description: 'Customer-owned resources: queryset is always scoped to the requesting
+        user (no IDOR).'
+      tags:
+      - account
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MeasurementProfileRequest'
+        required: true
+      security:
+      - cookieAuth: []
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MeasurementProfile'
+          description: ''
+  /api/v1/account/measurements/{id}/:
+    get:
+      operationId: account_measurements_retrieve
+      description: 'Customer-owned resources: queryset is always scoped to the requesting
+        user (no IDOR).'
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+          format: uuid
+        description: A UUID string identifying this measurement profile.
+        required: true
+      tags:
+      - account
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MeasurementProfile'
+          description: ''
+    put:
+      operationId: account_measurements_update
+      description: 'Customer-owned resources: queryset is always scoped to the requesting
+        user (no IDOR).'
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+          format: uuid
+        description: A UUID string identifying this measurement profile.
+        required: true
+      tags:
+      - account
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MeasurementProfileRequest'
+        required: true
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MeasurementProfile'
+          description: ''
+    patch:
+      operationId: account_measurements_partial_update
+      description: 'Customer-owned resources: queryset is always scoped to the requesting
+        user (no IDOR).'
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+          format: uuid
+        description: A UUID string identifying this measurement profile.
+        required: true
+      tags:
+      - account
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedMeasurementProfileRequest'
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MeasurementProfile'
+          description: ''
+    delete:
+      operationId: account_measurements_destroy
+      description: 'Customer-owned resources: queryset is always scoped to the requesting
+        user (no IDOR).'
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+          format: uuid
+        description: A UUID string identifying this measurement profile.
+        required: true
+      tags:
+      - account
+      security:
+      - cookieAuth: []
+      responses:
+        '204':
+          description: No response body
+  /api/v1/account/profile/:
+    get:
+      operationId: account_profile_retrieve
+      tags:
+      - account
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Profile'
+          description: ''
+    patch:
+      operationId: account_profile_partial_update
+      tags:
+      - account
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchedProfileRequest'
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Profile'
+          description: ''
+  /api/v1/auth/csrf/:
+    get:
+      operationId: auth_csrf_retrieve
+      description: Sets the csrftoken cookie. Call once before the first unsafe request.
+      tags:
+      - auth
+      security:
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Detail'
+          description: ''
+  /api/v1/auth/login/:
+    post:
+      operationId: auth_login_create
+      tags:
+      - auth
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginRequest'
+        required: true
+      security:
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Me'
+          description: ''
+  /api/v1/auth/logout/:
+    post:
+      operationId: auth_logout_create
+      tags:
+      - auth
+      security:
+      - cookieAuth: []
+      - {}
+      responses:
+        '204':
+          description: No response body
+  /api/v1/auth/me/:
+    get:
+      operationId: auth_me_retrieve
+      tags:
+      - auth
+      security:
+      - cookieAuth: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Me'
+          description: ''
+  /api/v1/auth/password/reset/:
+    post:
+      operationId: auth_password_reset_create
+      tags:
+      - auth
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PasswordResetRequestRequest'
+        required: true
+      security:
+      - cookieAuth: []
+      - {}
+      responses:
+        '202':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Detail'
+          description: ''
+  /api/v1/auth/password/reset/confirm/:
+    post:
+      operationId: auth_password_reset_confirm_create
+      tags:
+      - auth
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PasswordResetConfirmRequest'
+        required: true
+      security:
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Detail'
+          description: ''
+  /api/v1/auth/register/:
+    post:
+      operationId: auth_register_create
+      tags:
+      - auth
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RegisterRequest'
+        required: true
+      security:
+      - cookieAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Me'
+          description: ''
+  /api/v1/catalog/categories/:
+    get:
+      operationId: catalog_categories_list
+      tags:
+      - catalog
+      security:
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CategoryNode'
+          description: ''
+  /api/v1/catalog/categories/{path}/:
+    get:
+      operationId: catalog_categories_retrieve
+      parameters:
+      - in: path
+        name: path
+        schema:
+          type: string
+        required: true
+      tags:
+      - catalog
+      security:
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CategoryDetail'
+          description: ''
+  /api/v1/catalog/collections/:
+    get:
+      operationId: catalog_collections_list
+      tags:
+      - catalog
+      security:
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Collection'
+          description: ''
+  /api/v1/catalog/collections/{slug}/:
+    get:
+      operationId: catalog_collections_retrieve
+      parameters:
+      - in: path
+        name: slug
+        schema:
+          type: string
+        required: true
+      tags:
+      - catalog
+      security:
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Collection'
+          description: ''
+  /api/v1/catalog/measurement-guide/:
+    get:
+      operationId: catalog_measurement_guide_list
+      description: Body-measurement guidance (how to measure) — distinct from garment
+        size charts.
+      tags:
+      - catalog
+      security:
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MeasurementDefinition'
+          description: ''
+  /api/v1/catalog/products/:
+    get:
+      operationId: catalog_products_list
+      description: Product listing with filters and sorting. All amounts are paise.
+      parameters:
+      - in: query
+        name: category
+        schema:
+          type: string
+      - in: query
+        name: collection
+        schema:
+          type: string
+      - in: query
+        name: colour
+        schema:
+          type: string
+      - in: query
+        name: embroidery
+        schema:
+          type: string
+      - in: query
+        name: fabric
+        schema:
+          type: string
+      - in: query
+        name: fit
+        schema:
+          type: string
+      - in: query
+        name: fulfilment
+        schema:
+          type: string
+      - in: query
+        name: in_stock
+        schema:
+          type: string
+      - in: query
+        name: occasion
+        schema:
+          type: string
+      - in: query
+        name: ordering
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - in: query
+        name: pattern
+        schema:
+          type: string
+      - in: query
+        name: price_max
+        schema:
+          type: string
+        description: paise
+      - in: query
+        name: price_min
+        schema:
+          type: string
+        description: paise
+      - in: query
+        name: q
+        schema:
+          type: string
+      - in: query
+        name: size
+        schema:
+          type: string
+      tags:
+      - catalog
+      security:
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedProductCardList'
+          description: ''
+  /api/v1/catalog/products/{slug}/:
+    get:
+      operationId: catalog_products_retrieve
+      parameters:
+      - in: path
+        name: slug
+        schema:
+          type: string
+        required: true
+      tags:
+      - catalog
+      security:
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductDetail'
+          description: ''
+  /api/v1/catalog/products/{slug}/complete-the-look/:
+    get:
+      operationId: catalog_products_complete_the_look_list
+      parameters:
+      - in: path
+        name: slug
+        schema:
+          type: string
+        required: true
+      tags:
+      - catalog
+      security:
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ProductCard'
+          description: ''
+  /api/v1/catalog/products/{slug}/related/:
+    get:
+      operationId: catalog_products_related_list
+      parameters:
+      - in: path
+        name: slug
+        schema:
+          type: string
+        required: true
+      tags:
+      - catalog
+      security:
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ProductCard'
+          description: ''
+  /api/v1/catalog/products/facets/:
+    get:
+      operationId: catalog_products_facets_retrieve
+      parameters:
+      - in: query
+        name: category
+        schema:
+          type: string
+      - in: query
+        name: collection
+        schema:
+          type: string
+      - in: query
+        name: colour
+        schema:
+          type: string
+      - in: query
+        name: embroidery
+        schema:
+          type: string
+      - in: query
+        name: fabric
+        schema:
+          type: string
+      - in: query
+        name: fit
+        schema:
+          type: string
+      - in: query
+        name: fulfilment
+        schema:
+          type: string
+      - in: query
+        name: in_stock
+        schema:
+          type: string
+      - in: query
+        name: occasion
+        schema:
+          type: string
+      - in: query
+        name: ordering
+        schema:
+          type: string
+      - in: query
+        name: pattern
+        schema:
+          type: string
+      - in: query
+        name: price_max
+        schema:
+          type: string
+        description: paise
+      - in: query
+        name: price_min
+        schema:
+          type: string
+        description: paise
+      - in: query
+        name: q
+        schema:
+          type: string
+      - in: query
+        name: size
+        schema:
+          type: string
+      tags:
+      - catalog
+      security:
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Facets'
+          description: ''
+  /api/v1/catalog/search/:
+    get:
+      operationId: catalog_search_list
+      description: Product listing with filters and sorting. All amounts are paise.
+      parameters:
+      - in: query
+        name: category
+        schema:
+          type: string
+      - in: query
+        name: collection
+        schema:
+          type: string
+      - in: query
+        name: colour
+        schema:
+          type: string
+      - in: query
+        name: embroidery
+        schema:
+          type: string
+      - in: query
+        name: fabric
+        schema:
+          type: string
+      - in: query
+        name: fit
+        schema:
+          type: string
+      - in: query
+        name: fulfilment
+        schema:
+          type: string
+      - in: query
+        name: in_stock
+        schema:
+          type: string
+      - in: query
+        name: occasion
+        schema:
+          type: string
+      - in: query
+        name: ordering
+        schema:
+          type: string
+      - name: page
+        required: false
+        in: query
+        description: A page number within the paginated result set.
+        schema:
+          type: integer
+      - name: page_size
+        required: false
+        in: query
+        description: Number of results to return per page.
+        schema:
+          type: integer
+      - in: query
+        name: pattern
+        schema:
+          type: string
+      - in: query
+        name: price_max
+        schema:
+          type: string
+        description: paise
+      - in: query
+        name: price_min
+        schema:
+          type: string
+        description: paise
+      - in: query
+        name: q
+        schema:
+          type: string
+      - in: query
+        name: size
+        schema:
+          type: string
+      tags:
+      - catalog
+      security:
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedProductCardList'
+          description: ''
+  /api/v1/catalog/search/suggest/:
+    get:
+      operationId: catalog_search_suggest_retrieve
+      parameters:
+      - in: query
+        name: q
+        schema:
+          type: string
+        required: true
+      tags:
+      - catalog
+      security:
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Suggestions'
+          description: ''
+  /api/v1/catalog/size-charts/{id}/:
+    get:
+      operationId: catalog_size_charts_retrieve
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+          format: uuid
+        required: true
+      tags:
+      - catalog
+      security:
+      - cookieAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SizeChart'
+          description: ''
+  /api/v1/health/:
+    get:
+      operationId: health_retrieve
+      description: 'Readiness: verifies the database and cache. Returns 503 if any
+        dependency fails.'
+      tags:
+      - health
+      security:
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Health'
+          description: ''
+  /api/v1/health/live/:
+    get:
+      operationId: health_live_retrieve
+      tags:
+      - health
+      security:
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Health'
+          description: ''
+components:
+  schemas:
+    AccentEnum:
+      enum:
+      - burgundy
+      - emerald
+      - royal
+      type: string
+      description: |-
+        * `burgundy` - Burgundy
+        * `emerald` - Emerald
+        * `royal` - Royal blue
+    Address:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        full_name:
+          type: string
+          maxLength: 120
+        phone:
+          type: string
+          description: +91XXXXXXXXXX
+          maxLength: 13
+        line1:
+          type: string
+          maxLength: 200
+        line2:
+          type: string
+          maxLength: 200
+        landmark:
+          type: string
+          maxLength: 120
+        city:
+          type: string
+          maxLength: 80
+        state_code:
+          $ref: '#/components/schemas/StateCodeEnum'
+        state_name:
+          type: string
+          readOnly: true
+        pincode:
+          type: string
+          maxLength: 6
+        country:
+          type: string
+          readOnly: true
+        gstin:
+          type: string
+          description: Optional, for B2B invoices
+          maxLength: 15
+        is_default_shipping:
+          type: boolean
+        is_default_billing:
+          type: boolean
+      required:
+      - city
+      - country
+      - full_name
+      - id
+      - line1
+      - phone
+      - pincode
+      - state_code
+      - state_name
+    AddressRequest:
+      type: object
+      properties:
+        full_name:
+          type: string
+          minLength: 1
+          maxLength: 120
+        phone:
+          type: string
+          minLength: 1
+          description: +91XXXXXXXXXX
+          maxLength: 13
+        line1:
+          type: string
+          minLength: 1
+          maxLength: 200
+        line2:
+          type: string
+          maxLength: 200
+        landmark:
+          type: string
+          maxLength: 120
+        city:
+          type: string
+          minLength: 1
+          maxLength: 80
+        state_code:
+          $ref: '#/components/schemas/StateCodeEnum'
+        pincode:
+          type: string
+          minLength: 1
+          maxLength: 6
+        gstin:
+          type: string
+          description: Optional, for B2B invoices
+          maxLength: 15
+        is_default_shipping:
+          type: boolean
+        is_default_billing:
+          type: boolean
+      required:
+      - city
+      - full_name
+      - line1
+      - phone
+      - pincode
+      - state_code
+    AppliesToEnum:
+      enum:
+      - body
+      - garment
+      - both
+      type: string
+      description: |-
+        * `body` - Body
+        * `garment` - Garment
+        * `both` - Body and garment
+    CategoryDetail:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        name:
+          type: string
+          maxLength: 120
+        slug:
+          type: string
+          maxLength: 140
+          pattern: ^[-a-zA-Z0-9_]+$
+        path:
+          type: string
+          readOnly: true
+          description: e.g. wedding/sherwanis
+        eyebrow:
+          type: string
+          description: Small label above the title
+          maxLength: 80
+        description:
+          type: string
+          description: Editorial intro shown on the category page
+        breadcrumbs:
+          type: array
+          items:
+            $ref: '#/components/schemas/CategoryRef'
+          readOnly: true
+        children:
+          type: array
+          items:
+            $ref: '#/components/schemas/CategoryRef'
+        seo:
+          allOf:
+          - $ref: '#/components/schemas/Seo'
+          readOnly: true
+      required:
+      - breadcrumbs
+      - children
+      - id
+      - name
+      - path
+      - seo
+      - slug
+    CategoryNode:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        name:
+          type: string
+          maxLength: 120
+        slug:
+          type: string
+          maxLength: 140
+          pattern: ^[-a-zA-Z0-9_]+$
+        path:
+          type: string
+          readOnly: true
+          description: e.g. wedding/sherwanis
+        depth:
+          type: integer
+          readOnly: true
+        children:
+          type: array
+          items:
+            type: object
+            additionalProperties: {}
+          readOnly: true
+      required:
+      - children
+      - depth
+      - id
+      - name
+      - path
+      - slug
+    CategoryRef:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        name:
+          type: string
+          maxLength: 120
+        slug:
+          type: string
+          maxLength: 140
+          pattern: ^[-a-zA-Z0-9_]+$
+        path:
+          type: string
+          readOnly: true
+          description: e.g. wedding/sherwanis
+      required:
+      - id
+      - name
+      - path
+      - slug
+    Collection:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        name:
+          type: string
+          maxLength: 120
+        slug:
+          type: string
+          maxLength: 140
+          pattern: ^[-a-zA-Z0-9_]+$
+        eyebrow:
+          type: string
+          maxLength: 80
+        description:
+          type: string
+        accent:
+          $ref: '#/components/schemas/AccentEnum'
+        starts_at:
+          type: string
+          format: date-time
+          nullable: true
+        ends_at:
+          type: string
+          format: date-time
+          nullable: true
+        seo:
+          allOf:
+          - $ref: '#/components/schemas/Seo'
+          readOnly: true
+      required:
+      - id
+      - name
+      - seo
+      - slug
+    ColourFacet:
+      type: object
+      properties:
+        slug:
+          type: string
+        name:
+          type: string
+        count:
+          type: integer
+        hex:
+          type: string
+        family:
+          type: string
+      required:
+      - count
+      - family
+      - hex
+      - name
+      - slug
+    ColourOption:
+      type: object
+      properties:
+        slug:
+          type: string
+        name:
+          type: string
+        hex:
+          type: string
+        image:
+          allOf:
+          - $ref: '#/components/schemas/Image'
+          nullable: true
+      required:
+      - hex
+      - image
+      - name
+      - slug
+    Detail:
+      type: object
+      properties:
+        detail:
+          type: string
+      required:
+      - detail
+    FacetValue:
+      type: object
+      properties:
+        slug:
+          type: string
+        name:
+          type: string
+        count:
+          type: integer
+      required:
+      - count
+      - name
+      - slug
+    Facets:
+      type: object
+      properties:
+        colour:
+          type: array
+          items:
+            $ref: '#/components/schemas/ColourFacet'
+        size:
+          type: array
+          items:
+            $ref: '#/components/schemas/SizeFacet'
+        occasion:
+          type: array
+          items:
+            $ref: '#/components/schemas/FacetValue'
+        fabric:
+          type: array
+          items:
+            $ref: '#/components/schemas/FacetValue'
+        fit:
+          type: array
+          items:
+            $ref: '#/components/schemas/FacetValue'
+        embroidery:
+          type: array
+          items:
+            $ref: '#/components/schemas/FacetValue'
+        pattern:
+          type: array
+          items:
+            $ref: '#/components/schemas/FacetValue'
+        fulfilment:
+          type: array
+          items:
+            $ref: '#/components/schemas/FulfilmentFacet'
+        price:
+          $ref: '#/components/schemas/PriceRange'
+      required:
+      - colour
+      - embroidery
+      - fabric
+      - fit
+      - fulfilment
+      - occasion
+      - pattern
+      - price
+      - size
+    FulfilmentFacet:
+      type: object
+      properties:
+        value:
+          type: string
+        count:
+          type: integer
+      required:
+      - count
+      - value
+    FulfilmentTypeEnum:
+      enum:
+      - ready_to_wear
+      - made_to_measure
+      - both
+      type: string
+      description: |-
+        * `ready_to_wear` - Ready to wear
+        * `made_to_measure` - Made to measure
+        * `both` - Ready to wear and made to measure
+    Health:
+      type: object
+      properties:
+        status:
+          type: string
+        checks:
+          type: object
+          additionalProperties:
+            type: string
+      required:
+      - checks
+      - status
+    Image:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        url:
+          type: string
+          readOnly: true
+        alt:
+          type: string
+        width:
+          type: integer
+          maximum: 2147483647
+          minimum: 0
+          nullable: true
+        height:
+          type: integer
+          maximum: 2147483647
+          minimum: 0
+          nullable: true
+        focal_x:
+          type: number
+          format: double
+        focal_y:
+          type: number
+          format: double
+        is_placeholder:
+          type: boolean
+          description: Development placeholder, never real inventory
+      required:
+      - alt
+      - id
+      - url
+    InventoryPolicyEnum:
+      enum:
+      - track
+      - made_to_order
+      type: string
+      description: |-
+        * `track` - Track stock
+        * `made_to_order` - Made to order (not stock-tracked)
+    KindEnum:
+      enum:
+      - image
+      - video
+      type: string
+      description: |-
+        * `image` - Image
+        * `video` - Video
+    LoginRequest:
+      type: object
+      properties:
+        email:
+          type: string
+          format: email
+          minLength: 1
+        password:
+          type: string
+          writeOnly: true
+          minLength: 1
+      required:
+      - email
+      - password
+    Me:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        email:
+          type: string
+          format: email
+          readOnly: true
+        first_name:
+          type: string
+          readOnly: true
+        last_name:
+          type: string
+          readOnly: true
+        phone:
+          type: string
+          readOnly: true
+          nullable: true
+          description: E.164, e.g. +919812345678
+        is_staff:
+          type: boolean
+          readOnly: true
+        roles:
+          type: array
+          items:
+            type: string
+          readOnly: true
+        permissions:
+          type: array
+          items:
+            type: string
+          readOnly: true
+      required:
+      - email
+      - first_name
+      - id
+      - is_staff
+      - last_name
+      - permissions
+      - phone
+      - roles
+    MeasurementDefinition:
+      type: object
+      properties:
+        key:
+          type: string
+          maxLength: 40
+          pattern: ^[-a-zA-Z0-9_]+$
+        label:
+          type: string
+          maxLength: 80
+        applies_to:
+          $ref: '#/components/schemas/AppliesToEnum'
+        min_cm:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,4}(?:\.\d{0,1})?$
+        max_cm:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,4}(?:\.\d{0,1})?$
+        guide_text:
+          type: string
+          description: How to take this body measurement
+      required:
+      - key
+      - label
+      - max_cm
+      - min_cm
+    MeasurementProfile:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        label:
+          type: string
+          maxLength: 80
+        body_measurements:
+          type: object
+          additionalProperties:
+            type: string
+            format: decimal
+            pattern: ^-?\d{0,4}(?:\.\d{0,1})?$
+          description: Keys from /catalog/measurement-guide/, values in centimetres
+        height_cm:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,4}(?:\.\d{0,1})?$
+          nullable: true
+        weight_kg:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,4}(?:\.\d{0,1})?$
+          nullable: true
+        posture_notes:
+          type: string
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+      required:
+      - body_measurements
+      - created_at
+      - id
+      - label
+      - updated_at
+    MeasurementProfileRequest:
+      type: object
+      properties:
+        label:
+          type: string
+          minLength: 1
+          maxLength: 80
+        body_measurements:
+          type: object
+          additionalProperties:
+            type: string
+            format: decimal
+            pattern: ^-?\d{0,4}(?:\.\d{0,1})?$
+          description: Keys from /catalog/measurement-guide/, values in centimetres
+        height_cm:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,4}(?:\.\d{0,1})?$
+          nullable: true
+        weight_kg:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,4}(?:\.\d{0,1})?$
+          nullable: true
+        posture_notes:
+          type: string
+      required:
+      - body_measurements
+      - label
+    Media:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        url:
+          type: string
+          readOnly: true
+        alt:
+          type: string
+        width:
+          type: integer
+          maximum: 2147483647
+          minimum: 0
+          nullable: true
+        height:
+          type: integer
+          maximum: 2147483647
+          minimum: 0
+          nullable: true
+        focal_x:
+          type: number
+          format: double
+        focal_y:
+          type: number
+          format: double
+        is_placeholder:
+          type: boolean
+          description: Development placeholder, never real inventory
+        kind:
+          $ref: '#/components/schemas/KindEnum'
+        role:
+          $ref: '#/components/schemas/RoleEnum'
+        colour:
+          type: string
+          readOnly: true
+        poster_url:
+          type: string
+          nullable: true
+          readOnly: true
+      required:
+      - alt
+      - colour
+      - id
+      - poster_url
+      - url
+    Money:
+      type: object
+      properties:
+        amount:
+          type: integer
+          description: paise
+        currency:
+          type: string
+        formatted:
+          type: string
+      required:
+      - amount
+      - currency
+      - formatted
+    NamedRef:
+      type: object
+      properties:
+        slug:
+          type: string
+        name:
+          type: string
+      required:
+      - name
+      - slug
+    PaginatedProductCardList:
+      type: object
+      required:
+      - count
+      - results
+      properties:
+        count:
+          type: integer
+          example: 123
+        next:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=4
+        previous:
+          type: string
+          nullable: true
+          format: uri
+          example: http://api.example.org/accounts/?page=2
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProductCard'
+    PasswordResetConfirmRequest:
+      type: object
+      properties:
+        uid:
+          type: string
+          minLength: 1
+        token:
+          type: string
+          minLength: 1
+        new_password:
+          type: string
+          writeOnly: true
+          minLength: 1
+      required:
+      - new_password
+      - token
+      - uid
+    PasswordResetRequestRequest:
+      type: object
+      properties:
+        email:
+          type: string
+          format: email
+          minLength: 1
+      required:
+      - email
+    PatchedAddressRequest:
+      type: object
+      properties:
+        full_name:
+          type: string
+          minLength: 1
+          maxLength: 120
+        phone:
+          type: string
+          minLength: 1
+          description: +91XXXXXXXXXX
+          maxLength: 13
+        line1:
+          type: string
+          minLength: 1
+          maxLength: 200
+        line2:
+          type: string
+          maxLength: 200
+        landmark:
+          type: string
+          maxLength: 120
+        city:
+          type: string
+          minLength: 1
+          maxLength: 80
+        state_code:
+          $ref: '#/components/schemas/StateCodeEnum'
+        pincode:
+          type: string
+          minLength: 1
+          maxLength: 6
+        gstin:
+          type: string
+          description: Optional, for B2B invoices
+          maxLength: 15
+        is_default_shipping:
+          type: boolean
+        is_default_billing:
+          type: boolean
+    PatchedMeasurementProfileRequest:
+      type: object
+      properties:
+        label:
+          type: string
+          minLength: 1
+          maxLength: 80
+        body_measurements:
+          type: object
+          additionalProperties:
+            type: string
+            format: decimal
+            pattern: ^-?\d{0,4}(?:\.\d{0,1})?$
+          description: Keys from /catalog/measurement-guide/, values in centimetres
+        height_cm:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,4}(?:\.\d{0,1})?$
+          nullable: true
+        weight_kg:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,4}(?:\.\d{0,1})?$
+          nullable: true
+        posture_notes:
+          type: string
+    PatchedProfileRequest:
+      type: object
+      properties:
+        first_name:
+          type: string
+          minLength: 1
+          maxLength: 80
+        last_name:
+          type: string
+          maxLength: 80
+        marketing_email_opt_in:
+          type: boolean
+        marketing_sms_opt_in:
+          type: boolean
+        preferred_size:
+          type: string
+          maxLength: 20
+    Price:
+      type: object
+      properties:
+        current:
+          allOf:
+          - $ref: '#/components/schemas/Money'
+          description: Lowest current price across active variants
+        mrp:
+          allOf:
+          - $ref: '#/components/schemas/Money'
+          description: MRP of the lowest-priced variant
+        has_range:
+          type: boolean
+        on_sale:
+          type: boolean
+        discount_percent:
+          type: integer
+          nullable: true
+      required:
+      - current
+      - discount_percent
+      - has_range
+      - mrp
+      - on_sale
+    PriceRange:
+      type: object
+      properties:
+        min:
+          type: integer
+          nullable: true
+        max:
+          type: integer
+          nullable: true
+      required:
+      - max
+      - min
+    ProductCard:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        slug:
+          type: string
+          maxLength: 180
+          pattern: ^[-a-zA-Z0-9_]+$
+        name:
+          type: string
+          maxLength: 160
+        category:
+          $ref: '#/components/schemas/CategoryRef'
+        price:
+          allOf:
+          - $ref: '#/components/schemas/Price'
+          readOnly: true
+        badges:
+          type: array
+          items:
+            type: string
+          readOnly: true
+        primary_image:
+          allOf:
+          - $ref: '#/components/schemas/Image'
+          nullable: true
+          readOnly: true
+        hover_image:
+          allOf:
+          - $ref: '#/components/schemas/Image'
+          nullable: true
+          readOnly: true
+        colours:
+          type: array
+          items:
+            $ref: '#/components/schemas/ColourOption'
+          readOnly: true
+        is_mtm_available:
+          type: boolean
+        in_stock:
+          type: boolean
+      required:
+      - badges
+      - category
+      - colours
+      - hover_image
+      - id
+      - in_stock
+      - is_mtm_available
+      - name
+      - price
+      - primary_image
+      - slug
+    ProductDetail:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        slug:
+          type: string
+          maxLength: 180
+          pattern: ^[-a-zA-Z0-9_]+$
+        name:
+          type: string
+          maxLength: 160
+        short_description:
+          type: string
+          maxLength: 300
+        description:
+          type: string
+        category:
+          $ref: '#/components/schemas/CategoryRef'
+        brand:
+          allOf:
+          - $ref: '#/components/schemas/NamedRef'
+          nullable: true
+          readOnly: true
+        fabric:
+          allOf:
+          - $ref: '#/components/schemas/NamedRef'
+          nullable: true
+          readOnly: true
+        fabric_composition:
+          type: string
+          nullable: true
+          readOnly: true
+        pattern:
+          allOf:
+          - $ref: '#/components/schemas/NamedRef'
+          nullable: true
+          readOnly: true
+        embroidery:
+          allOf:
+          - $ref: '#/components/schemas/NamedRef'
+          nullable: true
+          readOnly: true
+        sleeve_type:
+          allOf:
+          - $ref: '#/components/schemas/NamedRef'
+          nullable: true
+          readOnly: true
+        fit:
+          allOf:
+          - $ref: '#/components/schemas/NamedRef'
+          nullable: true
+          readOnly: true
+        occasions:
+          type: array
+          items:
+            $ref: '#/components/schemas/NamedRef'
+        care_instructions:
+          type: string
+        fulfilment_type:
+          $ref: '#/components/schemas/FulfilmentTypeEnum'
+        is_mtm_available:
+          type: boolean
+        mtm_lead_time_days:
+          type: integer
+          maximum: 32767
+          minimum: 0
+          nullable: true
+        is_returnable:
+          type: boolean
+        return_window_days:
+          type: integer
+          maximum: 32767
+          minimum: 0
+        price:
+          allOf:
+          - $ref: '#/components/schemas/Price'
+          readOnly: true
+        in_stock:
+          type: boolean
+        media:
+          type: array
+          items:
+            $ref: '#/components/schemas/Media'
+        variants:
+          type: array
+          items:
+            $ref: '#/components/schemas/Variant'
+          readOnly: true
+        specifications:
+          type: array
+          items:
+            $ref: '#/components/schemas/Specification'
+        size_chart:
+          allOf:
+          - $ref: '#/components/schemas/SizeChart'
+          nullable: true
+        seo:
+          allOf:
+          - $ref: '#/components/schemas/Seo'
+          readOnly: true
+      required:
+      - brand
+      - category
+      - embroidery
+      - fabric
+      - fabric_composition
+      - fit
+      - id
+      - in_stock
+      - is_mtm_available
+      - media
+      - name
+      - occasions
+      - pattern
+      - price
+      - seo
+      - size_chart
+      - sleeve_type
+      - slug
+      - specifications
+      - variants
+    Profile:
+      type: object
+      properties:
+        email:
+          type: string
+          format: email
+          readOnly: true
+        first_name:
+          type: string
+          maxLength: 80
+        last_name:
+          type: string
+          maxLength: 80
+        marketing_email_opt_in:
+          type: boolean
+        marketing_sms_opt_in:
+          type: boolean
+        preferred_size:
+          type: string
+          maxLength: 20
+      required:
+      - email
+      - first_name
+      - last_name
+    RegisterRequest:
+      type: object
+      properties:
+        email:
+          type: string
+          format: email
+          minLength: 1
+        password:
+          type: string
+          writeOnly: true
+          minLength: 10
+        first_name:
+          type: string
+          minLength: 1
+          maxLength: 80
+        last_name:
+          type: string
+          maxLength: 80
+        phone:
+          type: string
+        marketing_opt_in:
+          type: boolean
+          default: false
+      required:
+      - email
+      - first_name
+      - password
+    RoleEnum:
+      enum:
+      - primary
+      - gallery
+      - detail
+      - lifestyle
+      - swatch
+      type: string
+      description: |-
+        * `primary` - Primary
+        * `gallery` - Gallery
+        * `detail` - Fabric / embroidery detail
+        * `lifestyle` - On-model lifestyle
+        * `swatch` - Colour swatch
+    Seo:
+      type: object
+      properties:
+        title:
+          type: string
+        description:
+          type: string
+      required:
+      - description
+      - title
+    SizeChart:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        name:
+          type: string
+          maxLength: 120
+        size_system:
+          type: string
+        notes:
+          type: string
+        columns:
+          type: array
+          items:
+            $ref: '#/components/schemas/MeasurementDefinition'
+          readOnly: true
+        rows:
+          type: array
+          items:
+            $ref: '#/components/schemas/SizeChartRow'
+          readOnly: true
+      required:
+      - columns
+      - id
+      - name
+      - rows
+      - size_system
+    SizeChartCell:
+      type: object
+      properties:
+        measurement:
+          type: string
+        value_cm:
+          type: string
+          format: decimal
+          pattern: ^-?\d{0,4}(?:\.\d{0,1})?$
+      required:
+      - measurement
+      - value_cm
+    SizeChartRow:
+      type: object
+      properties:
+        size:
+          type: string
+        measurements:
+          type: array
+          items:
+            $ref: '#/components/schemas/SizeChartCell'
+      required:
+      - measurements
+      - size
+    SizeFacet:
+      type: object
+      properties:
+        label:
+          type: string
+        system:
+          type: string
+        count:
+          type: integer
+      required:
+      - count
+      - label
+      - system
+    Specification:
+      type: object
+      properties:
+        key:
+          type: string
+        value:
+          type: string
+      required:
+      - key
+      - value
+    StateCodeEnum:
+      enum:
+      - '35'
+      - '37'
+      - '12'
+      - '18'
+      - '10'
+      - '04'
+      - '22'
+      - '26'
+      - '07'
+      - '30'
+      - '24'
+      - '06'
+      - '02'
+      - '01'
+      - '20'
+      - '29'
+      - '32'
+      - '38'
+      - '31'
+      - '23'
+      - '27'
+      - '14'
+      - '17'
+      - '15'
+      - '13'
+      - '21'
+      - '34'
+      - '03'
+      - 08
+      - '11'
+      - '33'
+      - '36'
+      - '16'
+      - 09
+      - '05'
+      - '19'
+      type: string
+      description: |-
+        * `35` - Andaman and Nicobar Islands
+        * `37` - Andhra Pradesh
+        * `12` - Arunachal Pradesh
+        * `18` - Assam
+        * `10` - Bihar
+        * `04` - Chandigarh
+        * `22` - Chhattisgarh
+        * `26` - Dadra and Nagar Haveli and Daman and Diu
+        * `07` - Delhi
+        * `30` - Goa
+        * `24` - Gujarat
+        * `06` - Haryana
+        * `02` - Himachal Pradesh
+        * `01` - Jammu and Kashmir
+        * `20` - Jharkhand
+        * `29` - Karnataka
+        * `32` - Kerala
+        * `38` - Ladakh
+        * `31` - Lakshadweep
+        * `23` - Madhya Pradesh
+        * `27` - Maharashtra
+        * `14` - Manipur
+        * `17` - Meghalaya
+        * `15` - Mizoram
+        * `13` - Nagaland
+        * `21` - Odisha
+        * `34` - Puducherry
+        * `03` - Punjab
+        * `08` - Rajasthan
+        * `11` - Sikkim
+        * `33` - Tamil Nadu
+        * `36` - Telangana
+        * `16` - Tripura
+        * `09` - Uttar Pradesh
+        * `05` - Uttarakhand
+        * `19` - West Bengal
+    StockStatusEnum:
+      enum:
+      - in_stock
+      - low_stock
+      - out_of_stock
+      - made_to_order
+      type: string
+      description: |-
+        * `in_stock` - in_stock
+        * `low_stock` - low_stock
+        * `out_of_stock` - out_of_stock
+        * `made_to_order` - made_to_order
+    SuggestCategory:
+      type: object
+      properties:
+        name:
+          type: string
+        path:
+          type: string
+      required:
+      - name
+      - path
+    SuggestProduct:
+      type: object
+      properties:
+        slug:
+          type: string
+        name:
+          type: string
+        price:
+          $ref: '#/components/schemas/Price'
+        image:
+          allOf:
+          - $ref: '#/components/schemas/Image'
+          nullable: true
+      required:
+      - image
+      - name
+      - price
+      - slug
+    Suggestions:
+      type: object
+      properties:
+        products:
+          type: array
+          items:
+            $ref: '#/components/schemas/SuggestProduct'
+        categories:
+          type: array
+          items:
+            $ref: '#/components/schemas/SuggestCategory'
+        queries:
+          type: array
+          items:
+            type: string
+      required:
+      - categories
+      - products
+      - queries
+    Variant:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        sku:
+          type: string
+          maxLength: 64
+        colour:
+          type: string
+          readOnly: true
+        size:
+          type: string
+          nullable: true
+          readOnly: true
+        price:
+          allOf:
+          - $ref: '#/components/schemas/Price'
+          readOnly: true
+        inventory_policy:
+          $ref: '#/components/schemas/InventoryPolicyEnum'
+        stock_status:
+          allOf:
+          - $ref: '#/components/schemas/StockStatusEnum'
+          readOnly: true
+        low_stock_quantity:
+          type: integer
+          nullable: true
+          readOnly: true
+      required:
+      - colour
+      - id
+      - low_stock_quantity
+      - price
+      - size
+      - sku
+      - stock_status
+  securitySchemes:
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: sessionid

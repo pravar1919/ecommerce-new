@@ -1,0 +1,155 @@
+# Development stack.
+#
+#   docker compose up -d                 → infrastructure only (postgres, redis, s3, mailpit)
+#   docker compose --profile app up -d   → + backend, worker, beat, frontend, caddy
+#                                          (backend available from Phase 2, frontend from Phase 3)
+#
+# Ports bind to 127.0.0.1 only.
+
+name: ecommerce
+
+x-env: &env
+  env_file:
+    - path: .env
+      required: false
+
+x-backend: &backend
+  <<: *env
+  build:
+    context: ./backend
+    target: dev
+  volumes:
+    - ./backend:/app
+    - backend-venv:/app/.venv
+  depends_on:
+    postgres: { condition: service_healthy }
+    redis: { condition: service_healthy }
+    s3-init: { condition: service_completed_successfully }
+  profiles: ["app"]
+
+services:
+  postgres:
+    image: postgres:17-alpine
+    <<: *env
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-ecommerce}
+      POSTGRES_USER: ${POSTGRES_USER:-ecommerce}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-ecommerce-dev}
+    ports: ["127.0.0.1:${POSTGRES_HOST_PORT:-5432}:5432"]
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./infra/postgres/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  redis:
+    image: redis:8-alpine
+    command: ["redis-server", "--appendonly", "yes"]
+    ports: ["127.0.0.1:${REDIS_HOST_PORT:-6379}:6379"]
+    volumes: [redis-data:/data]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  # S3-compatible object storage for development (SeaweedFS; MinIO images are no longer published).
+  s3:
+    image: chrislusf/seaweedfs:4.52
+    entrypoint: ["/bin/sh", "/entrypoint.sh"]
+    environment:
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID:-s3-dev}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY:-s3-dev-secret}
+      AWS_STORAGE_BUCKET_NAME: ${AWS_STORAGE_BUCKET_NAME:-ecommerce-media}
+    ports: ["127.0.0.1:${S3_HOST_PORT:-9000}:9000"]
+    volumes:
+      - s3-data:/data
+      - ./infra/seaweedfs/entrypoint.sh:/entrypoint.sh:ro
+    healthcheck:
+      test: ["CMD-SHELL", "test -f /tmp/ready && wget -q -O /dev/null http://127.0.0.1:9000/healthz"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+
+  # Applies the bucket policy: public/ is anonymously readable, everything else private.
+  s3-init:
+    image: amazon/aws-cli:2.39.3
+    depends_on:
+      s3: { condition: service_healthy }
+    environment:
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID:-s3-dev}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY:-s3-dev-secret}
+      AWS_DEFAULT_REGION: ${AWS_S3_REGION_NAME:-ap-south-1}
+      BUCKET: ${AWS_STORAGE_BUCKET_NAME:-ecommerce-media}
+    volumes:
+      - ./infra/seaweedfs/bucket-policy.json:/policy.json:ro
+    entrypoint:
+      - /bin/sh
+      - -c
+      - |
+        sed "s/BUCKET/$$BUCKET/" /policy.json > /tmp/policy.json &&
+        aws --endpoint-url http://s3:9000 s3api put-bucket-policy --bucket "$$BUCKET" --policy file:///tmp/policy.json &&
+        echo "bucket policy applied to $$BUCKET"
+
+  mailpit:
+    image: axllent/mailpit:v1.27
+    ports: ["127.0.0.1:8025:8025", "127.0.0.1:1025:1025"]
+
+  # ---- Application services (profile: app) -------------------------------
+  backend:
+    <<: *backend
+    # sync deps (fast no-op when unchanged), apply migrations, then serve with autoreload
+    command: ["sh", "-c", "uv sync --frozen --quiet && uv run --no-sync python manage.py migrate --noinput && uv run --no-sync python manage.py runserver 0.0.0.0:8000"]
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/v1/health/live/')\""]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+    ports: ["127.0.0.1:8000:8000"]
+
+  worker:
+    <<: *backend
+    depends_on:
+      backend: { condition: service_healthy }  # venv synced + migrated
+    command: ["uv", "run", "--no-sync", "celery", "-A", "config", "worker", "-l", "info", "-Q", "default,notifications,media"]
+
+  beat:
+    <<: *backend
+    depends_on:
+      backend: { condition: service_healthy }  # venv synced + migrated
+    command: ["uv", "run", "--no-sync", "celery", "-A", "config", "beat", "-l", "info", "-s", "/tmp/celerybeat-schedule"]
+
+  frontend:
+    <<: *env
+    build:
+      context: ./frontend
+      target: dev
+    command: ["npm", "run", "dev"]
+    volumes:
+      - ./frontend:/app
+      - frontend-node-modules:/app/node_modules
+    ports: ["127.0.0.1:3000:3000"]
+    profiles: ["app"]
+
+  caddy:
+    image: caddy:2-alpine
+    <<: *env
+    environment:
+      SITE_ADDRESS: ${SITE_ADDRESS:-:80}
+    ports: ["127.0.0.1:8080:80"]
+    volumes:
+      - ./infra/caddy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+    depends_on: [backend, frontend]
+    profiles: ["app"]
+
+volumes:
+  postgres-data:
+  redis-data:
+  s3-data:
+  backend-venv:
+  frontend-node-modules:
+  caddy-data:

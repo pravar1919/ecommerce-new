@@ -1,0 +1,83 @@
+[project]
+name = "ecommerce-backend"
+version = "0.1.0"
+description = "Commerce backend: Django + DRF modular monolith"
+requires-python = ">=3.14"
+dependencies = [
+    "argon2-cffi>=25.1.0",
+    "boto3>=1.44.4",
+    "celery[redis]>=5.7.0",
+    "django>=6.0,<6.2",
+    "django-environ>=0.14.0",
+    "django-filter>=26.2",
+    "django-storages[s3]>=1.14.6",
+    "djangorestframework>=3.18.3",
+    "drf-spectacular>=0.30.0",
+    "gunicorn>=27.0.1",
+    "pillow>=13.0.0",
+    "psycopg[binary]>=3.3.9",
+    "redis>=8.1.0",
+    "structlog>=26.1.0",
+]
+
+[dependency-groups]
+dev = [
+    "factory-boy>=3.3.3",
+    "import-linter>=2.16",
+    "pytest>=9.2.0",
+    "pytest-cov>=7.1.0",
+    "pytest-django>=4.14.0",
+    "ruff>=0.17.5",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings.test"
+python_files = ["test_*.py"]
+addopts = "-ra --strict-markers --reuse-db --ds=config.settings.test"  # --ds beats a DJANGO_SETTINGS_MODULE env var
+testpaths = ["apps", "common", "devtools"]
+
+[tool.coverage.run]
+source = ["apps", "common"]
+omit = ["*/migrations/*", "*/tests/*"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py314"
+extend-exclude = ["*/migrations/*"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "DJ", "S", "SIM", "RUF"]
+ignore = ["RUF012", "S101", "RUF001", "RUF002", "RUF003"]  # typographic copy (₹, –, ×) is intentional
+
+[tool.ruff.lint.per-file-ignores]
+"*/tests/*" = ["S105", "S106", "S311"]
+"conftest.py" = ["S105", "S106"]
+"devtools/management/commands/seed_dev.py" = ["S311", "E501"]  # deterministic dev data, tabular literals
+"config/settings/*" = ["S105"]
+
+[tool.importlinter]
+root_packages = ["apps", "common"]
+include_external_packages = false
+
+[[tool.importlinter.contracts]]
+name = "Common kernel depends on no app"
+type = "forbidden"
+source_modules = ["common"]
+forbidden_modules = ["apps"]
+
+[[tool.importlinter.contracts]]
+name = "Foundational apps do not depend on commerce apps"
+type = "forbidden"
+source_modules = ["apps.categories", "apps.attributes", "apps.catalog", "apps.accounts", "apps.customers", "apps.pricing"]
+# extend with carts/checkout/orders/payments/shipping/returns as those apps are added (Phase 5+)
+forbidden_modules = ["apps.inventory"]
+ignore_imports = ["apps.*.tests.** -> apps.**"]  # tests may build cross-app fixtures
+
+[[tool.importlinter.contracts]]
+name = "Taxonomy apps do not depend on catalog"
+type = "forbidden"
+source_modules = ["apps.categories", "apps.attributes"]
+forbidden_modules = ["apps.catalog"]
